@@ -14,7 +14,7 @@
     <div class="container-fluid object-fit" >
         <div class="row align-items-center">
             <div class="col-4">
-                <img src="logo.png" class="img-fluid">
+                <img src="logo1.png" class="img-fluid">
             <!-- FORM -->
                 <form>
                     <div class="mb-3">
@@ -31,6 +31,7 @@
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
                     <input type="button" class="btn btn-primary" value="Log in">
+                    <a href="signup.php">Make an account</a>
                 </form>
             
             </div>
