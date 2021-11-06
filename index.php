@@ -41,7 +41,7 @@ body, html {
 
 <div class="bgimg">
   <div class="middle">
-    <img id="logo" src="logo1.png" class="img-fluid">
+    <img id="logo" src="ZeonGoLogo.png" class="img-fluid">
     <h1 class="soon">COMING SOON</h1>
   </div>
 </div>
