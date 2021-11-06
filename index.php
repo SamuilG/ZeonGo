@@ -19,8 +19,6 @@ body, html {
 }
 
 .middle {
-    /* background: rgba(0, 0, 0, 0.3); */
-    /* border-radius: 25px; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -37,6 +35,10 @@ body, html {
 }
 
 </style>
+<head>
+  <title>ZeonGo</title>
+  <link rel="icon" type="image/x-icon" href="ZeonGoIcon.png">
+</head>
 <body>
 
 <div class="bgimg">
