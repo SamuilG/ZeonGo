@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0 0 15px 0;
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: #333;
+    background: #F3F3F3 url("body_bg.gif") repeat-x 0 0;
+    text-align: center;
+    min-width: 500px;
+}
+p {
+    margin: 1em 0;
+}
+.red {
+    color: #f00;
+}
+#Container {
+    width: 100%;
+    position: absolute;
+    top: 259px;
+    left: 0;
+    margin-top: -160px;
+    text-align: center;
+}
+#main {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    text-align: center;
+}
+#mainContent {
+    height: 184px;
+    overflow: hidden;
+    padding-top: 6px;
+    padding-bottom: 30px;
+    width: 940px;
+}
+#links {
+    padding-bottom: 10px;
+    margin-top: 40px;
+    font-family: Tahoma;
+    color: #999999
+}
+#www
+  {
+    display: block;
+    width: 153px;
+    height: 42px;
+    background: url("stworz-strone.png") no-repeat 0 0;
+    position: absolute;
+    left: 55%;
+    margin-left: -300px;
+    margin-top: -60px;
+  }
+#www:hover
+  {
+    background: url("stworz-strone-.png") no-repeat 0 0;
+  }
+#www span
+{
+      display: none;
+}
+#poczta
+{
+    display: block;
+    width: 153px;
+    height: 42px;
+    background: url("czytaj-poczte.png") no-repeat 0 0;
+    position: absolute;
+    left: 55%;
+    margin-left: -130px;
+    margin-top: -60px;
+}
+#poczta.new {
+    margin-left: -205px;
+}
+#poczta:hover
+{
+    background: url("czytaj-poczte-.png") no-repeat 0 0;
+}
+#poczta span
+{
+  display: none;
+}
+#uslugi
+{
+    display: block;
+    width: 153px;
+    height: 42px;
+    background: url("zarzadzaj-usluga.png") no-repeat 0 0;
+    position: absolute;
+    left: 55%;
+    margin-left: 40px;
+    margin-top: -60px;
+}
+#uslugi.new {
+    margin-left: -45px;
+}
+#uslugi:hover
+{
+    background: url("zarzadzaj-usluga-.png") no-repeat 0 0;
+}
+#uslugi span
+{
+    display: none;
+}
+#wrapper {
+  text-align: left;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+#footer {
+    color:#666666;
+    font-size:11px;
+    height:14px;
+    padding:70px 25px 12px;
+    position:relative;
+    text-align:center;
+    line-height:20px;
+}
+#footer a{
+    position:relative; color:#444;
+    text-decoration:none;
+    border-bottom:dashed 1px #A1A1A1;
+    font-weight:normal;
+}
+#footer a:hover{
+    color:#013e9f;
+}

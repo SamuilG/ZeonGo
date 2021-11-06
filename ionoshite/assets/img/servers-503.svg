@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="496px" height="179px" viewBox="0 0 496 179" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="10" y="0" width="84" height="127" rx="6"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="84" height="127" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="0" y="20" width="84" height="127" rx="6"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="84" height="127" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="8" y="28" width="20" height="6" rx="3"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="8" y="44" width="20" height="6" rx="3"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <rect id="path-9" x="8" y="60" width="20" height="6" rx="3"></rect>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <rect id="path-11" x="8" y="76" width="20" height="6" rx="3"></rect>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+        <rect id="path-13" x="8" y="92" width="20" height="6" rx="3"></rect>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+        <rect id="path-15" x="8" y="108" width="20" height="6" rx="3"></rect>
+        <mask id="mask-16" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-15"></use>
+        </mask>
+        <rect id="path-17" x="10" y="0" width="84" height="127" rx="6"></rect>
+        <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="84" height="127" fill="white">
+            <use xlink:href="#path-17"></use>
+        </mask>
+        <rect id="path-19" x="0" y="20" width="84" height="127" rx="6"></rect>
+        <mask id="mask-20" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="84" height="127" fill="white">
+            <use xlink:href="#path-19"></use>
+        </mask>
+        <rect id="path-21" x="8" y="28" width="20" height="6" rx="3"></rect>
+        <mask id="mask-22" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-21"></use>
+        </mask>
+        <rect id="path-23" x="8" y="44" width="20" height="6" rx="3"></rect>
+        <mask id="mask-24" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-23"></use>
+        </mask>
+        <rect id="path-25" x="8" y="60" width="20" height="6" rx="3"></rect>
+        <mask id="mask-26" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-25"></use>
+        </mask>
+        <rect id="path-27" x="8" y="76" width="20" height="6" rx="3"></rect>
+        <mask id="mask-28" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-27"></use>
+        </mask>
+        <rect id="path-29" x="8" y="92" width="20" height="6" rx="3"></rect>
+        <mask id="mask-30" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-29"></use>
+        </mask>
+        <rect id="path-31" x="8" y="108" width="20" height="6" rx="3"></rect>
+        <mask id="mask-32" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-31"></use>
+        </mask>
+        <rect id="path-33" x="10" y="0" width="84" height="127" rx="6"></rect>
+        <mask id="mask-34" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="84" height="127" fill="white">
+            <use xlink:href="#path-33"></use>
+        </mask>
+        <rect id="path-35" x="0" y="20" width="84" height="127" rx="6"></rect>
+        <mask id="mask-36" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="84" height="127" fill="white">
+            <use xlink:href="#path-35"></use>
+        </mask>
+        <rect id="path-37" x="8" y="28" width="20" height="6" rx="3"></rect>
+        <mask id="mask-38" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-37"></use>
+        </mask>
+        <rect id="path-39" x="8" y="44" width="20" height="6" rx="3"></rect>
+        <mask id="mask-40" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-39"></use>
+        </mask>
+        <rect id="path-41" x="8" y="60" width="20" height="6" rx="3"></rect>
+        <mask id="mask-42" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-41"></use>
+        </mask>
+        <rect id="path-43" x="8" y="76" width="20" height="6" rx="3"></rect>
+        <mask id="mask-44" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-43"></use>
+        </mask>
+        <rect id="path-45" x="8" y="92" width="20" height="6" rx="3"></rect>
+        <mask id="mask-46" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-45"></use>
+        </mask>
+        <rect id="path-47" x="8" y="108" width="20" height="6" rx="3"></rect>
+        <mask id="mask-48" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-47"></use>
+        </mask>
+        <rect id="path-49" x="304" y="34.5" width="88" height="116" rx="6"></rect>
+        <mask id="mask-50" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="88" height="116" fill="white">
+            <use xlink:href="#path-49"></use>
+        </mask>
+        <path d="M397,68.5073625 L397,140.492638 C397,143.810412 394.318122,146.5 391.002483,146.5 C391.002483,146.5 306.947514,146.740403 298.132324,146.5 C289.317135,146.259597 288.375786,143.5 280.997517,143.5 C277.68518,143.5 270,143.812094 270,140.492638 L270,68.5073625 C270,65.1895878 272.681878,62.5 275.997517,62.5 L391.002483,62.5 C394.31482,62.5 397,65.1879063 397,68.5073625 Z" id="path-51"></path>
+        <mask id="mask-52" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="127" height="84.106846" fill="white">
+            <use xlink:href="#path-51"></use>
+        </mask>
+        <rect id="path-53" x="376" y="77.5" width="20" height="6" rx="3"></rect>
+        <mask id="mask-54" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-53"></use>
+        </mask>
+        <rect id="path-55" x="360" y="77.5" width="20" height="6" rx="3"></rect>
+        <mask id="mask-56" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-55"></use>
+        </mask>
+        <rect id="path-57" x="344" y="77.5" width="20" height="6" rx="3"></rect>
+        <mask id="mask-58" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-57"></use>
+        </mask>
+        <rect id="path-59" x="328" y="77.5" width="20" height="6" rx="3"></rect>
+        <mask id="mask-60" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-59"></use>
+        </mask>
+        <rect id="path-61" x="312" y="77.5" width="20" height="6" rx="3"></rect>
+        <mask id="mask-62" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-61"></use>
+        </mask>
+        <rect id="path-63" x="296" y="77.5" width="20" height="6" rx="3"></rect>
+        <mask id="mask-64" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-63"></use>
+        </mask>
+        <rect id="path-65" x="10" y="0" width="84" height="127" rx="6"></rect>
+        <mask id="mask-66" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="84" height="127" fill="white">
+            <use xlink:href="#path-65"></use>
+        </mask>
+        <rect id="path-67" x="0" y="20" width="84" height="127" rx="6"></rect>
+        <mask id="mask-68" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="84" height="127" fill="white">
+            <use xlink:href="#path-67"></use>
+        </mask>
+        <rect id="path-69" x="8" y="28" width="20" height="6" rx="3"></rect>
+        <mask id="mask-70" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-69"></use>
+        </mask>
+        <rect id="path-71" x="8" y="44" width="20" height="6" rx="3"></rect>
+        <mask id="mask-72" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-71"></use>
+        </mask>
+        <rect id="path-73" x="8" y="60" width="20" height="6" rx="3"></rect>
+        <mask id="mask-74" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-73"></use>
+        </mask>
+        <rect id="path-75" x="8" y="76" width="20" height="6" rx="3"></rect>
+        <mask id="mask-76" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-75"></use>
+        </mask>
+        <rect id="path-77" x="8" y="92" width="20" height="6" rx="3"></rect>
+        <mask id="mask-78" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-77"></use>
+        </mask>
+        <rect id="path-79" x="8" y="108" width="20" height="6" rx="3"></rect>
+        <mask id="mask-80" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="6" fill="white">
+            <use xlink:href="#path-79"></use>
+        </mask>
+    </defs>
+    <g id="home---error-pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-SD---error-page-503-poczta" transform="translate(-392.000000, -419.000000)">
+            <g id="Group-3" transform="translate(392.000000, 419.000000)">
+                <path d="M271.007812,137.494141 C271.007812,137.494141 231.570312,147.96875 241.224609,161.347656 C250.878907,174.726562 278.779293,158.011719 301.488281,161.347656 C324.197268,164.683594 334.564464,170.958984 353.125003,175.519531 C371.685542,180.080078 430.416011,182.275391 430.416011,150.988281 C430.416011,131.755859 415.156245,128.558594 404.072261,128.558594" id="Path-3" fill="#DDE1E5"></path>
+                <g id="s">
+                    <path d="M4.20458984,25.0749512 L14.2092285,5.14123535" id="Path-2" stroke="#A5B2BD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M79.8127441,141.787354 L89.5812988,122.337036" id="Path-2" stroke="#A5B2BD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <use id="Rectangle" stroke="#A5B2BD" mask="url(#mask-2)" stroke-width="8" fill="#A5B3BE" xlink:href="#path-1"></use>
+                    <path d="M84.5422363,17.5571289 L89.0100098,6.02270508" id="Path-2" stroke="#FEFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.209999993"></path>
+                    <use id="Rectangle" stroke="#BDC9D3" mask="url(#mask-4)" stroke-width="8" fill="#FFFFFF" xlink:href="#path-3"></use>
+                    <rect id="Rectangle-2" fill="#BDC8D2" x="2" y="119" width="80" height="26"></rect>
+                    <path d="M4,39 L80,39" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <path d="M4,55 L80,55" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <g id="s-vertical" transform="translate(32.000000, 29.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 45.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 61.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 77.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 93.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 109.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(8.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(26.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(44.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(62.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-6)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-5"></use>
+                    <g id="s-dots" transform="translate(56.000000, 29.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 45.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 61.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 77.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 93.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 109.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-8)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-7"></use>
+                    <path d="M4,71 L80,71" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-10)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-9"></use>
+                    <path d="M4,87 L80,87" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-12)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-11"></use>
+                    <path d="M4,103 L80,103" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-14)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-13"></use>
+                    <path d="M4,119 L80,119" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-16)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-15"></use>
+                </g>
+                <g id="s" transform="translate(90.000000, 0.000000)">
+                    <path d="M4.20458984,25.0749512 L14.2092285,5.14123535" id="Path-2" stroke="#A5B2BD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M79.8127441,141.787354 L89.5812988,122.337036" id="Path-2" stroke="#A5B2BD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <use id="Rectangle" stroke="#A5B2BD" mask="url(#mask-18)" stroke-width="8" fill="#A5B2BD" xlink:href="#path-17"></use>
+                    <path d="M84.5422363,17.5571289 L89.0100098,6.02270508" id="Path-2" stroke="#FEFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.209999993"></path>
+                    <use id="Rectangle" stroke="#BDC9D3" mask="url(#mask-20)" stroke-width="8" fill="#FFFFFF" xlink:href="#path-19"></use>
+                    <rect id="Rectangle-2" fill="#BDC8D2" x="2" y="119" width="80" height="26"></rect>
+                    <path d="M4,39 L80,39" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <path d="M4,55 L80,55" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <g id="s-vertical" transform="translate(32.000000, 29.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 45.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 61.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 77.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 93.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 109.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(8.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(26.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(44.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(62.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-22)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-21"></use>
+                    <g id="s-dots" transform="translate(56.000000, 29.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 45.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 61.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 77.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 93.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 109.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-24)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-23"></use>
+                    <path d="M4,71 L80,71" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-26)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-25"></use>
+                    <path d="M4,87 L80,87" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-28)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-27"></use>
+                    <path d="M4,103 L80,103" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-30)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-29"></use>
+                    <path d="M4,119 L80,119" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-32)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-31"></use>
+                </g>
+                <g id="s" transform="translate(180.000000, 0.000000)">
+                    <path d="M4.20458984,25.0749512 L14.2092285,5.14123535" id="Path-2" stroke="#A5B2BD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M79.8127441,141.787354 L89.5812988,122.337036" id="Path-2" stroke="#A5B2BD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <use id="Rectangle" stroke="#A5B2BD" mask="url(#mask-34)" stroke-width="8" fill="#A5B2BD" xlink:href="#path-33"></use>
+                    <path d="M84.5422363,17.5571289 L89.0100098,6.02270508" id="Path-2" stroke="#FEFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.209999993"></path>
+                    <use id="Rectangle" stroke="#BDC9D3" mask="url(#mask-36)" stroke-width="8" fill="#FFFFFF" xlink:href="#path-35"></use>
+                    <rect id="Rectangle-2" fill="#BDC8D2" x="2" y="119" width="80" height="26"></rect>
+                    <path d="M4,39 L80,39" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <path d="M4,55 L80,55" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <g id="s-vertical" transform="translate(32.000000, 29.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 45.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 61.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 77.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 93.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 109.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(8.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(26.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(44.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(62.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-38)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-37"></use>
+                    <g id="s-dots" transform="translate(56.000000, 29.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 45.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 61.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 77.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 93.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 109.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-40)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-39"></use>
+                    <path d="M4,71 L80,71" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-42)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-41"></use>
+                    <path d="M4,87 L80,87" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-44)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-43"></use>
+                    <path d="M4,103 L80,103" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-46)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-45"></use>
+                    <path d="M4,119 L80,119" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-48)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-47"></use>
+                </g>
+                <path d="M278.302612,70.7520752 L292.302368,50.7452393" id="Path-2" stroke="#A5B2BD" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" transform="translate(285.302490, 60.748657) scale(-1, 1) rotate(-270.000000) translate(-285.302490, -60.748657) "></path>
+                <path d="M391.73877,141.607422 L401.730469,132.563477" id="Path-2" stroke="#A5B2BD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" transform="translate(396.734619, 137.085449) scale(-1, 1) rotate(-270.000000) translate(-396.734619, -137.085449) "></path>
+                <use id="Rectangle" stroke="#A5B2BD" mask="url(#mask-50)" stroke-width="8" fill="#A5B2BD" transform="translate(348.000000, 92.500000) rotate(-270.000000) translate(-348.000000, -92.500000) " xlink:href="#path-49"></use>
+                <path d="M398,61.0805664 L401.504395,54.6118164" id="Path-2" stroke="#FEFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.209999993"></path>
+                <use id="Rectangle" stroke="#BDC9D3" mask="url(#mask-52)" stroke-width="8" fill="#FFFFFF" xlink:href="#path-51"></use>
+                <polygon id="Rectangle-2" fill="#BDC8D2" transform="translate(285.000000, 104.500000) rotate(-270.000000) translate(-285.000000, -104.500000) " points="245 91.5 325 91.5 321 117.5 245 117.5"></polygon>
+                <path d="M340,104.5 L416,104.5" id="Line" stroke="#BDC8D2" stroke-width="2" transform="translate(378.000000, 104.500000) rotate(-270.000000) translate(-378.000000, -104.500000) "></path>
+                <path d="M324,104.5 L400,104.5" id="Line" stroke="#BDC8D2" stroke-width="2" transform="translate(362.000000, 104.500000) rotate(-270.000000) translate(-362.000000, -104.500000) "></path>
+                <g id="s-vertical" transform="translate(386.000000, 101.500000) rotate(-270.000000) translate(-386.000000, -101.500000) translate(379.000000, 99.500000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                    <g id="Line">
+                        <path d="M1,0 L1,4" stroke-width="2"></path>
+                        <path d="M7,0 L7,4" stroke-width="2"></path>
+                        <path d="M13,0 L13,4" stroke-width="2"></path>
+                    </g>
+                </g>
+                <g id="s-vertical" transform="translate(370.000000, 101.500000) rotate(-270.000000) translate(-370.000000, -101.500000) translate(363.000000, 99.500000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                    <g id="Line">
+                        <path d="M1,0 L1,4" stroke-width="2"></path>
+                        <path d="M7,0 L7,4" stroke-width="2"></path>
+                        <path d="M13,0 L13,4" stroke-width="2"></path>
+                    </g>
+                </g>
+                <g id="s-vertical" transform="translate(354.000000, 101.500000) rotate(-270.000000) translate(-354.000000, -101.500000) translate(347.000000, 99.500000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                    <g id="Line">
+                        <path d="M1,0 L1,4" stroke-width="2"></path>
+                        <path d="M7,0 L7,4" stroke-width="2"></path>
+                        <path d="M13,0 L13,4" stroke-width="2"></path>
+                    </g>
+                </g>
+                <g id="s-vertical" transform="translate(338.000000, 101.500000) rotate(-270.000000) translate(-338.000000, -101.500000) translate(331.000000, 99.500000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                    <g id="Line">
+                        <path d="M1,0 L1,4" stroke-width="2"></path>
+                        <path d="M7,0 L7,4" stroke-width="2"></path>
+                        <path d="M13,0 L13,4" stroke-width="2"></path>
+                    </g>
+                </g>
+                <g id="s-vertical" transform="translate(322.000000, 101.500000) rotate(-270.000000) translate(-322.000000, -101.500000) translate(315.000000, 99.500000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                    <g id="Line">
+                        <path d="M1,0 L1,4" stroke-width="2"></path>
+                        <path d="M7,0 L7,4" stroke-width="2"></path>
+                        <path d="M13,0 L13,4" stroke-width="2"></path>
+                    </g>
+                </g>
+                <g id="s-vertical" transform="translate(306.000000, 101.500000) rotate(-270.000000) translate(-306.000000, -101.500000) translate(299.000000, 99.500000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                    <g id="Line">
+                        <path d="M1,0 L1,4" stroke-width="2"></path>
+                        <path d="M7,0 L7,4" stroke-width="2"></path>
+                        <path d="M13,0 L13,4" stroke-width="2"></path>
+                    </g>
+                </g>
+                <g id="s-vertical" transform="translate(284.500000, 77.500000) rotate(-270.000000) translate(-284.500000, -77.500000) translate(277.500000, 71.000000)" stroke-linecap="round" stroke-opacity="0.6" stroke="#8DA1B4" stroke-width="2" stroke-linejoin="round">
+                    <g id="Line">
+                        <path d="M1,0 L1,13"></path>
+                        <path d="M7,0 L7,13"></path>
+                        <path d="M13,0 L13,13"></path>
+                    </g>
+                </g>
+                <g id="s-vertical" transform="translate(284.500000, 95.500000) rotate(-270.000000) translate(-284.500000, -95.500000) translate(277.500000, 89.000000)" stroke-linecap="round" stroke-opacity="0.6" stroke="#8DA1B4" stroke-width="2" stroke-linejoin="round">
+                    <g id="Line">
+                        <path d="M1,0 L1,13"></path>
+                        <path d="M7,0 L7,13"></path>
+                        <path d="M13,0 L13,13"></path>
+                    </g>
+                </g>
+                <g id="s-vertical" transform="translate(284.500000, 113.500000) rotate(-270.000000) translate(-284.500000, -113.500000) translate(277.500000, 107.000000)" stroke-linecap="round" stroke-opacity="0.6" stroke="#8DA1B4" stroke-width="2" stroke-linejoin="round">
+                    <g id="Line">
+                        <path d="M1,0 L1,13"></path>
+                        <path d="M7,0 L7,13"></path>
+                        <path d="M13,0 L13,13"></path>
+                    </g>
+                </g>
+                <g id="s-vertical" transform="translate(284.500000, 131.000000) rotate(-270.000000) translate(-284.500000, -131.000000) translate(278.000000, 124.500000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <g transform="translate(0.000000, -0.000000)" id="Line">
+                        <path d="M1,0 L1,13"></path>
+                        <path d="M7,0 L6,12"></path>
+                        <path d="M13,-5.68434189e-14 L11,10"></path>
+                    </g>
+                </g>
+                <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-54)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" transform="translate(386.000000, 80.500000) rotate(-270.000000) translate(-386.000000, -80.500000) " xlink:href="#path-53"></use>
+                <g id="s-dots" transform="translate(386.000000, 128.500000) rotate(-270.000000) translate(-386.000000, -128.500000) translate(376.000000, 126.500000)" fill-opacity="0.6" fill="#87919A">
+                    <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                    <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                    <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                </g>
+                <g id="s-dots" transform="translate(370.000000, 128.500000) rotate(-270.000000) translate(-370.000000, -128.500000) translate(360.000000, 126.500000)" fill="#FF9500">
+                    <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                    <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                    <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                </g>
+                <g id="s-dots" transform="translate(354.000000, 128.500000) rotate(-270.000000) translate(-354.000000, -128.500000) translate(344.000000, 126.500000)">
+                    <circle id="Oval" fill-opacity="0.6" fill="#87919A" cx="18" cy="2" r="2"></circle>
+                    <circle id="Oval" fill-opacity="0.6" fill="#87919A" cx="10" cy="2" r="2"></circle>
+                    <circle id="Oval" fill="#FF9500" cx="2" cy="2" r="2"></circle>
+                </g>
+                <g id="s-dots" transform="translate(338.000000, 128.500000) rotate(-270.000000) translate(-338.000000, -128.500000) translate(328.000000, 126.500000)">
+                    <circle id="Oval" fill="#FF9500" cx="18" cy="2" r="2"></circle>
+                    <circle id="Oval" fill-opacity="0.6" fill="#87919A" cx="10" cy="2" r="2"></circle>
+                    <circle id="Oval" fill="#59A506" cx="2" cy="2" r="2"></circle>
+                </g>
+                <g id="s-dots" transform="translate(322.000000, 128.500000) rotate(-270.000000) translate(-322.000000, -128.500000) translate(312.000000, 126.500000)">
+                    <circle id="Oval" fill="#FF9500" cx="18" cy="2" r="2"></circle>
+                    <circle id="Oval" fill="#59A506" cx="10" cy="2" r="2"></circle>
+                    <circle id="Oval" fill="#FF9500" cx="2" cy="2" r="2"></circle>
+                </g>
+                <g id="s-dots" transform="translate(306.000000, 128.500000) rotate(-270.000000) translate(-306.000000, -128.500000) translate(296.000000, 126.500000)">
+                    <circle id="Oval" fill="#FF9500" cx="18" cy="2" r="2"></circle>
+                    <circle id="Oval" fill="#FF9500" cx="10" cy="2" r="2"></circle>
+                    <circle id="Oval" fill-opacity="0.6" fill="#87919A" cx="2" cy="2" r="2"></circle>
+                </g>
+                <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-56)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" transform="translate(370.000000, 80.500000) rotate(-270.000000) translate(-370.000000, -80.500000) " xlink:href="#path-55"></use>
+                <path d="M308,104.5 L384,104.5" id="Line" stroke="#BDC8D2" stroke-width="2" transform="translate(346.000000, 104.500000) rotate(-270.000000) translate(-346.000000, -104.500000) "></path>
+                <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-58)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" transform="translate(354.000000, 80.500000) rotate(-270.000000) translate(-354.000000, -80.500000) " xlink:href="#path-57"></use>
+                <path d="M292,104.5 L368,104.5" id="Line" stroke="#BDC8D2" stroke-width="2" transform="translate(330.000000, 104.500000) rotate(-270.000000) translate(-330.000000, -104.500000) "></path>
+                <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-60)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" transform="translate(338.000000, 80.500000) rotate(-270.000000) translate(-338.000000, -80.500000) " xlink:href="#path-59"></use>
+                <path d="M276,104.5 L352,104.5" id="Line" stroke="#BDC8D2" stroke-width="2" transform="translate(314.000000, 104.500000) rotate(-270.000000) translate(-314.000000, -104.500000) "></path>
+                <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-62)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" transform="translate(322.000000, 80.500000) rotate(-270.000000) translate(-322.000000, -80.500000) " xlink:href="#path-61"></use>
+                <path d="M260,104.5 L336,104.5" id="Line" stroke="#BDC8D2" stroke-width="2" transform="translate(298.000000, 104.500000) rotate(-270.000000) translate(-298.000000, -104.500000) "></path>
+                <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-64)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" transform="translate(306.000000, 80.500000) rotate(-270.000000) translate(-306.000000, -80.500000) " xlink:href="#path-63"></use>
+                <path d="M290.915527,59.4433594 L310.06543,52.6313477 L326.351562,58.9331055 L346.993164,52.0795898 C346.993164,52.0795898 348.59668,58.0493164 349.09668,58.0493164 C349.59668,58.0493164 372.013672,54.9306641 372.013672,54.9306641" id="Path-4" stroke="#415262" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.200000003"></path>
+                <polyline id="Path-4" stroke="#415262" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.200000003" points="400 134.023682 403.248047 127.955078 400 119.1875 404.02417 102.108398"></polyline>
+                <path d="M380.23584,37.7922364 C380.23584,37.7922364 385.298828,38.7363286 389.298828,37.4111327 C393.298828,36.0859368 396.453125,31.5214844 403.06543,31.5214844" id="Path-6" stroke="#A5B2BD" stroke-width="7"></path>
+                <g id="s" transform="translate(402.000000, 0.000000)">
+                    <path d="M4.20458984,25.0749512 L14.2092285,5.14123535" id="Path-2" stroke="#A5B2BD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M79.8127441,141.787354 L89.5812988,122.337036" id="Path-2" stroke="#A5B2BD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <use id="Rectangle" stroke="#A5B2BD" mask="url(#mask-66)" stroke-width="8" fill="#A5B2BD" xlink:href="#path-65"></use>
+                    <path d="M84.5422363,17.5571289 L89.0100098,6.02270508" id="Path-2" stroke="#FEFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.209999993"></path>
+                    <use id="Rectangle" stroke="#BDC9D3" mask="url(#mask-68)" stroke-width="8" fill="#FFFFFF" xlink:href="#path-67"></use>
+                    <rect id="Rectangle-2" fill="#BDC8D2" x="2" y="119" width="80" height="26"></rect>
+                    <path d="M4,39 L80,39" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <path d="M4,55 L80,55" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <g id="s-vertical" transform="translate(32.000000, 29.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 45.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 61.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 77.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 93.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(32.000000, 109.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(8.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(26.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(44.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <g id="s-vertical" transform="translate(62.000000, 126.000000)" stroke="#8DA1B4" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Line">
+                            <path d="M1,0 L1,4" stroke-width="2"></path>
+                            <path d="M7,0 L7,4" stroke-width="2"></path>
+                            <path d="M13,0 L13,4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-70)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-69"></use>
+                    <g id="s-dots" transform="translate(56.000000, 29.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 45.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 61.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 77.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 93.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <g id="s-dots" transform="translate(56.000000, 109.000000)" fill="#59A506">
+                        <circle id="Oval" cx="18" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="10" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                    </g>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-72)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-71"></use>
+                    <path d="M4,71 L80,71" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-74)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-73"></use>
+                    <path d="M4,87 L80,87" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-76)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-75"></use>
+                    <path d="M4,103 L80,103" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-78)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-77"></use>
+                    <path d="M4,119 L80,119" id="Line" stroke="#BDC8D2" stroke-width="2"></path>
+                    <use id="Rectangle" stroke-opacity="0.424733922" stroke="#94A6B6" mask="url(#mask-80)" stroke-width="2" fill-opacity="0.3" fill="#98BBD5" xlink:href="#path-79"></use>
+                </g>
+                <g id="Group-2" transform="translate(371.340447, 39.566851) rotate(-7.000000) translate(-371.340447, -39.566851) translate(361.840447, 33.066851)" stroke="#BDC8D2" stroke-width="2" stroke-linejoin="round">
+                    <path d="M5.84502012,1.55633806 L11.8750785,2.01005338" id="Line" stroke-linecap="round"></path>
+                    <path d="M2.50425707,4 L11.5,4" id="Line" stroke-linecap="round"></path>
+                    <path d="M0.464520311,7.35940259 L11.6218693,6.00745385" id="Line" stroke-linecap="round"></path>
+                    <path d="M2.69266705,9.66227076 L11.4115725,8.1188512" id="Line" stroke-linecap="round"></path>
+                    <path d="M7.62186934,12.0074538 L13.0740369,9.52677331" id="Line" stroke-linecap="round"></path>
+                    <polygon id="Rectangle-3" stroke-linecap="square" fill="#BDC8D2" points="11.8781307 1.99254615 18.8781307 3.99254615 18.4949312 7.90794605 12.2437387 10.0149077"></polygon>
+                </g>
+                <path d="M359.387695,32.2607422 L351.081055,26.7880859" id="Path-5" stroke-opacity="0.3" stroke="#87919A" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M364.762207,28.4658203 L361.05957,18.0541992" id="Path-5" stroke-opacity="0.3" stroke="#87919A" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M372.98584,27.6445312 L372.98584,18.9702148" id="Path-5" stroke-opacity="0.3" stroke="#87919A" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M335.139336,35.0391602 C335.869336,35.0391602 336.479336,35.6291602 336.479336,36.5391602 C336.479336,37.4291602 335.869336,38.0391602 335.139336,38.0391602 C334.289336,38.0391602 333.759336,37.4191602 333.759336,36.5391602 C333.759336,35.5791602 334.399336,35.0391602 335.139336,35.0391602 L335.139336,35.0391602 Z M335.379336,33.8391602 C334.889336,33.8391602 334.259336,34.1191602 333.899336,34.6491602 L333.659336,33.9391602 L332.559336,33.9391602 L332.559336,40.8391602 L333.899336,40.8391602 L333.899336,38.4791602 C334.239336,39.0491602 335.019336,39.2391602 335.369336,39.2391602 C336.979336,39.2391602 337.839336,37.9791602 337.839336,36.5591602 C337.839336,35.0091602 336.909336,33.8391602 335.379336,33.8391602 L335.379336,33.8391602 Z M338.789336,33.9391602 L338.789336,37.0591602 C338.789336,38.4491602 339.479336,39.2391602 340.829336,39.2391602 C341.479336,39.2391602 341.969336,38.9991602 342.309336,38.5491602 L342.479336,39.1391602 L343.549336,39.1391602 L343.549336,33.9391602 L342.149336,33.9391602 L342.149336,37.0091602 C342.149336,37.6391602 341.699336,37.9191602 341.149336,37.9191602 C340.479336,37.9191602 340.169336,37.5991602 340.169336,36.9891602 L340.169336,33.9391602 L338.789336,33.9391602 Z M344.789336,33.9891602 L344.789336,39.1391602 L346.169336,39.1391602 L346.169336,36.8191602 C346.169336,35.6991602 346.799336,35.3591602 347.679336,35.3591602 L347.849336,35.3591602 L347.849336,33.9391602 C346.929336,33.9391602 346.389336,34.1491602 346.069336,34.8091602 L345.889336,33.9891602 L344.789336,33.9891602 Z M348.679336,33.9891602 L348.679336,39.1391602 L350.059336,39.1391602 L350.059336,36.8191602 C350.059336,35.6991602 350.689336,35.3591602 351.569336,35.3591602 L351.739336,35.3591602 L351.739336,33.9391602 C350.819336,33.9391602 350.279336,34.1491602 349.959336,34.8091602 L349.779336,33.9891602 L348.679336,33.9891602 Z" id="purr" fill-opacity="0.6" fill="#87919A" transform="translate(342.254336, 37.339160) rotate(-10.000000) translate(-342.254336, -37.339160) "></path>
+                <path d="M334.817976,27.1499644 C335.276843,27.1499644 335.660279,27.520829 335.660279,28.0928405 C335.660279,28.6522803 335.276843,29.0357165 334.817976,29.0357165 C334.28368,29.0357165 333.95053,28.6459944 333.95053,28.0928405 C333.95053,27.4893998 334.352824,27.1499644 334.817976,27.1499644 L334.817976,27.1499644 Z M334.968837,26.3956636 C334.66083,26.3956636 334.264822,26.5716671 334.038532,26.9048166 L333.887672,26.458522 L333.19623,26.458522 L333.19623,30.7957518 L334.038532,30.7957518 L334.038532,29.3122935 C334.252251,29.6705864 334.742546,29.7900174 334.962551,29.7900174 C335.974571,29.7900174 336.515153,28.9980015 336.515153,28.1054121 C336.515153,27.1311069 335.93057,26.3956636 334.968837,26.3956636 L334.968837,26.3956636 Z M337.112308,26.458522 L337.112308,28.4197042 C337.112308,29.293436 337.546031,29.7900174 338.39462,29.7900174 C338.803199,29.7900174 339.111205,29.6391572 339.324924,29.3562944 L339.431783,29.727159 L340.104368,29.727159 L340.104368,26.458522 L339.224351,26.458522 L339.224351,28.388275 C339.224351,28.7842829 338.941488,28.9602864 338.595767,28.9602864 C338.174615,28.9602864 337.979754,28.7591395 337.979754,28.3757033 L337.979754,26.458522 L337.112308,26.458522 Z M340.883812,26.4899512 L340.883812,29.727159 L341.751258,29.727159 L341.751258,28.268844 C341.751258,27.5648299 342.147266,27.3511113 342.70042,27.3511113 L342.80728,27.3511113 L342.80728,26.458522 C342.228982,26.458522 341.889547,26.5905246 341.6884,27.0053901 L341.575255,26.4899512 L340.883812,26.4899512 Z M343.329004,26.4899512 L343.329004,29.727159 L344.19645,29.727159 L344.19645,28.268844 C344.19645,27.5648299 344.592458,27.3511113 345.145612,27.3511113 L345.252472,27.3511113 L345.252472,26.458522 C344.674174,26.458522 344.334739,26.5905246 344.133592,27.0053901 L344.020447,26.4899512 L343.329004,26.4899512 Z" id="purr" fill-opacity="0.6" fill="#87919A" transform="translate(339.224351, 28.595708) rotate(-4.000000) translate(-339.224351, -28.595708) "></path>
+                <path d="M348.309563,42.7079831 C348.69542,42.7079831 349.017848,43.0198403 349.017848,43.5008403 C349.017848,43.9712689 348.69542,44.2936974 348.309563,44.2936974 C347.860277,44.2936974 347.580134,43.9659831 347.580134,43.5008403 C347.580134,42.9934117 347.91842,42.7079831 348.309563,42.7079831 L348.309563,42.7079831 Z M348.43642,42.0736974 C348.17742,42.0736974 347.84442,42.2216974 347.654134,42.5018403 L347.527277,42.1265545 L346.945848,42.1265545 L346.945848,45.7736975 L347.654134,45.7736975 L347.654134,44.5262689 C347.833848,44.8275546 348.246134,44.9279832 348.431134,44.9279832 C349.282134,44.9279832 349.736706,44.2619831 349.736706,43.5114117 C349.736706,42.692126 349.245134,42.0736974 348.43642,42.0736974 L348.43642,42.0736974 Z M350.238848,42.1265545 L350.238848,43.7756974 C350.238848,44.5104117 350.603563,44.9279832 351.317134,44.9279832 C351.660706,44.9279832 351.919706,44.801126 352.09942,44.5632689 L352.189277,44.875126 L352.754848,44.875126 L352.754848,42.1265545 L352.014848,42.1265545 L352.014848,43.7492689 C352.014848,44.0822689 351.776991,44.2302689 351.486277,44.2302689 C351.132134,44.2302689 350.968277,44.061126 350.968277,43.7386974 L350.968277,42.1265545 L350.238848,42.1265545 Z M353.410277,42.1529831 L353.410277,44.875126 L354.139706,44.875126 L354.139706,43.6488403 C354.139706,43.0568403 354.472706,42.877126 354.937848,42.877126 L355.027706,42.877126 L355.027706,42.1265545 C354.54142,42.1265545 354.255991,42.2375545 354.086848,42.5864117 L353.991706,42.1529831 L353.410277,42.1529831 Z M355.46642,42.1529831 L355.46642,44.875126 L356.195849,44.875126 L356.195849,43.6488403 C356.195849,43.0568403 356.528849,42.877126 356.993991,42.877126 L357.083849,42.877126 L357.083849,42.1265545 C356.597563,42.1265545 356.312134,42.2375545 356.142991,42.5864117 L356.047849,42.1529831 L355.46642,42.1529831 Z" id="purr" fill-opacity="0.6" fill="#87919A" transform="translate(352.014848, 43.923697) rotate(-20.000000) translate(-352.014848, -43.923697) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
