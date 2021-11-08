@@ -12,14 +12,14 @@
         <img class="h-100 img-fluid" src="/images/ZeonGoLogo.png" alt="ZeonGo">
       </a>
     
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav" style="margin-left: auto">
           
         
           @auth
               <li>
                 {{-- <a href="{{ route('home') }}" class="p-3">{{ auth()->user()->name  }}</a> --}}
-                <a href="#" class="p-3">Actial Name</a>
+                <a href="#" class="nav-link">Actial Name</a>
               </li> 
               <li>
                 {{-- <form action="{{ route('logout') }}" method="POST" class="p-3 inline"> --}}
@@ -33,15 +33,15 @@
           @guest
               <li>
                 {{-- <a href="{{ route('login') }}" class="p-3">Login</a> --}}
-                <a href="#" class="p-3">Login</a>
+                <a href="#" class="nav-link text-white border border-white rounded">Login</a>
               </li>  
               <li>
-                <a href="{{ route('register') }}" class="p-3">Register</a>
+                <a href="{{ route('register') }}" class="nav-link text-white border border-white rounded">Register</a>
                 {{-- <a href="#" class="p-3">Register</a> --}}
               </li>
           @endguest  
 
-        </ul>    
+        </ul>
       </div>
     </nav>
 
