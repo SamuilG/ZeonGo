@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark vh-50" style="height: 69px;"">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark vh-50" style="height: 69px;">
       <a class="ms-3 h-100 navbar-brand" href="/">
         <img class="h-100 img-fluid" src="/images/ZeonGoLogo.png" alt="ZeonGo">
       </a>
