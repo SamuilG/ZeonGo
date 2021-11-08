@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark vh-50" style="height: 69px;"">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark vh-50" style="height: 69px;">
       <a class="ms-3 h-100 navbar-brand" href="/">
         <img class="h-100 img-fluid" src="/images/ZeonGoLogo.png" alt="ZeonGo">
       </a>
     
-      {{-- <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent"> --}}
-        <ul class="navbar-nav mr-auto">
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav" style="margin-left: auto">
           
         
           @auth
@@ -33,10 +33,10 @@
           @guest
               <li>
                 {{-- <a href="{{ route('login') }}" class="p-3">Login</a> --}}
-                <a href="#" class="p-3">Login</a>
+                <a href="#" class="nav-link text-white border border-white rounded">Login</a>
               </li>  
               <li>
-                <a href="{{ route('register') }}" class="p-3">Register</a>
+                <a href="{{ route('register') }}" class="nav-link text-white border border-white rounded">Register</a>
                 {{-- <a href="#" class="p-3">Register</a> --}}
               </li>
           @endguest  
