@@ -18,8 +18,8 @@
         
           @auth
               <li>
-                {{-- <a href="{{ route('home') }}" class="p-3">{{ auth()->user()->name  }}</a> --}}
-                <a href="#" class="nav-link">Actial Name</a>
+                <a href="{{ route('home') }}" class="p-3">{{ auth()->user()->name  }}</a>
+                {{-- <a href="#" class="p-3">Actial Name</a> --}}
               </li> 
               <li>
                 {{-- <form action="{{ route('logout') }}" method="POST" class="p-3 inline"> --}}
@@ -41,8 +41,8 @@
               </li>
           @endguest  
 
-        </ul>
-      </div>
+        </ul>    
+      {{-- </div> --}}
     </nav>
 
 
