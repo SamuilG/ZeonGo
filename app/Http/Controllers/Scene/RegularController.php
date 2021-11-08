@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class RegularController extends Controller
 {
     public function index(){
-        return view('scene.regular');
+        return view('scenes.regular');
     }
 }
