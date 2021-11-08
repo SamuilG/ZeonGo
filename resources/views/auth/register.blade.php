@@ -1,5 +1,10 @@
 @extends('layouts.auth')
 
+@section('title')
+    Register
+@endsection
+
+
 @section('form')
     <div class="card bg-light ">
         <div class="card-body">
