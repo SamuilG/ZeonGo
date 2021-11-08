@@ -32,12 +32,10 @@
 
           @guest
               <li>
-                {{-- <a href="{{ route('login') }}" class="p-3">Login</a> --}}
-                <a href="#" class="nav-link text-white border border-white rounded">Login</a>
+                <a href="{{ route('login') }}" class="nav-link text-white border border-white rounded">Login</a>
               </li>  
               <li>
                 <a href="{{ route('register') }}" class="nav-link text-white border border-white rounded">Register</a>
-                {{-- <a href="#" class="p-3">Register</a> --}}
               </li>
           @endguest  
 
