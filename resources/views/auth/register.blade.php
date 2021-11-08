@@ -2,6 +2,7 @@
 
 @section('left-side')
     <form>
+        @csrf
         {{-- Email --}}
         <div class="form-group">
             <label for="email">Email address</label>
@@ -27,4 +28,5 @@
 
 
 @section('right-side')
+    <img src="/images/registerpic.jpg"
 @endsection
