@@ -6,8 +6,8 @@
 
 @section('content')
     <div id="bg-img">
-        <div class="container-fluid object-fit">
-            <div class="row align-items-center">
+        <div class="h-100 container-fluid object-fit">
+            <div class="h-75 row d-flex justify-content-center align-items-center">
                 <div class="col-4">
                     @yield('form')
                 </div>
