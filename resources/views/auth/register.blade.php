@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('left-side')
+@section('form')
     <form action="{{ route('register') }}" method="POST">
         @csrf
         {{-- Email --}}
@@ -33,9 +33,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-@endsection
-
-
-@section('right-side')
-    {{-- <img src="/images/registerpic.jpg"> --}}
 @endsection

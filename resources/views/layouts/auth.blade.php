@@ -6,13 +6,10 @@
 
 @section('content')
     <div id="bg-img">
-        <div class="container-fluid object-fit" >
+        <div class="container-fluid object-fit">
             <div class="row align-items-center">
                 <div class="col-4">
-                    @yield('left-side')
-                </div>
-                <div class="col-8">
-                    @yield('right-side')
+                    @yield('form')
                 </div>
             </div>
         </div>
