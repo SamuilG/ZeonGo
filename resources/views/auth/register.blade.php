@@ -7,7 +7,6 @@
 
 @section('form')
     <div style="text-align: center">
-
         <form action="{{ route('register') }}" method="POST">
             @csrf
             {{-- Email --}}
