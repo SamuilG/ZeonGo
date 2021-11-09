@@ -26,14 +26,9 @@
           
             @auth
                 <li>
-                  <a href="{{ route('home') }}" class="p-3">{{ auth()->user()->name  }}</a>
-                  {{-- <a href="#" class="p-3">Actial Name</a> --}}
-                </li> 
-                <li>
-                  {{-- <form action="{{ route('logout') }}" method="POST" class="p-3 inline"> --}}
                   <form action="#" method="POST" class="p-3 inline">
                       @csrf
-                      <button type="submit">Logout</button>
+                      <button type="submit" class="me-2 btn btn-outline-light">Logout</button>
                   </form>
                 </li>
             @endauth
