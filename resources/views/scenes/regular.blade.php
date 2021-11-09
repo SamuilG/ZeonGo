@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    regular
+    <img src="/images/meme.jpg"
 @endsection
