@@ -1,10 +1,9 @@
 html, body {
     height: 100%;
     margin: 0;
-    overflow: hidden;
 }
 
-#bg-img {
+#wrapper {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/gate_old.jpg);
     height: 100%;
     background-position: center;
