@@ -16,4 +16,13 @@ html, body {
     #container {
         width: 83.333%;
     }
+
+    /* #create {
+        width: 100%;
+    } */
+}
+@media (max-width: 620px) {
+    #create {
+        width: 100%;
+    }
 }

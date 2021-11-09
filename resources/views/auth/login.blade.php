@@ -5,7 +5,6 @@
 @endsection
 
 @section('form')
-        <div style="text-align: center">
             @if (session('status'))
                 <div class="text-danger">
                     <h5>{{ session('status') }}</h5>
@@ -31,9 +30,8 @@
                     @enderror
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary col-8">Log in</button>
+                <button type="submit" class="btn btn-primary col-7">Log in</button>
             </form>
-        </div>  
 
 
 

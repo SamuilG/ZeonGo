@@ -12,9 +12,9 @@
     <title>@yield('title')</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark vh-50" style="height: 69px;">
+    <nav class="navbar navbar-expand navbar-light bg-dark vh-50" style="height: 69px;">
       <a class="ms-3 h-100 navbar-brand" href="/">
-        <img class="h-100 img-fluid" src="/images/ZeonGoLogo.png" alt="ZeonGo">
+        <img class="mh-100 img-fluid" src="/images/ZeonGoLogo.png" alt="ZeonGo">
       </a>
     
       <div class="collapse navbar-collapse">
@@ -37,10 +37,10 @@
 
           @guest
               <li>
-                <a href="{{ route('login') }}" class="nav-link text-white border border-white rounded">Login</a>
+                <a href="{{ route('login') }}" class="me-2 btn btn-outline-light" role="button" aria-disabled="true">Login</a>
               </li>  
               <li>
-                <a href="{{ route('register') }}" class="nav-link text-white border border-white rounded">Register</a>
+                <a href="{{ route('register') }}" class="me-3 btn btn-outline-light" role="button" aria-disabled="true">Register</a>
               </li>
           @endguest  
 

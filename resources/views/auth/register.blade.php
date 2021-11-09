@@ -6,7 +6,6 @@
 
 
 @section('form')
-    <div style="text-align: center">
         <form action="{{ route('register') }}" method="POST">
             @csrf
             {{-- Email --}}
@@ -37,8 +36,6 @@
                 <label for="password_confirmation" class="text-white" style="float: left">Confirm Password</label>
                 <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Repeat password">
             </div>
-            <br>
-            <button type="submit" class="btn btn-primary col-8">Create an account</button>
+            <button type="submit" id="create" class="btn btn-primary col-7 mt-3">Create an account</button>
         </form>
-    </div>
 @endsection
