@@ -29,8 +29,7 @@
                         <div class="text-danger"> {{$message}} </div>
                     @enderror
                 </div>
-                <br>
-                <button type="submit" class="btn btn-primary col-7">Log in</button>
+                <button type="submit" class="btn btn-primary col-7 mt-3">Log in</button>
             </form>
 
 
