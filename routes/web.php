@@ -29,4 +29,5 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/', function () {
     return view('index');
-})->name('index');
+})->name('index')
+  ->middleware(['guest']);
