@@ -36,7 +36,6 @@ class RegisterController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'remember_token' => $emailVKey,
         ]);
 
         $data = array('email' => $request->email, 'name' =>  $request->name, 'verifyKey' => $emailVKey);
