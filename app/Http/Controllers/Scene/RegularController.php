@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Scene;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 
 class RegularController extends Controller
@@ -15,13 +16,14 @@ class RegularController extends Controller
     }
 
     public function index(){
-        // $key = "https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=".$this->createKey();
-        $key = "https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=fuck_u";
+        $key = "https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=".$this->createKey();
         return view('scenes.regular')->with('key', $key);
     }
 
     private function createKey()
     {
-        return Str::random(500);
+        $key = Str::random(100);
+        DB::update('UPDATE `user_keys` SET `user_key`= ? WHERE user_id = ?', [$key, auth()->id()]);
+        return $key;
     }
 }

@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\EmailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Scene\RegularController;
 
 /*
@@ -18,6 +19,9 @@ use App\Http\Controllers\Scene\RegularController;
 */
 
 Route::get('/home', [RegularController::class, 'index'])->name('home');
+
+Route::get('/send', [EmailController::class, 'send'])->name('verifyEmail');
+Route::get('/verifyEmail', [EmailController::class, 'verifyEmail']);
 
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 

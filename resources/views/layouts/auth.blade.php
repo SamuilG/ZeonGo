@@ -9,7 +9,6 @@
         
         <div style="text-align: center">
             @yield('form')
-        
         </div>
     </div>
 @endsection
