@@ -3,21 +3,22 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
 {
-    public function send()
-    {   
-        $data = array('email' => 'ilko.petrov27@gmail.com', 'username' =>  'ilko', 'verifyKey' => '123456789');
-        Mail::send('auth.emailVerify', ["data" => $data], function($m) use($data){
-            $m->to($data['email'], $data['username'])->subject('A');
-            $m->from("ZeonGo@online.com", "ZeonGo");
-        });
-    }
     public function verifyEmail(Request $request)
     {
-        dd($request->key);
+        //dd($request->key);
+        $key = $request->key;
+        
+        DB::update('UPDATE `users` SET `email_verified`= 1 WHERE `email_verified` = ?', [$key]);
+
+        auth()->attempt($request->only('email', 'password'));
+
+        redirect()->route('home');
     }
 }

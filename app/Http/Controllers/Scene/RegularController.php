@@ -16,8 +16,13 @@ class RegularController extends Controller
     }
 
     public function index(){
+        if(auth()->user()->email_verified != 1){
+            auth()->logout();
+            return redirect()->route('login')->with('status', 'Email is not verified');
+        }
         $key = "https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=".$this->createKey();
         return view('scenes.regular')->with('key', $key);
+        
     }
 
     private function createKey()

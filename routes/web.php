@@ -20,7 +20,6 @@ use App\Http\Controllers\Scene\RegularController;
 
 Route::get('/home', [RegularController::class, 'index'])->name('home');
 
-Route::get('/send', [EmailController::class, 'send'])->name('verifyEmail');
 Route::get('/verifyEmail', [EmailController::class, 'verifyEmail']);
 
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
