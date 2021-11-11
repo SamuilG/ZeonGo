@@ -15,7 +15,7 @@ class RegularController extends Controller
     }
 
     public function index(){
-        return view('scenes.regular')->with('key',$this->createKey());
+        return view('scenes.regular')->with($this->createKey());
     }
 
     private function createKey()
