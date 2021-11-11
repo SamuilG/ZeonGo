@@ -11,7 +11,7 @@ class EmailController extends Controller
     public function send()
     {   
         $data = array('email' => 'ilko.petrov27@gmail.com', 'username' =>  'ilko', 'verifyKey' => '123456789');
-        Mail::send('auth.emailVerify', $data, function($m) use($data){
+        Mail::send('auth.emailVerify', ["data" => $data], function($m) use($data){
             $m->to($data['email'], $data['username'])->subject('A');
             $m->from("ZeonGo@online.com", "ZeonGo");
         });

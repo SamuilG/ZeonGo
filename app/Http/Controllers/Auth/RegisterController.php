@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
+
 use App\Http\Controllers\Controller;
-
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -36,6 +38,12 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
             'remember_token' => $emailVKey,
         ]);
+
+        $data = array('email' => $request->email, 'name' =>  $request->name, 'verifyKey' => $emailVKey);
+        Mail::send('auth.emailVerify', ["data" => $data], function($m) use($data){
+            $m->to($data['email'], $data['name'])->subject('A');
+            $m->from("ZeonGo@online.com", "ZeonGo");
+        });
 
         auth()->attempt($request->only('email', 'password'));
 
