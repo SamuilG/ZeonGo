@@ -29,6 +29,12 @@
                         <div class="text-danger"> {{$message}} </div>
                     @enderror
                 </div>
+                <div class="form-check pt-3 pb-4">
+                    <input class="form-check-input" type="checkbox" id="remember" name="remember">
+                    <label class="form-check-label" for="remember" style="float: left">
+                      Remember me
+                    </label>
+                </div>
                 <button type="submit" class="btn btn-primary col-7 mt-3">Log in</button>
             </form>
 

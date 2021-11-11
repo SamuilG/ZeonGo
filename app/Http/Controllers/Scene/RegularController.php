@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Scene;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class RegularController extends Controller
 {   
@@ -13,6 +15,11 @@ class RegularController extends Controller
     }
 
     public function index(){
-        return view('scenes.regular');
+        return view('scenes.regular')->with('key',$this->createKey());
+    }
+
+    private function createKey()
+    {
+        return Str::random(15);
     }
 }
