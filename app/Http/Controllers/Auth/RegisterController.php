@@ -29,10 +29,12 @@ class RegisterController extends Controller
             'password' => 'required|confirmed',
         ]);
 
+        $emailVKey = Str::random(50);
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'remember_token' => $emailVKey,
         ]);
 
         auth()->attempt($request->only('email', 'password'));
