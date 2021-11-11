@@ -13,7 +13,7 @@ class CreateCodesTable extends Migration
      */
     public function up()
     {
-        Schema::create('keys', function (Blueprint $table) {
+        Schema::create('user_keys', function (Blueprint $table) {
             $table->id('key_id');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->text('key');
@@ -28,6 +28,6 @@ class CreateCodesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('keys');
+        Schema::dropIfExists('user_keys');
     }
 }
