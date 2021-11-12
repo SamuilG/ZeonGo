@@ -35,6 +35,8 @@ Route::get('/verifyEmail', [EmailController::class, 'verifyEmail']);
 // Auth Things
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
+Route::post('/forgottenPassword', [PasswordController::class, 'forgottenPassword'])->name('forgottenPassword');
+
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 

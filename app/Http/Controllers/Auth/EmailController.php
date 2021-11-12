@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['guest']);
+    }
+    
     public function verifyEmail(Request $request)
     {
         //dd($request->key);

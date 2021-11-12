@@ -11,5 +11,8 @@
             @yield('form')
         </div>
     </div>
+
+    @yield('modal')
+    
 @endsection
 

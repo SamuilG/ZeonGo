@@ -40,19 +40,19 @@ class RegisterController extends Controller
         ]);
 
         $data = array('email' => $request->email, 'name' =>  $request->name, 'verifyKey' => $emailVKey);
-        Mail::send('auth.emailVerify', ["data" => $data], function($m) use($data){
-            $m->to($data['email'], $data['name'])->subject('A');
+        Mail::send('emails.emailVerify', ["data" => $data], function($m) use($data){
+            $m->to($data['email'], $data['name'])->subject('Email verification');
             $m->from("admin@beta.zeongo.online", "ZeonGo");
         });
 
         auth()->attempt($request->only('email', 'password'));
-
+        
         // DB::insert('insert into user_keys (user_id, user_key) values (?, ?)', [auth()->id(), '0']);
         UserKey::create([
             'user_id' => auth()->id(),
             'user_key' => '0'
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('login')->with('status', 'Please verify your email');
     }
 }
