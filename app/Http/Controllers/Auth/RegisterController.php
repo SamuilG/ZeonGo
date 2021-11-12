@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Models\UserKey;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -46,7 +47,11 @@ class RegisterController extends Controller
 
         auth()->attempt($request->only('email', 'password'));
 
-        DB::insert('insert into user_keys (user_id, user_key) values (?, ?)', [auth()->id(), '0']);
+        // DB::insert('insert into user_keys (user_id, user_key) values (?, ?)', [auth()->id(), '0']);
+        UserKey::create([
+            'user_id' => auth()->id(),
+            'user_key' => '0'
+        ]);
 
         return redirect()->route('home');
     }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\Auth\EmailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -18,10 +19,15 @@ use App\Http\Controllers\Scene\RegularController;
 |
 */
 
+// Home
 Route::get('/home', [RegularController::class, 'index'])->name('home');
 
+// Email
 Route::get('/verifyEmail', [EmailController::class, 'verifyEmail']);
 
+
+
+// Auth Things
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Scene;
 
+use App\Models\UserKey;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -28,7 +29,11 @@ class RegularController extends Controller
     private function createKey()
     {
         $key = Str::random(100);
-        DB::update('UPDATE `user_keys` SET `user_key`= ? WHERE user_id = ?', [$key, auth()->id()]);
+        // DB::update('UPDATE `user_keys` SET `user_key`= ? WHERE user_id = ?', [$key, auth()->id()]);
+        // $row = UserKey::where('user_id', auth()->id());
+        // $row->user_key = $key;
+        // $row->save();
+        UserKey::where('user_id', auth()->id())->update(array('user_key' => $key));
         return $key;
     }
 }
