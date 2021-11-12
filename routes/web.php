@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\Auth\EmailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -25,7 +24,13 @@ Route::get('/home', [RegularController::class, 'index'])->name('home');
 // Email
 Route::get('/verifyEmail', [EmailController::class, 'verifyEmail']);
 
-
+// Route::get('/create', function(){
+//   Device::create([
+//     'device_name' => 'Bazata',
+//     'coordinate_x' => 1,
+//     'coordinate_y' => 1,
+//   ]);
+// });
 
 // Auth Things
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
