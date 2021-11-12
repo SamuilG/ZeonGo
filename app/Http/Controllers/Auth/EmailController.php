@@ -17,8 +17,6 @@ class EmailController extends Controller
         
         DB::update('UPDATE `users` SET `email_verified`= 1 WHERE `email_verified` = ?', [$key]);
 
-        auth()->attempt($request->only('email', 'password'));
-
-        redirect()->route('home');
+        redirect()->route('login');
     }
 }
