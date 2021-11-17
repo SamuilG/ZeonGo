@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Models\Pass;
 // use App\Http\Controllers\Auth\PasswordController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\PassController;
 use App\Http\Controllers\Auth\EmailController;
 use App\Http\Controllers\Auth\LoginController;
@@ -53,7 +54,10 @@ Route::get('/', function () {
 })->name('index')
   ->middleware(['guest']);
 
-  
+/////// aaaaaaaaaaaa
 Route::get('/a', function () {
-  return view('index');
+  Pass::create([
+    'device_id' => 1,
+    'user_id' => 1,
+  ]);
 });
