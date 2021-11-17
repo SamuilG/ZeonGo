@@ -13,6 +13,7 @@
         <br>
         {{ $data['history'] }}
         @foreach ($data['history'] as $item)
+        <br>
             {{$item->created_at}} {{-- get the date --}}
             {{$item->device_name}} {{-- get the device name --}}
         @endforeach
