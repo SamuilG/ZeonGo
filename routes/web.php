@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\Auth\PasswordController;
+use App\Http\Controllers\Auth\PassController;
 use App\Http\Controllers\Auth\EmailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -35,7 +37,10 @@ Route::get('/verifyEmail', [EmailController::class, 'verifyEmail']);
 // Auth Things
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
-Route::post('/forgottenPassword', [PasswordController::class, 'forgottenPassword'])->name('forgottenPassword');
+Route::post('/forgottenPassword', [PassController::class, 'forgottenPassword'])->name('forgottenPassword');
+Route::get('/forgottenPassword', [PassController::class, 'index']);
+
+// Route::post('/resetPassword', [PassController::class, 'forgottenPassword'])->name('resetPassword'); // за после 
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);

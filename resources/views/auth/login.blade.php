@@ -56,15 +56,27 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Forgotten password</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+      
+        
+        <form action="/forgottenPassword" method="POST">
+            @csrf
+            {{-- Email --}}
+            <div class="form-group">
+                <input type="email" class="form-control @error('email') border border-danger @enderror" id="email" name="email" placeholder="Enter email" value="{{ old('email') }}">
+                @error('email')
+                    <div class="text-danger"> {{$message}} </div>
+                @enderror
+            </div>
+            <button type="submit" id="create" class="btn btn-primary mt-3 float-end">Reset password</button>
+        </form>
+
+
+
+
       </div>
     </div>
   </div>
