@@ -34,6 +34,7 @@ Route::get('/verifyEmail', [EmailController::class, 'verifyEmail']);
 //   ]);
 // });
 
+
 // Auth Things
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
@@ -52,8 +53,3 @@ Route::get('/', function () {
     return view('index');
 })->name('index')
   ->middleware(['guest']);
-
-  
-Route::get('/a', function () {
-  return view('index');
-});
