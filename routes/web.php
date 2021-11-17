@@ -52,3 +52,8 @@ Route::get('/', function () {
     return view('index');
 })->name('index')
   ->middleware(['guest']);
+
+  
+Route::get('/a', function () {
+  return view('index');
+});

@@ -21,8 +21,17 @@ class RegularController extends Controller
             auth()->logout();
             return redirect()->route('login')->with('status', 'Please verify your email');
         }
+
+        $devices = DB::table('passes')
+            ->join('devices', 'passes.device_id', '=' , 'devices.id')
+            ->where('user_id', auth()->id())
+            ->get();
+        
         $key = "https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=".$this->createKey();
-        return view('scenes.regular')->with('key', $key);
+        
+        $data = array('key' => $key, 'devices' => $devices);
+
+        return view('scenes.regular')->with('data', $data);
         
     }
 
