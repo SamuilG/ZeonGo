@@ -4,10 +4,6 @@
     Home
 @endsection
 
-@section('headContent')
-    <link rel="stylesheet" href="/css/regular.css">
-@endsection
-
 @section('content')
 
     <div id="content">
