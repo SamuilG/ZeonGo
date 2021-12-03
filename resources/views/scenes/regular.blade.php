@@ -8,10 +8,21 @@
 
     <div id="content">
         {{-- QR code --}}
-        <div class="w-35 float-start text-center">
+        <div class="float-start text-center" id="qrCode">
             
-            <img src="{{ $data['key'] }}" class="w-75 p-5">
+            <img src="{{ $data['key'] }}" class="w-100">
         </div>
+        <script>
+
+
+            window.addEventListener('resize', function(event){
+                if(window.innerWidth > 900){
+                document.getElementById("qrCode").hidden = true;
+                } else {
+                    document.getElementById("qrCode").hidden = false;
+                }
+            });
+        </script>
         {{-- Actions --}}
         <div class="w-65 float-end row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
