@@ -1,6 +1,8 @@
 html, body {
     height: 100%;
     margin: 0;
+    background: rgb(33,37,41);
+background: linear-gradient(145deg, rgba(33,37,41,1) 90%, rgba(255,255,255,1) 100%);
 }
 
 #wrapper {
@@ -13,13 +15,17 @@ html, body {
 }
 
 #td_locations {
+    /* background: rgb(33,37,41);
+background: linear-gradient(156deg, rgba(33,37,41,1) 34%, rgba(255,255,255,1) 49%); */
     height: 55%;
 }
 
 #locations {
+    
     position: absolute;
     top: 69px;
-    margin-right: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 #history {
@@ -30,4 +36,8 @@ html, body {
 #map {
     height: 100%;
     margin-right: 50px;
+}
+
+.card {
+    
 }
