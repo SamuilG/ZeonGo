@@ -30,6 +30,7 @@ class RegularController extends Controller
         $history = History::where('user_id', '=', auth()->id())
             ->join('devices', 'history.device_id', '=', 'devices.id')
             ->select('devices.device_name', 'history.created_at')
+            ->orderBy('created_at', 'DESC')
             ->get();
 
         $key = "https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=".$this->createKey();
