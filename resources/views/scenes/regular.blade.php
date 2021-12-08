@@ -1,73 +1,51 @@
 @extends('layouts.app')
 
+@section('headContent')
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+@endsection
+
 @section('title')
     Home
 @endsection
 
 @section('content')
 
-    <div id="content">
-        {{-- QR code --}}
-        <div class="w-35 float-start text-center">
-            
-            <img src="{{ $data['key'] }}" class="w-75 p-5">
-        </div>
-        {{-- Actions --}}
-        <div class="w-65 float-end row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card h-100" style="width: 18rem;">
-                    <img src="/images/teamwork.jpg" class="card-img-top" alt="Join">
-                    <div class="card-body">
-                    <h5 class="card-title">Join a network</h5>
-                    <p class="card-text">You can as many networks as you want!</p>
-                    <a href="#" class="btn btn-primary">Join</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 18rem;">
-                    <img src="/images/teamwork.jpg" class="card-img-top" alt="Join">
-                    <div class="card-body">
-                    <h5 class="card-title">Join a network</h5>
-                    <p class="card-text">You can as many networks as you want!</p>
-                    <a href="#" class="btn btn-primary">Join</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 18rem;">
-                    <img src="/images/teamwork.jpg" class="card-img-top" alt="Join">
-                    <div class="card-body">
-                    <h5 class="card-title">Join a network</h5>
-                    <p class="card-text">You can as many networks as you want!</p>
-                    <a href="#" class="btn btn-primary">Join</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 18rem;">
-                    <img src="/images/teamwork.jpg" class="card-img-top" alt="Join">
-                    <div class="card-body">
-                    <h5 class="card-title">Join a network</h5>
-                    <p class="card-text">You can as many networks as you want!</p>
-                    <a href="#" class="btn btn-primary">Join</a>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    
-        @foreach ($data['devices'] as $device)
-            {{$device->device_name}}
-            haha
-        @endforeach
-        <br>
-        @foreach ($data['history'] as $item)
-        <br>
-            {{$item->created_at}} {{-- get the date --}}
-            {{$item->device_name}} {{-- get the device name --}}
-        @endforeach
-        {{-- <img src="/images/meme.jpg"> --}}
-    </div>
-    
+<table class="col-12" style="border: 1px solid black">
+    <tr>
+        <td class="col-9">
+            <h1>Locations</h1>
+        </td>
+        <td class="col-3" rowspan="2">
+            <h1>History</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style="height: 500px;" id="map"></div>
+            {{-- <div id='map' style='margin: 20px; height: 85%;'></div> --}}
+        </td>
+    </tr>
+</table>
+
+<script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .openPopup();
+</script>
+
+{{-- <script src="js/map.js"></script> --}}
+
+
 @endsection
