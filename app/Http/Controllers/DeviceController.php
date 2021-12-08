@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+use App\Models\History;
+use App\Models\UserKey;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use App\Models\History;
-use Carbon\Carbon;
 
 class DeviceController extends Controller
 {
@@ -18,9 +19,12 @@ class DeviceController extends Controller
             ->where('user_key', $userKey)
             ->join('passes', 'user_keys.user_id', '=' , 'passes.user_id')
             ->where('device_id', $deviceId)
-            ->select('user_keys.updated_at', 'user_keys.user_id')
+            ->select('user_keys.updated_at', 'user_keys.user_id', 'user_keys.user_id')
             ->get();
 
+        if($userKey = '0'){
+            return(2);
+        }
         if(count($check) == 0){
             return(0);
         }
@@ -33,6 +37,7 @@ class DeviceController extends Controller
                 'user_id' => $check->first()->user_id,
                 'device_id' => $deviceId
             ]);
+            UserKey::where('user_id', $check->first()->user_id)->update(array('user_key' => '0'));
             return(1);
         } else {
             return(2);

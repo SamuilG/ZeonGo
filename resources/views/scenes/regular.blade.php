@@ -15,7 +15,6 @@ crossorigin=""/>
 @endsection
 
 @section('content')
-
 <table class="col-12" style="border: 1px solid black">
     <tr>
         <td class="col-9">

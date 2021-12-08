@@ -9,7 +9,6 @@
     <div id="content">
         {{-- QR code --}}
         <div class="w-35 float-start text-center">
-            
             <img src="{{ $data['key'] }}" class="w-75 p-5">
         </div>
         {{-- Actions --}}
