@@ -11,8 +11,6 @@ html, body {
     position: relative;
 }
 
-#map { height: 180px; }
-
 @media (max-width: 991px) {
     #container {
         width: 83.333%;

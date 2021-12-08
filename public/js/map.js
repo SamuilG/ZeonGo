@@ -1,19 +1,3 @@
-
-// function runDefaltPosition() {   // map
-
-//     var map = L.map('map').setView([51.505, -0.09], 13);
-
-//     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//     }).addTo(map);
-
-//     L.marker([51.5, -0.09]).addTo(map)
-//         .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-//         .openPopup();
-
-// }
-// runDefaltPosition()
-
 let error_map;  // the name says it all
 
 function getLocation() {    // map
@@ -76,12 +60,8 @@ function runPosition(x, y, z, accuracy) {   // map
     let OSM_ATTRIB = '&copy;  <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';  
     let osmLayer = L.tileLayer(OSM_URL,  {attribution:  OSM_ATTRIB});  
 
-    let WAQI_URL = "https://tiles.waqi.info/tiles/usepa-aqi/{z}/{x}/{y}.png?token=_TOKEN_ID_";  
-    let WAQI_ATTR = 'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waqi.info</a>';  
-    let waqiLayer = L.tileLayer(WAQI_URL,  {attribution:  WAQI_ATTR});  
-
     let map = L.map('map').setView([x,  y],  z);  // z=zoom
-    map.addLayer(osmLayer).addLayer(waqiLayer);
+    map.addLayer(osmLayer);
 
     let marker = L.marker([x, y]).addTo(map);
 
@@ -98,13 +78,10 @@ function runDefaltPosition(x, y, z) {   // map
 
     let  OSM_URL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';  
     let  OSM_ATTRIB = '&copy;  <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';  
-    let  osmLayer = L.tileLayer(OSM_URL,  {attribution:  OSM_ATTRIB});  
-
-    let  WAQI_URL = "https://tiles.waqi.info/tiles/usepa-aqi/{z}/{x}/{y}.png?token=_TOKEN_ID_";  
-    let  WAQI_ATTR = 'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waqi.info</a>';  
-    let  waqiLayer = L.tileLayer(WAQI_URL,  {attribution:  WAQI_ATTR});  
+    let  osmLayer = L.tileLayer(OSM_URL,  {attribution:  OSM_ATTRIB});
 
     let  map = L.map('map').setView([x,  y],  z);  // z=zoom
-    map.addLayer(osmLayer).addLayer(waqiLayer);
+    map.addLayer(osmLayer);
+
 
 }

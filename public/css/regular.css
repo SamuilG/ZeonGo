@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#wrapper {
+    height: 100%;
+}
+
+#regular {
+    margin-top: -69px;
+    height: 100%;
+}
+
+#td_locations {
+    height: 55%;
+}
+
+#locations {
+    position: absolute;
+    top: 69px;
+    margin-right: 50px;
+}
+
+#history {
+    position: absolute;
+    top: 69px;
+}
+
+#map {
+    height: 100%;
+    margin-right: 50px;
+}
