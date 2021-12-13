@@ -35,7 +35,8 @@ class RegularController extends Controller
             ->get();
 
         $manager = Manager::where('user_id', '=', auth()->id())
-                                ->get();
+                        ->select('managers.device_id')
+                        ->get();
 
         $key = "https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=".$this->createKey();
         

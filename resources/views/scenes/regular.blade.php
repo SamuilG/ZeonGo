@@ -20,11 +20,17 @@ crossorigin=""/>
     <tr>
         <td id="td_locations" class="col-8">
             <div id="locations" class="col-7">
+<<<<<<< Updated upstream
                 <br>
+=======
+                <h3>Locations</h3>
+                {{ $data['manager'] }}
+>>>>>>> Stashed changes
                 <div class="container-fluid overflow-auto">
                     <div class="row flex-nowrap">
 
                         @foreach ($data['devices'] as $device)
+<<<<<<< Updated upstream
                         <div class="col-3">
                             <div class="card h-100 card-block bg-dark">
                                 <div class="card-body">
@@ -40,6 +46,62 @@ crossorigin=""/>
                                         <input type="hidden" name="device_id" value="{{ $device->id }}">
                                         <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
                                     </form>
+=======
+                            <div class="col-3">
+                                <div class="card card-block">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{$device->device_name}}</h5>
+                                        <p class="card-text">
+                                            {{ $device->device_description }}
+                                        </p>
+
+                                        {{-- @if ($data['manager'])
+                                                @foreach ($data['manager'] as $manager_device)
+                                                    @if ($manager_device->device_id == $device->id)
+                                                    <form action="/manage" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                                        <input class="btn btn-primary" style="float: right" type="submit" value="Manage">
+                                                    </form>
+                                                @endif
+                                            @endforeach
+                                        @else
+                                            <form action="/abandon" method="post">
+                                                @csrf
+                                                <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                                <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                            </form>
+                                        @endif --}}
+
+                                        
+                                        
+                                        @if (count($data['manager']))
+                                            
+                                            @foreach ($data['manager'] as $manager_device)
+                                                @if ($manager_device->device_id == $device->id)
+                                                    <form action="/manage" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                                        <input class="btn btn-primary" style="float: right" type="submit" value="Manage">
+                                                    </form>
+                                                @else
+                                                
+                                                    <form action="/abandon" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                                        <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                                    </form>
+                                                @endif
+                                            @endforeach
+                                        @else
+                                            <form action="/abandon" method="post">
+                                                @csrf
+                                                <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                                <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                            </form>
+                                        @endif
+                                    </div>
+>>>>>>> Stashed changes
                                 </div>
                             </div>
                         </div>  
@@ -84,17 +146,10 @@ crossorigin=""/>
                 </table> --}}
 
                 <h3 class="text-center">History</h3>
-                @php
-                  $i = 0
-                @endphp
                 <ul class="list-group m-1">
-                    @foreach ($data['history'] as $log)
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        {{$log->device_name}} {{-- get the device name --}}
-                        <span class="badge bg-primary rounded-pill">{{$log->created_at->diffForHumans()}}</span> {{-- get the date --}}
-                    </li>
+                @if (count($data['history']))
                     @php
-                        $i++
+                        $i = 0
                     @endphp
                     @if ($i > 10)
                         @break
@@ -118,6 +173,40 @@ crossorigin=""/>
                   @endforeach
                   <tr><td colspan="2" class="text-center"><a href="/hisory">View full history</a></td></tr> --}}
                     
+                        @foreach ($data['history'] as $log)
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{$log->device_name}} {{-- get the device name --}}
+                            <span class="badge bg-primary rounded-pill">{{$log->created_at->diffForHumans()}}</span> {{-- get the date --}}
+                        </li>
+                        @php
+                            $i++
+                        @endphp
+                        @if ($i > 15)
+                            @break
+                        @endif
+                        @endforeach
+                        <li class="list-group-item d-flex justify-content-between align-items-center"><a href="/history">View full history</a></li>
+                        
+
+                
+                        {{-- @foreach ($data['history'] as $item)
+                            <tr>
+                                <td class="w-50 pt-3 text-center">{{$item->device_name}}</td>
+                                <td class="w-50 pt-3 text-center">{{$item->created_at->diffForHumans()}}</td>
+                            </tr>
+                            @php
+                                $i++
+                            @endphp
+                            @if ($i > 15)
+                                @break
+                            @endif
+                        @endforeach
+                        <tr><td colspan="2" class="text-center"><a href="/hisory">View full history</a></td></tr> --}}
+                        
+                @else
+                    <li class="list-group-item d-flex justify-content-between align-items-center">No history yet</li>
+                @endif
+                </ul>
                     
                 
             </div>

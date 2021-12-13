@@ -32,18 +32,18 @@ Route::get('/create', function(){
 //     'coordinate_x' => 43.5660385636653,
 //     'coordinate_y' => 27.81893540981833
 //   ]);
-  Pass::create([
-    'device_id' => 1,
-    'user_id' => 1
-  ]);
+  // Pass::create([
+  //   'device_id' => 1,
+  //   'user_id' => 1
+  // ]);
   Pass::create([
     'device_id' => 2,
-    'user_id' => 1
+    'user_id' => 2
   ]);
-Pass::create([
-  'device_id' => 3,
-  'user_id' => 1
-]);
+// Pass::create([
+//   'device_id' => 3,
+//   'user_id' => 1
+// ]);
 //   Manager::create([
 //     'device_id' => 2,
 //     'user_id' => 1
