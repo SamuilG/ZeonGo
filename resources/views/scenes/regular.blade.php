@@ -30,7 +30,7 @@ crossorigin=""/>
                                     <div class="card-body">
                                         <h5 class="card-title">{{$device->device_name}}</h5>
                                         <p class="card-text">
-                                            
+
                                         </p>
                                         <form action="/abandon" method="post">
                                             @csrf
@@ -51,27 +51,50 @@ crossorigin=""/>
         </td>
         <td class="col-4" rowspan="2">
             
-            <div id="history" class="col-4">
+            <div id="history">
+                {{-- <table class="list-group">
+                    
+                        <tr class="list-group-item">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    
+                </table> --}}
+
                 <h3 class="text-center">History</h3>
-                <table class="col-12">
+                @php
+                  $i = 0
+                @endphp
+                <ul class="list-group m-1">
+                    @foreach ($data['history'] as $item)
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{$item->device_name}} {{-- get the device name --}}
+                        <span class="badge bg-primary rounded-pill">{{$item->created_at->diffForHumans()}}</span> {{-- get the date --}}
+                    </li>
                     @php
-                        $i = 0
+                        $i++
                     @endphp
-                        @foreach ($data['history'] as $item)
-                            <tr>
-                                <td class="w-50 pt-3 text-center">{{$item->device_name}}</td> {{-- get the device name --}}
-                                <td class="w-50 pt-3 text-center">{{$item->created_at->diffForHumans()}}</td> {{-- get the date --}}
-                            </tr>
-                            @php
-                                $i++
-                            @endphp
-                            @if ($i > 15)
-                                @break
-                            @endif
-                        @endforeach
-                        <tr><td colspan="2" class="text-center"><a href="/hisory">View full history</a></td></tr>
-                </table>
-                
+                    @if ($i > 15)
+                        @break
+                    @endif
+                    @endforeach
+                    <li><a href="/hisory">View full history</a>
+                  </ul>
+
+            
+                  {{-- @foreach ($data['history'] as $item)
+                      <tr>
+                          <td class="w-50 pt-3 text-center">{{$item->device_name}}</td>
+                          <td class="w-50 pt-3 text-center">{{$item->created_at->diffForHumans()}}</td>
+                      </tr>
+                      @php
+                          $i++
+                      @endphp
+                      @if ($i > 15)
+                          @break
+                      @endif
+                  @endforeach
+                  <tr><td colspan="2" class="text-center"><a href="/hisory">View full history</a></td></tr> --}}
                     
                     
                 
