@@ -53,6 +53,17 @@ Route::post('/forgottenPassword', [PassController::class, 'forgottenPassword'])-
 Route::get('/forgottenPassword', [PassController::class, 'index']);
 
 // Route::post('/resetPassword', [PassController::class, 'forgottenPassword'])->name('resetPassword'); // за после 
+Route::get('/create', function(){
+  Device::create([
+    'device_name' => 'Drugo ime',
+    'coordinate_x' => 1,
+    'coordinate_y' => 1,
+  ]);
+  Pass::create([
+    'device_id' => 2,
+    'user_id' => 1
+  ]);
+});
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);

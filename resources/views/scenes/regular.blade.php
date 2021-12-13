@@ -19,11 +19,33 @@ crossorigin=""/>
 <table id="regular" class="col-12">
     <tr>
         <td id="td_locations" class="col-8">
-            <div id="locations">
+            <div id="locations" class="col-7">
                 <h3>Locations</h3>
-                @foreach ($data['devices'] as $device)
-                    {{$device->device_name}}
-                @endforeach
+                <div class="container-fluid overflow-auto">
+                    <div class="row flex-nowrap">
+
+                        @foreach ($data['devices'] as $device)
+                            <div class="col-3">
+                                <div class="card card-block">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{$device->device_name}}</h5>
+                                        <p class="card-text">
+                                            
+                                        </p>
+                                        <form action="/abandon" method="post">
+                                            @csrf
+                                            <a href="#" class="btn btn-danger" style="float: right">Abandon</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>                            
+                        @endforeach
+
+                        
+                    </div>
+                </div>
+
+
             </div>
             
         </td>
