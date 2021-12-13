@@ -20,109 +20,47 @@ crossorigin=""/>
     <tr>
         <td id="td_locations" class="col-8">
             <div id="locations" class="col-7">
-<<<<<<< Updated upstream
                 <br>
-=======
-                <h3>Locations</h3>
-                {{ $data['manager'] }}
->>>>>>> Stashed changes
                 <div class="container-fluid overflow-auto">
                     <div class="row flex-nowrap">
 
                         @foreach ($data['devices'] as $device)
-<<<<<<< Updated upstream
-                        <div class="col-3">
+                        <div class="col-4">
                             <div class="card h-100 card-block bg-dark">
                                 <div class="card-body">
                                     <h5 class="card-title text-white">{{$device->device_name}}</h5>
                                     <p class="card-text text-white">
                                         {{ $device->device_description }}
                                     </p>
-                                    {{-- @if ()
-                                        
-                                    @endif --}}
-                                    <form action="/abandon" method="post">
-                                        @csrf
-                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                        <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
-                                    </form>
-=======
-                            <div class="col-3">
-                                <div class="card card-block">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{$device->device_name}}</h5>
-                                        <p class="card-text">
-                                            {{ $device->device_description }}
-                                        </p>
-
-                                        {{-- @if ($data['manager'])
-                                                @foreach ($data['manager'] as $manager_device)
-                                                    @if ($manager_device->device_id == $device->id)
-                                                    <form action="/manage" method="post">
-                                                        @csrf
-                                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                                        <input class="btn btn-primary" style="float: right" type="submit" value="Manage">
-                                                    </form>
-                                                @endif
-                                            @endforeach
-                                        @else
-                                            <form action="/abandon" method="post">
-                                                @csrf
-                                                <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                                <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
-                                            </form>
-                                        @endif --}}
-
-                                        
-                                        
-                                        @if (count($data['manager']))
+                                    
+                                    @if (count($data['manager']))
                                             
-                                            @foreach ($data['manager'] as $manager_device)
-                                                @if ($manager_device->device_id == $device->id)
-                                                    <form action="/manage" method="post">
-                                                        @csrf
-                                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                                        <input class="btn btn-primary" style="float: right" type="submit" value="Manage">
-                                                    </form>
-                                                @else
-                                                
-                                                    <form action="/abandon" method="post">
-                                                        @csrf
-                                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                                        <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
-                                                    </form>
-                                                @endif
-                                            @endforeach
-                                        @else
-                                            <form action="/abandon" method="post">
-                                                @csrf
-                                                <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                                <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
-                                            </form>
-                                        @endif
-                                    </div>
->>>>>>> Stashed changes
+                                        @foreach ($data['manager'] as $manager_device)
+                                            @if ($manager_device->device_id == $device->id)
+                                                <form action="/manage" method="post">
+                                                    @csrf
+                                                    <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                                    <input class="btn btn-primary" style="float: right" type="submit" value="Manage">
+                                                </form>
+                                            @else
+                                            
+                                                <form action="/abandon" method="post">
+                                                    @csrf
+                                                    <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                                    <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                                </form>
+                                            @endif
+                                        @endforeach
+                                    @else
+                                        <form action="/abandon" method="post">
+                                            @csrf
+                                            <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                            <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                        </form>
+                                    @endif
                                 </div>
                             </div>
-                        </div>  
-                        <div class="col-3">
-                            <div class="card h-100 card-block bg-dark">
-                                <div class="card-body">
-                                    <h5 class="card-title text-white">{{$device->device_name}}</h5>
-                                    <p class="card-text text-white">
-                                        {{ $device->device_description }}
-                                    </p>
-                                    {{-- @if ()
-                                        
-                                    @endif --}}
-                                    <form action="/abandon" method="post">
-                                        @csrf
-                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                        <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
-                                    </form>
-                                </div>
-                            </div>
-                        </div>                            
+                        </div>
                         @endforeach
 
                         
@@ -148,17 +86,10 @@ crossorigin=""/>
                 <h3 class="text-center">History</h3>
                 <ul class="list-group m-1">
                 @if (count($data['history']))
+
                     @php
                         $i = 0
                     @endphp
-                    @if ($i > 10)
-                        @break
-                    @endif
-                    @endforeach
-                    <li class="list-group-item d-flex justify-content-between align-items-center"><a href="/history">View full history</a>
-                  </ul>
-
-            
                   {{-- @foreach ($data['history'] as $item)
                       <tr>
                           <td class="w-50 pt-3 text-center">{{$item->device_name}}</td>
