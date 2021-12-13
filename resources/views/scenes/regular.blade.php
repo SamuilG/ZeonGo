@@ -47,15 +47,24 @@ crossorigin=""/>
         <td class="col-4" rowspan="2">
             
             <div id="history">
-                <h3>History</h3>
-                <table>
-                    @foreach ($data['history'] as $item)
-                        <tr>
-                            <td>{{$item->device_name}}</td> {{-- get the device name --}}
-                            <td>{{$item->created_at->diffForHumans()}}</td> {{-- get the date --}}
+                {{-- <table class="list-group">
+                    
+                        <tr class="list-group-item">
+                            <td></td>
+                            <td></td>
                         </tr>
+                    
+                </table> --}}
+
+                <h3 class="text-center">History</h3>
+                <ul class="list-group m-1">
+                    @foreach ($data['history'] as $item)
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{$item->device_name}} {{-- get the device name --}}
+                        <span class="badge bg-primary rounded-pill">{{$item->created_at->diffForHumans()}}</span> {{-- get the date --}}
+                    </li>
                     @endforeach
-                </table>
+                  </ul>
                 
                     
                     
