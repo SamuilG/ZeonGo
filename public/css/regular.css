@@ -31,7 +31,7 @@ background: linear-gradient(145deg, rgba(33,37,41,1) 90%, rgba(255,255,255,1) 10
 #history {
     width: 100%;
     position: relative;
-    /* top: -185px; */
+    margin-top: 69px;
 }
 
 #map {
