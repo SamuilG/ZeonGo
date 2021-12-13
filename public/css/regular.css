@@ -1,8 +1,6 @@
 html, body {
     height: 100%;
     margin: 0;
-    /* background: rgb(33,37,41);
-background: linear-gradient(145deg, rgba(33,37,41,1) 90%, rgba(255,255,255,1) 100%); */
 }
 
 #wrapper {
@@ -15,8 +13,6 @@ background: linear-gradient(145deg, rgba(33,37,41,1) 90%, rgba(255,255,255,1) 10
 }
 
 #td_locations {
-    background: rgb(33,37,41);
-    background: linear-gradient(137deg, rgba(33,37,41,1) 25%, rgba(255,255,255,1) 75%);
     height: 55%;
 }
 
@@ -39,6 +35,6 @@ background: linear-gradient(145deg, rgba(33,37,41,1) 90%, rgba(255,255,255,1) 10
     margin-right: 50px;
 }
 
-.card {
-    
-}
+/* .customCard {
+    width: 26.5%;
+} */

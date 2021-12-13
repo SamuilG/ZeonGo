@@ -20,29 +20,47 @@ crossorigin=""/>
     <tr>
         <td id="td_locations" class="col-8">
             <div id="locations" class="col-7">
-                <h3>Locations</h3>
+                <br>
                 <div class="container-fluid overflow-auto">
                     <div class="row flex-nowrap">
 
                         @foreach ($data['devices'] as $device)
-                            <div class="col-3">
-                                <div class="card card-block">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{$device->device_name}}</h5>
-                                        <p class="card-text">
-                                            {{ $device->device_description }}
-                                        </p>
-                                        @if ()
-                                            
-                                        @endif
-                                        <form action="/abandon" method="post">
-                                            @csrf
-                                            <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                            <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
-                                        </form>
-                                    </div>
+                        <div class="col-3">
+                            <div class="card h-100 card-block bg-dark">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">{{$device->device_name}}</h5>
+                                    <p class="card-text text-white">
+                                        {{ $device->device_description }}
+                                    </p>
+                                    {{-- @if ()
+                                        
+                                    @endif --}}
+                                    <form action="/abandon" method="post">
+                                        @csrf
+                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                        <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                    </form>
                                 </div>
-                            </div>                            
+                            </div>
+                        </div>  
+                        <div class="col-3">
+                            <div class="card h-100 card-block bg-dark">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">{{$device->device_name}}</h5>
+                                    <p class="card-text text-white">
+                                        {{ $device->device_description }}
+                                    </p>
+                                    {{-- @if ()
+                                        
+                                    @endif --}}
+                                    <form action="/abandon" method="post">
+                                        @csrf
+                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                        <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>                            
                         @endforeach
 
                         
@@ -78,7 +96,7 @@ crossorigin=""/>
                     @php
                         $i++
                     @endphp
-                    @if ($i > 15)
+                    @if ($i > 10)
                         @break
                     @endif
                     @endforeach
