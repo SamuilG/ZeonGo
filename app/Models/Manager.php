@@ -19,7 +19,7 @@ class Manager extends Model
      * @var string[]
      */
     protected $fillable = [
-        'manager_id',
+        'user_id',
         'device_id',
     ];
 }

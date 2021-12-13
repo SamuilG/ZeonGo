@@ -16,6 +16,7 @@ class CreateDevicesTable extends Migration
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
             $table->text('device_name');
+            $table->text('device_description');
             $table->text('coordinate_x');
             $table->text('coordinate_y');
             $table->timestamps();

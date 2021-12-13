@@ -15,7 +15,7 @@ class historyFactory extends Factory
     {
         return [
             'user_id' => 1,
-            'device_id' => 1,
+            'device_id' => rand(1, 3),
         ];
     }
 }

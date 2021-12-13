@@ -30,11 +30,15 @@ crossorigin=""/>
                                     <div class="card-body">
                                         <h5 class="card-title">{{$device->device_name}}</h5>
                                         <p class="card-text">
-
+                                            {{ $device->device_description }}
                                         </p>
+                                        @if ()
+                                            
+                                        @endif
                                         <form action="/abandon" method="post">
                                             @csrf
-                                            <a href="#" class="btn btn-danger" style="float: right">Abandon</a>
+                                            <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                            <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
                                         </form>
                                     </div>
                                 </div>
@@ -66,10 +70,10 @@ crossorigin=""/>
                   $i = 0
                 @endphp
                 <ul class="list-group m-1">
-                    @foreach ($data['history'] as $item)
+                    @foreach ($data['history'] as $log)
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        {{$item->device_name}} {{-- get the device name --}}
-                        <span class="badge bg-primary rounded-pill">{{$item->created_at->diffForHumans()}}</span> {{-- get the date --}}
+                        {{$log->device_name}} {{-- get the device name --}}
+                        <span class="badge bg-primary rounded-pill">{{$log->created_at->diffForHumans()}}</span> {{-- get the date --}}
                     </li>
                     @php
                         $i++
@@ -78,7 +82,7 @@ crossorigin=""/>
                         @break
                     @endif
                     @endforeach
-                    <li><a href="/hisory">View full history</a>
+                    <li class="list-group-item d-flex justify-content-between align-items-center"><a href="/history">View full history</a>
                   </ul>
 
             
