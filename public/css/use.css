@@ -55,3 +55,7 @@ html, body {
     height: 41.666%;
     overflow: auto;
 }
+
+.changeDeviceGroup {
+    width: 30%;
+}

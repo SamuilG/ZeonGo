@@ -16,9 +16,14 @@ class ManageDevice extends Controller
                     ->get();
 
         $history = History::where('device_id', $device_id)
+                    ->join('devices', 'history.device_id', '=', 'devices.id')
+                    ->join('users', 'history.user_id', '=', 'users.id')
+                    ->select('users.email', 'history.created_at')
                     ->get();
 
         $members = Pass::where('device_id', $device_id)
+                    ->join('users', 'passes.user_id', '=', 'users.id')
+                    ->select('users.email', 'passes.created_at')
                     ->get();
         $data = array('device' => $device, 'history' => $history, 'members' => $members);
 

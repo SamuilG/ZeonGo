@@ -33,7 +33,24 @@
 <table id="regular" class="col-12">
     <tr>
         <td id="td_m_about" class="col-7">
-            
+        <form action="/saveChanges" method="POST">
+
+            <div class="form-group changeDeviceGroup"> 
+                <label for="device_name" class="form-label">Device name</label>
+                <input type="text" class="form-control" id="device_name" name="device_name" value="{{$data['device']->first()->device_name}}">
+            </div>
+
+            <div class="form-group changeDeviceGroup">
+                <label for="device_description">Device description</label>
+                <textarea class="form-control" rows="5" id="device_description" name="device_description">{{$data['device']->first()->device_description}}</textarea>
+            </div>
+
+            <div class="form-group changeDeviceGroup">
+                <label for="coordinates">Device coordinates</label>
+                <input type="text" class="form-control" id="coordinates" name="coordinates" value="{{$data['device']->first()->coordinate_x.", ".$data['device']->first()->coordinate_y}}">
+            </div>
+            <input type="submit" value="Update" class="btn btn-primary">
+        </form>
             
         </td>
         <td id="td_m_members" class="col-5" rowspan="2">
@@ -52,7 +69,7 @@
                         
                             @foreach ($data['history'] as $log)
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                {{$log->device_id}} {{-- get the device name --}}
+                                {{$log->email}} {{-- get the device name --}}
                                 <span class="badge bg-primary rounded-pill">{{$log->created_at->diffForHumans()}}</span> {{-- get the date --}}
                             </li>
                             @php
