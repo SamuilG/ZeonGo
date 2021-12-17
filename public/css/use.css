@@ -20,8 +20,9 @@ html, body {
     
     position: absolute;
     top: 69px;
-    margin-left: 25px;
-    margin-right: 25px;
+    /* height: 100%; */
+    /* margin-left: 25px;
+    margin-right: 25px; */
 }
 
 #history {
@@ -32,7 +33,7 @@ html, body {
 
 #map {
     height: 100%;
-    margin-right: 50px;
+    /* margin-right: 50px; */
 }
 
 /* .customCard {

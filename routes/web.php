@@ -54,6 +54,10 @@ Route::get('/create', function(){
 // Home
 Route::get('/home', [RegularController::class, 'index'])->name('home');
 
+Route::get('/manage', function () {
+  return view('index');
+});
+
 // Email
 Route::get('/verifyEmail', [EmailController::class, 'verifyEmail']);
 
