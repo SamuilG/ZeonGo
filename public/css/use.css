@@ -39,3 +39,19 @@ html, body {
 /* .customCard {
     width: 26.5%;
 } */
+
+#td_m_about {
+    background-color: aqua;
+    height: 60%;
+}
+
+#td_m_members {
+    background-color: bisque;
+}
+
+#td_m_history {
+    position: fixed;
+    width: 58.333%;
+    height: 41.666%;
+    overflow: auto;
+}
