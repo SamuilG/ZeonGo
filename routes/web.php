@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\PassController;
 use App\Http\Controllers\Devices\UserOptions;
 use App\Http\Controllers\Auth\EmailController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Devices\ManageDevice;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Scene\RegularController;
@@ -80,3 +81,5 @@ Route::get('/', function () {
 // Device management things
 // normal user things
 Route::post('/abandon', [UserOptions::class, 'leaveDevice'])->name("leaveDevice");
+// management things
+Route::post('/manage', [ManageDevice::class, 'index'])->name("manage");
