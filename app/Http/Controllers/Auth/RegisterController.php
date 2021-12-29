@@ -12,6 +12,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\RegisterRequest;
 
 class RegisterController extends Controller
 {
@@ -24,20 +25,9 @@ class RegisterController extends Controller
         return view('auth.register');
     }
 
-    public function store(Request $request){
-        $this->validate($request, [
-            'name' => 'required|max: 255',
-            'email' => 'required|max: 255|email',
-            'password' => 'required|confirmed',
-        ]);
-
+    public function store(RegisterRequest $request){
         $emailVKey = Str::random(50);
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'email_verified' => $emailVKey
-        ]);
+        User::create($request->validated() + ['email_verified' => $emailVKey]);
 
         $data = array('email' => $request->email, 'name' =>  $request->name, 'verifyKey' => $emailVKey);
         Mail::send('emails.emailVerify', ["data" => $data], function($m) use($data){

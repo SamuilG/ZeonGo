@@ -15,6 +15,8 @@ return array(
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DeviceController' => $baseDir . '/app/Http/Controllers/DeviceController.php',
+    'App\\Http\\Controllers\\Devices\\ManageDevice' => $baseDir . '/app/Http/Controllers/Devices/ManageDevice.php',
+    'App\\Http\\Controllers\\Devices\\UserOptions' => $baseDir . '/app/Http/Controllers/Devices/UserOptions.php',
     'App\\Http\\Controllers\\Scene\\RegularController' => $baseDir . '/app/Http/Controllers/Scene/RegularController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',

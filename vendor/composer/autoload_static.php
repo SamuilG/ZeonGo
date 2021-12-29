@@ -530,6 +530,8 @@ class ComposerStaticInit64ce28e5251698e5a8570617b471dc5d
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DeviceController' => __DIR__ . '/../..' . '/app/Http/Controllers/DeviceController.php',
+        'App\\Http\\Controllers\\Devices\\ManageDevice' => __DIR__ . '/../..' . '/app/Http/Controllers/Devices/ManageDevice.php',
+        'App\\Http\\Controllers\\Devices\\UserOptions' => __DIR__ . '/../..' . '/app/Http/Controllers/Devices/UserOptions.php',
         'App\\Http\\Controllers\\Scene\\RegularController' => __DIR__ . '/../..' . '/app/Http/Controllers/Scene/RegularController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
