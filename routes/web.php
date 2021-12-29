@@ -1,9 +1,7 @@
 <?php
 
 use App\Models\Pass;
-// use App\Http\Controllers\Auth\PasswordController;
 use App\Models\Device;
-use App\Models\History;
 use App\Models\Manager;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\PassController;
@@ -27,28 +25,40 @@ use App\Http\Controllers\Scene\RegularController;
 */
 
 Route::get('/create', function(){
-//   Device::create([
-//     'device_name' => 'EG Geo Milev',
-//     'device_description' => 'EG Geo Milev is a school located in Dobrich. Sami the giga chad is from there!',
-//     'coordinate_x' => 43.5660385636653,
-//     'coordinate_y' => 27.81893540981833
-//   ]);
+  // Device::create([
+  //   'device_name' => 'EG Geo Milev',
+  //   'device_description' => 'EG Geo Milev is a school located in Dobrich. Sami the giga chad is from there!',
+  //   'coordinate_x' => 43.5660385636653,
+  //   'coordinate_y' => 27.81893540981833
+  // ]);
+  // Device::create([
+  //   'device_name' => 'PMG Ivan Vazov',
+  //   'device_description' => 'PMG Ivan Vazov is a school located in Dobrich. Ilko studies there!',
+  //   'coordinate_x' => 43.564057234319115, 
+  //   'coordinate_y' => 27.828727169323802
+  // ]);
+  // Device::create([
+  //   'device_name' => 'Bazata',
+  //   'device_description' => 'Bazata is our favourite place to be',
+  //   'coordinate_x' => 43.57019220851931,
+  //   'coordinate_y' => 27.82741656421111
+  // ]);
   // Pass::create([
   //   'device_id' => 1,
   //   'user_id' => 1
   // ]);
-  Pass::create([
-    'device_id' => 2,
-    'user_id' => 2
-  ]);
-// Pass::create([
-//   'device_id' => 3,
-//   'user_id' => 1
-// ]);
-//   Manager::create([
-//     'device_id' => 2,
-//     'user_id' => 1
-//   ]);
+  // Pass::create([
+  //   'device_id' => 2,
+  //   'user_id' => 1
+  // ]);
+  // Pass::create([
+  //   'device_id' => 3,
+  //   'user_id' => 1
+  // ]);
+  // Manager::create([
+  //   'device_id' => 2,
+  //   'user_id' => 1
+  // ]);
 });
 
 // Home
