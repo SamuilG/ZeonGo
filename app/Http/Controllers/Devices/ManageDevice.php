@@ -12,19 +12,13 @@ class ManageDevice extends Controller
 {
     public function index(Request $request){
         $device_id = $request->device_id;
-        $device = Device::where('id', $device_id)
-                    ->get();
 
-        $history = History::where('device_id', $device_id)
-                    ->join('devices', 'history.device_id', '=', 'devices.id')
-                    ->join('users', 'history.user_id', '=', 'users.id')
-                    ->select('users.email', 'history.created_at')
-                    ->get();
+        $device = Device::find($device_id);
+        
+        $history = $device->history;
 
-        $members = Pass::where('device_id', $device_id)
-                    ->join('users', 'passes.user_id', '=', 'users.id')
-                    ->select('users.email', 'passes.created_at')
-                    ->get();
+        $members = $device->users;
+        
         $data = array('device' => $device, 'history' => $history, 'members' => $members);
 
         return view('devices.manage')->with('data', $data);

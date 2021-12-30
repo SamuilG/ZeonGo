@@ -54,7 +54,7 @@
             
         </td>
         <td id="td_m_members" class="col-5" rowspan="2">
-            
+            {{$data['members']}}
         </td>
     </tr>
     <tr>

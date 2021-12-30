@@ -23,4 +23,17 @@ class Device extends Model
     {
         return 'uuid';
     }
+
+    public function history()
+    {
+        return $this->hasMany(History::class)
+                    ->join('users', 'history.user_id', '=', 'users.id')
+                    ->select('users.email', 'history.created_at');
+    }
+    public function users()
+    {
+        return $this->hasMany(Pass::class)
+                    ->join('users', 'passes.user_id', '=', 'users.id')
+                    ->select('users.email', 'passes.created_at');
+    }
 }
