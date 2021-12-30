@@ -23,16 +23,18 @@ class RegularController extends Controller
             return redirect()->route('login')->with('status', 'Please verify your email');
         }
 
-        $devices = DB::table('passes')
-            ->join('devices', 'passes.device_id', '=' , 'devices.id')
-            ->where('user_id', auth()->id())
-            ->get();
+        // $devices = DB::table('passes')
+        //     ->join('devices', 'passes.device_id', '=' , 'devices.id')
+        //     ->where('user_id', auth()->id())
+        //     ->get();
+        $devices = auth()->user()->devices;
         
-        $history = History::where('user_id', '=', auth()->id())
-            ->join('devices', 'history.device_id', '=', 'devices.id')
-            ->select('devices.device_name', 'history.created_at')
-            // ->orderBy('created_at', 'DESC')
-            ->get();
+        // $history = History::where('user_id', '=', auth()->id())
+        //     ->join('devices', 'history.device_id', '=', 'devices.id')
+        //     ->select('devices.device_name', 'history.created_at')
+        //     // ->orderBy('created_at', 'DESC')
+        //     ->get();
+        $history = auth()->user()->history;
 
         $manager = Manager::where('user_id', '=', auth()->id())
                         ->select('managers.device_id')

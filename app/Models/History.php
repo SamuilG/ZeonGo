@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class History extends Model
 {
+    // App\Models\History::factory()->times(100)->create()
+    // use this to run the factory
+    
     use HasFactory;
 
             /**

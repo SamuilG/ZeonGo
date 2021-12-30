@@ -30,7 +30,6 @@ crossorigin=""/>
                                 <div class="card-body">
                                     <h4 class="card-title text-white pb-2">{{$device->device_name}}</h4>
                                     <p class="card-text text-white">
-                                        fglkdjkjkfdl dfnmgksdnfgkjsdn hgkjshdkjfn sdhgkjsdhm dksjhgtskdnvlk sfjkhgkjsldng 
                                         {{ $device->device_description }}
                                     </p>
                                     
