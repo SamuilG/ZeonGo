@@ -15,14 +15,6 @@ class Device extends Model
         'coordinate_y',
     ];
 
-    protected $hidden = [
-        'id'
-    ];
-    
-    public function getRouteKeyName()
-    {
-        return 'uuid';
-    }
 
     public function history()
     {

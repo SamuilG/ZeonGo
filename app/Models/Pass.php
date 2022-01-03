@@ -21,6 +21,7 @@ class Pass extends Model
      */
     protected $fillable = [
         'device_id',
-        'user_id'
+        'user_id',
+        'approved'
     ];
 }

@@ -45,15 +45,18 @@ use App\Http\Controllers\Scene\RegularController;
 //   ]);
 //   Pass::create([
 //     'device_id' => 1,
-//     'user_id' => 1
+//     'user_id' => 1,
+//     'approved' => true,
 //   ]);
 //   Pass::create([
 //     'device_id' => 2,
-//     'user_id' => 1
+//     'user_id' => 1,
+//     'approved' => true,
 //   ]);
 //   Pass::create([
 //     'device_id' => 3,
-//     'user_id' => 1
+//     'user_id' => 1,
+//     'approved' => true,
 //   ]);
 //   Manager::create([
 //     'device_id' => 2,

@@ -56,6 +56,7 @@ class User extends Authenticatable
     }
     public function history(){
         return $this->hasMany(History::class)
-                    ->join('devices', 'history.device_id', '=', 'devices.id');
+                    ->join('devices', 'history.device_id', '=', 'devices.id')
+                    ->orderBy('history.created_at', 'DESC');
     }
 }

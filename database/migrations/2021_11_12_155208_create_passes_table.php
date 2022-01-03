@@ -17,6 +17,7 @@ class CreatePassesTable extends Migration
             $table->id();
             $table->foreignId('device_id')->constrained()->onDelete('cascade');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->boolean('approved');
             $table->timestamps();
         });
     }
