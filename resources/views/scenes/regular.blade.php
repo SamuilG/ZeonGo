@@ -28,7 +28,7 @@ crossorigin=""/>
                         <div class="row flex-nowrap">
     
                             @foreach ($data['devices'] as $device)
-                            <div class="col-4">
+                            <div class="col-5">
                                 <div class="card h-100 card-block bg-dark">
                                     <div class="card-body">
                                         <h4 class="card-title text-white pb-2">{{$device->device_name}}</h4>
@@ -75,6 +75,7 @@ crossorigin=""/>
                             @endforeach
                             
                         </div>
+                                    <br>
                     </div>
     
     
