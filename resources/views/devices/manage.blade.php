@@ -33,6 +33,7 @@
 <table id="regular" class="col-12">
     <tr>
         <td id="td_m_about" class="col-7">
+        <p>Device Key: {{ $data['device']->first()->device_key }}</p>
         <form action="/saveChanges" method="POST">
 
             <div class="form-group changeDeviceGroup"> 
@@ -53,8 +54,24 @@
         </form>
             
         </td>
+        {{-- load the members --}}
         <td id="td_m_members" class="col-5" rowspan="2">
             {{$data['members']}}
+            <ul class="list-group m-1">
+                @foreach ($data['members'] as $member)
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{$member->email}}
+                        {{$member->name}}
+                        {{-- show if the member is approved and if not let the manager decide --}}
+                        @if ($member->approved == true)
+                            <input class="btn btn-danger" type="submit" value="Abandon">
+                        @else
+                            <input class="btn btn-success" type="submit" value="Approve">
+                            <input class="btn btn-danger" type="submit" value="Decline">
+                        @endif
+                    </li>
+                @endforeach
+            </ul>
         </td>
     </tr>
     <tr>
@@ -85,7 +102,7 @@
                     @else
                         <li class="list-group-item d-flex justify-content-between align-items-center">No history yet</li>
                     @endif
-                    </ul>
+                </ul>
             </div>
             
         </td>

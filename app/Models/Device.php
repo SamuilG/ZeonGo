@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 
 class Device extends Model
@@ -13,6 +14,7 @@ class Device extends Model
         'device_description',
         'coordinate_x',
         'coordinate_y',
+        'device_key',
     ];
 
 
@@ -26,6 +28,15 @@ class Device extends Model
     {
         return $this->hasMany(Pass::class)
                     ->join('users', 'passes.user_id', '=', 'users.id')
-                    ->select('users.email', 'passes.created_at');
+                    ->select('users.email', 'users.name', 'passes.created_at', 'passes.approved');
+    }
+    
+    public static function createKey()
+    {
+        $key = Str::random(6);
+        while(count(Device::where('device_key', $key)->get())){
+            $key = Str::random(6);
+        }
+        return $key;
     }
 }

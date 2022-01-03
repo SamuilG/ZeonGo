@@ -27,6 +27,14 @@
                 
               
                 @auth
+                <li>
+                  <form action="{{ route('addDevice') }}" method="POST" class="p-3 inline">
+                      
+                      @csrf
+                      <input type="text" name="device_key">
+                      <button type="submit" class="me-2 btn btn-outline-light">Join</button>
+                  </form>
+                </li> 
                     <li>
                       <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
                           @csrf

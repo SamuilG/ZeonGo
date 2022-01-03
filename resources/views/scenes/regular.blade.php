@@ -33,6 +33,9 @@ crossorigin=""/>
                                     <div class="card-body">
                                         <h4 class="card-title text-white pb-2">{{$device->device_name}}</h4>
                                         <p class="card-text text-white overflow-auto">
+                                            @if (!$device->approved)
+                                            <span class="text-danger">Wait for a manager to approve your request to join</span> <br>
+                                        @endif
                                             {{ $device->device_description }}
                                             {{-- {{ $device->device_description }}
                                             {{ $device->device_description }}
@@ -131,5 +134,14 @@ crossorigin=""/>
 
 <script src="js/map.js"></script>
 
+
+@if (session('status'))
+    <script>
+    alert( '{{Session::get('status')}}' )
+    </script>
+@endif
+@error('device_key')
+    <script>alert("The code is invalid")</script>
+@enderror
 
 @endsection

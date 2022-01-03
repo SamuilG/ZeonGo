@@ -3,11 +3,18 @@
 namespace App\Http\Controllers\Devices;
 
 use App\Models\Pass;
+use App\Models\Device;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\JoinDeviceRequest;
 
 class UserOptions extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+
     public function leaveDevice(Request $request)
     {
         Pass::where('device_id', $request->device_id)
@@ -15,5 +22,24 @@ class UserOptions extends Controller
             ->delete();
 
             return redirect()->route('home');
+    }
+
+    public function addDevice(JoinDeviceRequest $request){
+        $device = Device::where('device_key', $request->validated())->first();
+        $check = Pass::where('user_id', auth()->id())
+                    ->where('device_id', $device->id)->first();
+        if($check){
+            return redirect()->back()->with('status', 'You have already joined');
+        }
+        // dd($device->id);
+        if(!$device){
+            return redirect()->back()->with('status', 'The code is invalid');
+        }
+        Pass::create([
+            'device_id' => $device->id,
+            'user_id' => auth()->id(),
+            'approved' => false
+        ]);
+        return redirect()->back()->with('status', 'Succesfuly, joined! Please wait for a manager to approve your request to join');
     }
 }
