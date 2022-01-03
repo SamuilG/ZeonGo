@@ -12,39 +12,44 @@
     <title>@yield('title')</title>
   </head>
   <body>
-    <div id="wrapper">
+    {{-- <div id="wrapper"> --}}
+    <div class="container-fluid d-flex h-100 flex-column">
 
-    
-      <nav class="navbar navbar-expand navbar-light bg-dark vh-50" style="height: 69px;">
-        <a class="ms-3 h-100 navbar-brand" href="/">
-          <img class="mh-100 img-fluid" src="/images/ZeonGoLogo.png" alt="ZeonGo">
-        </a>
-      
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav" style="margin-left: auto">
-            
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand navbar-light bg-dark vh-50" style="height: 69px;">
+            <a class="ms-3 h-100 navbar-brand" href="/">
+              <img class="mh-100 img-fluid" src="/images/ZeonGoLogo.png" alt="ZeonGo">
+            </a>
           
-            @auth
-                <li>
-                  <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
-                      @csrf
-                      <button type="submit" class="me-2 btn btn-outline-light">Logout</button>
-                  </form>
-                </li>
-            @endauth
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav" style="margin-left: auto">
+                
+              
+                @auth
+                    <li>
+                      <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
+                          @csrf
+                          <button type="submit" class="me-2 btn btn-outline-light">Logout</button>
+                      </form>
+                    </li>
+                @endauth
 
-            @guest
-                <li>
-                  <a href="{{ route('login') }}" class="me-2 btn btn-outline-light" role="button" aria-disabled="true">Login</a>
-                </li>  
-                <li>
-                  <a href="{{ route('register') }}" class="me-3 btn btn-outline-light" role="button" aria-disabled="true">Register</a>
-                </li>
-            @endguest  
+                @guest
+                    <li>
+                      <a href="{{ route('login') }}" class="me-2 btn btn-outline-light" role="button" aria-disabled="true">Login</a>
+                    </li>  
+                    <li>
+                      <a href="{{ route('register') }}" class="me-3 btn btn-outline-light" role="button" aria-disabled="true">Register</a>
+                    </li>
+                @endguest  
 
-          </ul>    
+              </ul>    
+            </div>
+          </nav>
         </div>
-      </nav>
+      </div>
+      
 
       @yield('content')
 
