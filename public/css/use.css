@@ -25,6 +25,16 @@ html, body {
     margin-right: 25px; */
 }
 
+/* .col-3 {
+    height: 100%;
+}
+ */
+.card-p {
+    position: absolute;
+    height: 55%;
+    overflow: auto;
+}
+
 #history {
     width: 100%;
     position: relative;

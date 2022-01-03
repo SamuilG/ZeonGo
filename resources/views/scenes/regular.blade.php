@@ -16,6 +16,8 @@ crossorigin=""/>
 
 @section('content')
 
+
+
 <table id="regular" class="col-12">
     <tr>
         <td id="td_locations" class="col-8">
@@ -30,11 +32,14 @@ crossorigin=""/>
                                 <div class="card-body">
                                     <h4 class="card-title text-white pb-2">{{$device->device_name}}</h4>
                                     <p class="card-text text-white">
+                                        @if (!$device->approved)
+                                            <span class="text-danger">Wait for a manager to approve your request to join</span> <br>
+                                        @endif
                                         {{ $device->device_description }}
                                     </p>
                                     
                                     @if (count($data['manager']))
-                                            
+                                        
                                         @foreach ($data['manager'] as $manager_device)
                                             @if ($manager_device->device_id == $device->id)
                                                 <form action="/manage" method="post">
@@ -55,7 +60,7 @@ crossorigin=""/>
                                         <form action="/abandon" method="post">
                                             @csrf
                                             <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                            <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                            <input class="btn btn-danger"style="float: right" type="submit" value="Abandon">
                                         </form>
                                     @endif
                                 </div>
@@ -116,5 +121,14 @@ crossorigin=""/>
 
 <script src="js/map.js"></script>
 
+
+@if (session('status'))
+    <script>
+    alert( '{{Session::get('status')}}' )
+    </script>
+@endif
+@error('device_key')
+    <script>alert("The code is invalid")</script>
+@enderror
 
 @endsection

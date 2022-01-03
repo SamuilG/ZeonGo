@@ -24,45 +24,48 @@ use App\Http\Controllers\Scene\RegularController;
 |
 */
 
-// Route::get('/create', function(){
-//   Device::create([
-//     'device_name' => 'EG Geo Milev',
-//     'device_description' => 'EG Geo Milev is a school located in Dobrich. Sami the giga chad is from there!',
-//     'coordinate_x' => 43.5660385636653,
-//     'coordinate_y' => 27.81893540981833
-//   ]);
-//   Device::create([
-//     'device_name' => 'PMG Ivan Vazov',
-//     'device_description' => 'PMG Ivan Vazov is a school located in Dobrich. Ilko studies there!',
-//     'coordinate_x' => 43.564057234319115, 
-//     'coordinate_y' => 27.828727169323802
-//   ]);
-//   Device::create([
-//     'device_name' => 'AAAAAAAAAA',
-//     'device_description' => 'AAAAAAAAAAAAAAAAA',
-//     'coordinate_x' => 43.57019220851931,
-//     'coordinate_y' => 27.82741656421111
-//   ]);
-//   Pass::create([
-//     'device_id' => 1,
-//     'user_id' => 1,
-//     'approved' => true,
-//   ]);
-//   Pass::create([
-//     'device_id' => 2,
-//     'user_id' => 1,
-//     'approved' => true,
-//   ]);
-//   Pass::create([
-//     'device_id' => 3,
-//     'user_id' => 1,
-//     'approved' => true,
-//   ]);
-//   Manager::create([
-//     'device_id' => 2,
-//     'user_id' => 1
-//   ]);
-// });
+Route::get('/create', function(){
+  Device::create([
+    'device_name' => 'EG Geo Milev',
+    'device_description' => 'EG Geo Milev is a school located in Dobrich. Sami the giga chad is from there!',
+    'coordinate_x' => 43.5660385636653,
+    'coordinate_y' => 27.81893540981833,
+    'device_key' => Device::createKey(),
+  ]);
+  Device::create([
+    'device_name' => 'PMG Ivan Vazov',
+    'device_description' => 'PMG Ivan Vazov is a school located in Dobrich. Ilko studies there!',
+    'coordinate_x' => 43.564057234319115, 
+    'coordinate_y' => 27.828727169323802,
+    'device_key' => Device::createKey(),
+  ]);
+  Device::create([
+    'device_name' => 'AAAAAAAAAA',
+    'device_description' => 'AAAAAAAAAAAAAAAAA',
+    'coordinate_x' => 43.57019220851931,
+    'coordinate_y' => 27.82741656421111,
+    'device_key' => Device::createKey(),
+  ]);
+  Pass::create([
+    'device_id' => 1,
+    'user_id' => 1,
+    'approved' => true,
+  ]);
+  Pass::create([
+    'device_id' => 2,
+    'user_id' => 1,
+    'approved' => true,
+  ]);
+  Pass::create([
+    'device_id' => 3,
+    'user_id' => 1,
+    'approved' => true,
+  ]);
+  Manager::create([
+    'device_id' => 2,
+    'user_id' => 1
+  ]);
+});
 
 // Home
 Route::get('/home', [RegularController::class, 'index'])->name('home');
@@ -94,5 +97,6 @@ Route::get('/', function () {
 // Device management things
 // normal user things
 Route::post('/abandon', [UserOptions::class, 'leaveDevice'])->name("leaveDevice");
+Route::post('/addDevice', [UserOptions::class, 'addDevice'])->name("addDevice");
 // management things
 Route::post('/manage', [ManageDevice::class, 'index'])->name("manage");

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Device;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -20,6 +21,7 @@ class CreateDevicesTable extends Migration
             $table->text('device_description');
             $table->text('coordinate_x');
             $table->text('coordinate_y');
+            $table->text('device_key');
             $table->timestamps();
         });
     }
