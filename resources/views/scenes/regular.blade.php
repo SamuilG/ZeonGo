@@ -76,8 +76,8 @@ crossorigin=""/>
                                 </div>
                             </div>
                             @endforeach
-                            
                         </div>
+                            <br>
                     </div>
     
     
