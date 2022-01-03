@@ -29,7 +29,12 @@ crossorigin=""/>
                             <div class="card h-100 card-block bg-dark">
                                 <div class="card-body">
                                     <h4 class="card-title text-white pb-2">{{$device->device_name}}</h4>
+<<<<<<< Updated upstream
                                     <p class="card-text text-white">
+=======
+                                    <p class="card-p card-text text-white">
+                                        fglkdjkjkfdl dfnmgksdnfgkjsdn hgkjshdkjfn sdhgkjsdhm dksjhgtskdnvlk sfjkhgkjsldng 
+>>>>>>> Stashed changes
                                         {{ $device->device_description }}
                                     </p>
                                     
