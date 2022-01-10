@@ -19,8 +19,7 @@ class CreateDevicesTable extends Migration
             $table->id();
             $table->text('device_name');
             $table->text('device_description');
-            $table->text('coordinate_x');
-            $table->text('coordinate_y');
+            $table->text('coordinates');
             $table->text('device_key');
             $table->timestamps();
         });

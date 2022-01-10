@@ -35,20 +35,20 @@
         <td id="td_m_about" class="col-7">
         <p>Device Key: {{ $data['device']->first()->device_key }}</p>
         <form action="/saveChanges" method="POST">
-
+            @csrf
             <div class="form-group changeDeviceGroup"> 
                 <label for="device_name" class="form-label">Device name</label>
-                <input type="text" class="form-control" id="device_name" name="device_name" value="{{$data['device']->first()->device_name}}">
+                <input type="text" class="form-control" id="device_name" name="device_name" value="{{$data['device']->device_name}}">
             </div>
 
             <div class="form-group changeDeviceGroup">
                 <label for="device_description">Device description</label>
-                <textarea class="form-control" rows="5" id="device_description" name="device_description">{{$data['device']->first()->device_description}}</textarea>
+                <textarea class="form-control" rows="5" id="device_description" name="device_description">{{$data['device']->device_description}}</textarea>
             </div>
 
             <div class="form-group changeDeviceGroup">
                 <label for="coordinates">Device coordinates</label>
-                <input type="text" class="form-control" id="coordinates" name="coordinates" value="{{$data['device']->first()->coordinate_x.", ".$data['device']->first()->coordinate_y}}">
+                <input type="text" class="form-control" id="coordinates" name="coordinates" value="{{$data['device']->coordinates}}">
             </div>
             <input type="submit" value="Update" class="btn btn-primary">
         </form>

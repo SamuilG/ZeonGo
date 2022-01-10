@@ -18,7 +18,7 @@ class ManageDevice extends Controller
     public function index(Request $request){
         $device_id = $request->device_id;
 
-        $device = Device::find($device_id);
+        $device = Device::find($device_id)->first();
         
         $history = $device->history;
 
@@ -27,5 +27,18 @@ class ManageDevice extends Controller
         $data = array('device' => $device, 'history' => $history, 'members' => $members);
 
         return view('devices.manage')->with('data', $data);
+    }
+
+    public function saveChanges(Request $request){
+        //dd($request);
+        $request->validate([
+            'device_id' => 'required',
+            'device_name' => 'required|max:100',
+            'device_description' => 'required|max:500',
+            'coordinates' => 'required'
+        ]);
+        Device::find($request->id)->update($request);
+
+        return back();
     }
 }
