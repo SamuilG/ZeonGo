@@ -7,6 +7,15 @@ html, body {
     padding: 0;
 }
 
+.col-card {
+    flex: 0 0 auto;
+    width: 30%;
+}
+
+.locations {
+    height: 55%;
+}
+
 #map {
     height: 100%;
 }

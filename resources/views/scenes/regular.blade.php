@@ -7,7 +7,6 @@ crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
-<link rel="stylesheet" href="/css/use.css">
 @endsection
 
 @section('title')
@@ -19,29 +18,23 @@ crossorigin=""/>
 <div class="row flex-grow-1">
     
     <div class="col-md-8 d-flex h-100 flex-column">
-        <div class="row">
-            <div class="col">
+        <div class="row locations">
+            <div class="col h-100">
                 
-                <div id="locations" class="col-8">
-                    <br>
-                    <div class="container-fluid overflow-auto">
-                        <div class="row flex-nowrap">
+                {{-- <div class="col-8 h-100"> --}}
+                    <div class="container-fluid h-100 d-flex overflow-auto">
+                        <div class="row flex-grow-1 flex-nowrap">
     
                             @foreach ($data['devices'] as $device)
-                            <div class="col-4">
+                            <div class="col-card p-3 ps-2 pe-2">
                                 <div class="card h-100 card-block bg-dark">
-                                    <div class="card-body">
+                                    <div class="card-body overflow-auto">
                                         <h4 class="card-title text-white pb-2">{{$device->device_name}}</h4>
-                                        <p class="card-text text-white overflow-auto">
+                                        <p class="card-text text-white">
                                             @if (!$device->approved)
-                                            <span class="text-danger">Wait for a manager to approve your request to join</span> <br>
+                                            <span class="text-danger">Access pending</span> <br>
                                         @endif
-                                            {{ $device->device_description }}
-                                            {{-- {{ $device->device_description }}
-                                            {{ $device->device_description }}
-                                            {{ $device->device_description }}
-                                            {{ $device->device_description }}
-                                            {{ $device->device_description }} --}}
+                                        {{ $device->device_description }}
                                         </p>
                                         
                                         
@@ -81,7 +74,7 @@ crossorigin=""/>
                     </div>
     
     
-                </div>
+                {{-- </div> --}}
 
             </div>
         </div>
