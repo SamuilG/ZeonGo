@@ -11,11 +11,16 @@ class Device extends Model
     
     protected $fillable = [
         'device_name',
+        'uuid',
         'device_description',
         'coordinates',
         'device_key',
     ];
 
+    public function getRouteKeyName()
+    {
+        return 'uuid';
+    }
 
     public function history()
     {
@@ -37,5 +42,14 @@ class Device extends Model
             $key = Str::random(6);
         }
         return $key;
+    }
+
+    public static function createUUID()
+    {
+        $uuid = Str::uuid();
+        while(count(Device::where('uuid', $uuid)->get())){
+            $uuid = Str::uuid();
+        }
+        return $uuid;
     }
 }

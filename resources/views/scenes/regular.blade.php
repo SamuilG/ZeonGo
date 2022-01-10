@@ -44,11 +44,12 @@ crossorigin=""/>
                                                 
                                             @foreach ($data['manager'] as $manager_device)
                                                 @if ($manager_device->device_id == $device->id)
-                                                    <form action="/manage" method="post">
+                                                    {{-- <form action="/manage" method="get">
                                                         @csrf
                                                         <input type="hidden" name="device_id" value="{{ $device->id }}">
                                                         <input class="btn btn-primary" style="float: right" type="submit" value="Manage">
-                                                    </form>
+                                                    </form> --}}
+                                                    <a class="btn btn-primary" style="float: right" href='/manage/{{$device->uuid}}'>Manage</a>
                                                 @else
                                                 
                                                     <form action="/abandon" method="post">

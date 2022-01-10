@@ -15,10 +15,7 @@ class ManageDevice extends Controller
         $this->middleware(['auth']);
     }
     
-    public function index(Request $request){
-        $device_id = $request->device_id;
-
-        $device = Device::find($device_id)->first();
+    public function index(Device $device){
         
         $history = $device->history;
 
@@ -29,16 +26,19 @@ class ManageDevice extends Controller
         return view('devices.manage')->with('data', $data);
     }
 
-    public function saveChanges(Request $request){
-        //dd($request);
+    public function saveChanges(Request $request, Device $device){
+        
         $request->validate([
-            'device_id' => 'required',
-            'device_name' => 'required|max:100',
-            'device_description' => 'required|max:500',
+            'device_name' => 'required',
+            'device_description' => 'required',
             'coordinates' => 'required'
         ]);
-        Device::find($request->id)->update($request);
+        // dd($device);
+        $device->device_name = $request->device_name;
+        $device->device_description = $request->device_description;
+        $device->coordinates = $request->coordinates;
 
-        return back();
+        $device->save();
+        return redirect('/manage/'.$device->uuid);
     }
 }

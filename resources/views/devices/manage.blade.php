@@ -34,7 +34,7 @@
     <tr>
         <td id="td_m_about" class="col-7">
         <p>Device Key: {{ $data['device']->first()->device_key }}</p>
-        <form action="/saveChanges" method="POST">
+        <form action="/manage/{{ $data['device']->uuid }}" method="POST">
             @csrf
             <div class="form-group changeDeviceGroup"> 
                 <label for="device_name" class="form-label">Device name</label>

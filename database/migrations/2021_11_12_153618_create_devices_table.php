@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Device;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,6 +18,8 @@ class CreateDevicesTable extends Migration
     {
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid');
+
             $table->text('device_name');
             $table->text('device_description');
             $table->text('coordinates');
