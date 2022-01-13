@@ -18,7 +18,7 @@ class DeviceController extends Controller
         $check = DB::table('user_keys')
             ->where('user_key', $userKey)
             ->join('passes', 'user_keys.user_id', '=' , 'passes.user_id')
-            //->where('approved', true)
+            ->where('approved', true)
             ->where('device_id', $deviceId)
             ->select('user_keys.updated_at', 'user_keys.user_id', 'user_keys.user_id')
             ->get();
