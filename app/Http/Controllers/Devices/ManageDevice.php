@@ -55,6 +55,5 @@ class ManageDevice extends Controller
         $currentPass->save();
 
         return redirect('/manage/'.$device->uuid);
-
     }
 }
