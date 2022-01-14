@@ -16,6 +16,18 @@ html, body {
     height: 55%;
 }
 
+.info {
+    height: 50%;
+}
+
+.form-group {
+    padding-bottom: 10px;
+}
+
 #map {
     height: 100%;
+}
+
+#device_description {
+    resize: none;
 }
