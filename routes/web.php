@@ -29,8 +29,8 @@ use App\Http\Controllers\Scene\RegularController;
 
 Route::get('/create', function(){
   User::create([
-    'name' => 'Ilko',
-    'email' => 'ilko.petrov27@gmail.com',
+    'name' => 'Samuil_G',
+    'email' => 'samuil.georgiev@outlook.com',
     'password' => Hash::make('123'),
     'email_verified' => '1'
   ]);
