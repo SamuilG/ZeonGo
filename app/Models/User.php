@@ -65,6 +65,7 @@ class User extends Authenticatable
         return $this->hasMany(Pass::class)
                     ->join('devices', 'passes.device_id', '=' , 'devices.id')
                     ->select('devices.device_name', 'devices.coordinates')
+                    ->get()
                     ->toJson();
     }
     public function history(){

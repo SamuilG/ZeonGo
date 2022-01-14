@@ -88,7 +88,7 @@
                                 <p class="m-0 w-50">{{$member->name}}</p>                            
                                 <p class="m-0 w-50">{{$member->email}}</p>
                             </div>
-                            {{ auth()->user()->devicesCoords }}
+                            {{ auth()->user()->devicesCoords() }}
                             {{-- show if the member is approved and if not let the manager decide --}}
                             @if (count(\App\Models\Manager::where('user_id',$member->id)->where('device_id',$data['device']->id)->get()))
                                 @if ($member->approved == true)
