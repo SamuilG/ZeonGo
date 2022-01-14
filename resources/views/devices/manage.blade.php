@@ -89,12 +89,24 @@
                                 <p class="m-0 w-50">{{$member->email}}</p>
                             </div>
                             {{-- show if the member is approved and if not let the manager decide --}}
-                            @if (auth()->id() != $member->id)
+                            @if (1 == 1)
                                 @if ($member->approved == true)
-                                    <input class="btn btn-danger" type="submit" value="Evict">
+                                    {{-- Evict user --}}
+                                    <form action="/decline/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
+                                        @csrf
+                                        <input class="btn btn-danger" type="submit" value="Evict">
+                                    </form>
                                 @else
-                                    <input class="btn btn-success" type="submit" value="Approve">
-                                    <input class="btn btn-danger" type="submit" value="Decline">
+                                    {{-- Approve user --}}
+                                    <form action="/approve/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
+                                        @csrf
+                                        <input class="btn btn-success" type="submit" value="Approve">
+                                    </form>
+                                    {{-- Decline user  --}}
+                                    <form action="/decline/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
+                                        @csrf
+                                        <input class="btn btn-danger" type="submit" value="Decline">
+                                    </form>
                                 @endif
                             @endif
                         </li>

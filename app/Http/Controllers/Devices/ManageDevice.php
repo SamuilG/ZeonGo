@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\History;
 use App\Models\Pass;
+use App\Models\User;
 
 class ManageDevice extends Controller
 {
@@ -16,7 +17,11 @@ class ManageDevice extends Controller
     }
     
     public function index(Device $device){
-        
+        if(!auth()->user()->isManager($device->id))
+        {
+            return redirect('/home');
+        }
+
         $history = $device->history;
 
         $members = $device->users;
@@ -27,7 +32,11 @@ class ManageDevice extends Controller
     }
 
     public function saveChanges(Request $request, Device $device){
-        
+        if(!auth()->user()->isManager($device->id))
+        {
+            return redirect('/home');
+        }
+
         $request->validate([
             'device_name' => 'required',
             'device_description' => 'required',
@@ -42,9 +51,14 @@ class ManageDevice extends Controller
         return redirect('/manage/'.$device->uuid);
     }
 
-    public function approve(Request $request, Device $device)
+    public function approve(Device $device, User $user)
     {
-        $user_id = $request->user_id;
+        if(!auth()->user()->isManager($device->id))
+        {
+            return redirect('/home');
+        }
+
+        $user_id = $user->id;
         $device_id = $device->id;
 
         $currentPass = Pass::where('user_id', $user_id)
@@ -55,5 +69,22 @@ class ManageDevice extends Controller
         $currentPass->save();
 
         return redirect('/manage/'.$device->uuid);
+    }
+
+    public function decline(Device $device, User $user)
+    {
+        if(!auth()->user()->isManager($device->id))
+        {
+            return redirect('/home');
+        }
+        if($user->isManager($device->id))
+        {
+            return redirect('/manage/'.$device->uuid);
+        }
+        $passToRemove = Pass::where('user_id', $user->id)
+            ->where('device_id', $device->id)
+            ->delete();
+        return redirect('/manage/'.$device->uuid);
+
     }
 }

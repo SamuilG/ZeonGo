@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
 
 class AddUuidColumnToUsersTable extends Migration
 {
@@ -15,6 +16,7 @@ class AddUuidColumnToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->uuid('uuid')
+                  ->default(User::createUUID())
                   ->after('id');
         });
     }

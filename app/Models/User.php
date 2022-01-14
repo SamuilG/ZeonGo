@@ -3,11 +3,10 @@
 namespace App\Models;
 
 use App\Models\Pass;
-use App\Models\Device;
 use App\Models\History;
+use Illuminate\Support\Str;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -52,7 +51,7 @@ class User extends Authenticatable
     {
         return 'uuid';
     }
-    
+
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
@@ -74,5 +73,17 @@ class User extends Authenticatable
             $uuid = Str::uuid();
         }
         return $uuid;
+    }
+
+    public function isManager($device_id)
+    {
+        $row = Manager::where('user_id', $this->id)
+                      ->where('device_id', $device_id)
+                      ->get();  
+        if(count($row))
+        {
+            return true;
+        }
+        return false;
     }
 }
