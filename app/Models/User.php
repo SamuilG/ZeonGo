@@ -60,6 +60,12 @@ class User extends Authenticatable
         return $this->hasMany(Pass::class)
                     ->join('devices', 'passes.device_id', '=' , 'devices.id');
     }
+
+    public function devicesCoords(){
+        return $this->hasMany(Pass::class)
+                    ->join('devices', 'passes.device_id', '=' , 'devices.id')
+                    ->select('devices.coordinates');
+    }
     public function history(){
         return $this->hasMany(History::class)
                     ->join('devices', 'history.device_id', '=', 'devices.id')
