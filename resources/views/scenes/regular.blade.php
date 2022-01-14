@@ -88,9 +88,9 @@
         </div>
     </div>
     
-    <div class="col-md-4">
+    <div class="col-md-4 position-relative">
 
-        <div id="history">
+        <div class="w-95 position-absolute top-50 start-50 translate-middle">
 
             <h3 class="text-center">History</h3>
             <ul class="list-group m-1">

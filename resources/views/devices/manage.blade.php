@@ -1,22 +1,3 @@
-{{-- @extends('layouts.app')
-
-@section('content')
-    <b>Device info</b>
-    <br>
-    {{$data['device']}}
-
-    <br><br>
-    <b>History</b>
-    <br>
-    {{$data['history']}}
-
-    <br><br>
-    <b>Members</b>
-    <br>
-    {{$data['members']}}
-@endsection --}}
-
-
 @extends('layouts.app')
 
 @section('headContent')
@@ -66,8 +47,10 @@
                 <ul class="list-group m-1">
                     @foreach ($data['members'] as $member)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            {{$member->email}}
-                            {{$member->name}}
+                            <div class="w-75">
+                                <p class="float-start m-0">{{$member->name}}</p>                            
+                                <p class="float-end m-0">{{$member->email}}</p>
+                            </div>
                             {{-- show if the member is approved and if not let the manager decide --}}
                             @if (auth()->id() != $member->id)
                                 @if ($member->approved == true)
@@ -85,37 +68,37 @@
         </div>
     </div>
     
-    <div class="col-md-5">
+    <div class="col-md-5 position-relative">
+        <div class="w-90 position-absolute top-50 start-50 translate-middle">
+            {{-- history --}}
+            <h3 class="text-center">History</h3>
+            <ul class="list-group m-1">
+                @if (count($data['history']))
 
-        {{-- history --}}
-        <h3 class="text-center">History</h3>
-        <ul class="list-group m-1">
-            @if (count($data['history']))
-
-                @php
-                    $i = 0
-                @endphp
-                
-                    @foreach ($data['history'] as $log)
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        {{$log->email}} {{-- get the device name --}}
-                        <span class="badge bg-primary rounded-pill">{{$log->created_at->diffForHumans()}}</span> {{-- get the date --}}
-                    </li>
                     @php
-                        $i++
+                        $i = 0
                     @endphp
-                    @if ($i > 10)
-                        @break
-                    @endif
-                    @endforeach
-                    <li class="list-group-item d-flex justify-content-between align-items-center"><a href="/history">View full history</a></li>
                     
-                    
-            @else
-                <li class="list-group-item d-flex justify-content-between align-items-center">No history yet</li>
-            @endif
-        </ul>
-
+                        @foreach ($data['history'] as $log)
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{$log->email}} {{-- get the device name --}}
+                            <span class="badge bg-primary rounded-pill">{{$log->created_at->diffForHumans()}}</span> {{-- get the date --}}
+                        </li>
+                        @php
+                            $i++
+                        @endphp
+                        @if ($i > 10)
+                            @break
+                        @endif
+                        @endforeach
+                        <li class="list-group-item d-flex justify-content-between align-items-center"><a href="/history">View full history</a></li>
+                        
+                        
+                @else
+                    <li class="list-group-item d-flex justify-content-between align-items-center">No history yet</li>
+                @endif
+            </ul>
+        </div>
     </div>
 </div>
 
