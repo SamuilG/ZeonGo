@@ -32,7 +32,8 @@ class Device extends Model
     {
         return $this->hasMany(Pass::class)
                     ->join('users', 'passes.user_id', '=', 'users.id')
-                    ->select('users.id','users.email', 'users.name', 'passes.created_at', 'passes.approved');
+                    ->select('users.id','users.email', 'users.name', 'passes.created_at', 'passes.approved')
+                    ->orderBy('passes.approved', 'ASC');
     }
     
     public static function createKey()
