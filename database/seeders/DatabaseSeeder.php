@@ -7,7 +7,7 @@ use App\Models\User;
 use App\Models\Device;
 use App\Models\History;
 use App\Models\Manager;
-use App\Models\UserKey;
+
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 
@@ -20,17 +20,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'ilko',
-            'email' => 'ilko.petrov27@gmail.com',
-            'password' => Hash::make('123'),
-            'email_verified' => '1'
-        ]);
 
-        UserKey::create([
-            'user_id' => auth()->id(),
-            'user_key' => '0'
-        ]);
+        $a = User::find(1);
+        $a->email_verified = 1;
+        $a->save();
         
         Device::create([
             'device_name' => 'EG Geo Milev',

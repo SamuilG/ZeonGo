@@ -77,9 +77,9 @@ class User extends Authenticatable
     public static function createUUID()
     {
         $uuid = Str::uuid();
-        while(count(User::where('uuid', $uuid)->get())){
-            $uuid = Str::uuid();
-        }
+        // while(count(User::where('uuid', $uuid)->get())){
+        //     $uuid = Str::uuid();
+        // }
         return $uuid;
     }
 

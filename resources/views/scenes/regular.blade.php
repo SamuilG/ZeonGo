@@ -128,7 +128,6 @@
 
 <script src="js/map.js"></script>
 
-{{ $data['deviceCoords'] }}
 <script>
     let a = JSON.parse({!! $data['deviceCoords'] !!});
     console.log(a);
