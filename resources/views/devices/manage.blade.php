@@ -89,7 +89,7 @@
                                 <p class="m-0 w-50">{{$member->email}}</p>
                             </div>
                             {{-- show if the member is approved and if not let the manager decide --}}
-                            @if (1 == 1)
+                            @if (count(\App\Models\Manager::where('user_id',$member->id)->where('device_id',$data['device']->id)->get()))
                                 @if ($member->approved == true)
                                     {{-- Evict user --}}
                                     <form action="/decline/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">

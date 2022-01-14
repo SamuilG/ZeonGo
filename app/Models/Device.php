@@ -35,7 +35,10 @@ class Device extends Model
                     ->select('users.uuid','users.email', 'users.name', 'passes.created_at', 'passes.approved')
                     ->orderBy('passes.approved', 'ASC');
     }
-    
+    public function managers()
+    {
+        return $this->hasMany(Manager::class);
+    }
     public static function createKey()
     {
         $key = Str::random(6);

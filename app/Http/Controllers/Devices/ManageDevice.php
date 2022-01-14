@@ -42,7 +42,7 @@ class ManageDevice extends Controller
             'device_description' => 'required',
             'coordinates' => 'required'
         ]);
-        // dd($device);
+
         $device->device_name = $request->device_name;
         $device->device_description = $request->device_description;
         $device->coordinates = $request->coordinates;
@@ -81,7 +81,7 @@ class ManageDevice extends Controller
         {
             return redirect('/manage/'.$device->uuid);
         }
-        $passToRemove = Pass::where('user_id', $user->id)
+        Pass::where('user_id', $user->id)
             ->where('device_id', $device->id)
             ->delete();
         return redirect('/manage/'.$device->uuid);
