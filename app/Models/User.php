@@ -21,6 +21,7 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
+        'uuid',
         'name',
         'email',
         'password',
@@ -33,6 +34,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
+        'id',
         'password',
         'remember_token',
     ];
@@ -46,6 +48,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function getRouteKeyName()
+    {
+        return 'uuid';
+    }
+    
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
@@ -58,5 +65,14 @@ class User extends Authenticatable
         return $this->hasMany(History::class)
                     ->join('devices', 'history.device_id', '=', 'devices.id')
                     ->orderBy('history.created_at', 'DESC');
+    }
+
+    public static function createUUID()
+    {
+        $uuid = Str::uuid();
+        while(count(User::where('uuid', $uuid)->get())){
+            $uuid = Str::uuid();
+        }
+        return $uuid;
     }
 }
