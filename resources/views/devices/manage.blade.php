@@ -47,19 +47,24 @@
                 <ul class="list-group m-1">
                     @foreach ($data['members'] as $member)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="w-75">
+                            <form action="/approve/{{ $data['device']->uuid }}" method="POST">
+                                @csrf
+                                <div class="w-75">
+                                <input type="hidden" name="user_id" value='{{ $member->id }}'>
                                 <p class="float-start m-0">{{$member->name}}</p>                            
                                 <p class="float-end m-0">{{$member->email}}</p>
-                            </div>
-                            {{-- show if the member is approved and if not let the manager decide --}}
-                            @if (auth()->id() != $member->id)
-                                @if ($member->approved == true)
-                                    <input class="btn btn-danger" type="submit" value="Evict">
-                                @else
-                                    <input class="btn btn-success" type="submit" value="Approve">
-                                    <input class="btn btn-danger" type="submit" value="Decline">
+                                </div>
+                                {{-- show if the member is approved and if not let the manager decide --}}
+                                @if (auth()->id() != $member->id)
+                                    @if ($member->approved == true)
+                                        <input class="btn btn-danger" type="submit" value="Evict">
+                                    @else
+                                        <input class="btn btn-success" type="submit" value="Approve">
+                                        <input class="btn btn-danger" type="submit" value="Decline">
+                                    @endif
                                 @endif
-                            @endif
+                            </form>
+                            
                         </li>
                     @endforeach
                 </ul>

@@ -41,4 +41,20 @@ class ManageDevice extends Controller
         $device->save();
         return redirect('/manage/'.$device->uuid);
     }
+
+    public function approve(Request $request, Device $device)
+    {
+        $user_id = $request->user_id;
+        $device_id = $device->id;
+
+        $currentPass = Pass::where('user_id', $user_id)
+            ->where('device_id', $device_id)
+            ->get()->first();
+        $currentPass->approved = true;
+
+        $currentPass->save();
+
+        return redirect('/manage/'.$device->uuid);
+
+    }
 }
