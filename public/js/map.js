@@ -72,6 +72,10 @@ function runPosition(x, y, z, accuracy) {   // map
         radius: accuracy
     }).addTo(map);
 
+    map.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('Device')
+    .openPopup();
+
 }
 
 function runDefaltPosition(x, y, z) {   // map
@@ -82,6 +86,10 @@ function runDefaltPosition(x, y, z) {   // map
 
     let  map = L.map('map').setView([x,  y],  z);  // z=zoom
     map.addLayer(osmLayer);
+
+    map.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('Device')
+    .openPopup();
 
 
 }

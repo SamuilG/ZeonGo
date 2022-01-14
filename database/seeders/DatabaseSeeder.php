@@ -19,12 +19,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'Samuil_G',
-            'email' => 'samuil.georgiev@outlook.com',
-            'password' => Hash::make('123'),
-            'email_verified' => '1'
-        ]);
+        $a = User::find(1);
+        $a->email_verified = 1;
+        $a->save();
+        
         Device::create([
             'device_name' => 'EG Geo Milev',
             'uuid' => Device::createUUID(),

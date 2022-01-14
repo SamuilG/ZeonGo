@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    /* background-color: rgba(150, 150, 150, 0.1); */
 }
 
 .col {

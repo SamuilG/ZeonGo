@@ -11,7 +11,7 @@ class PassFactory extends Factory
      *
      * @return array
      */
-    private static $currentUser = 1;
+    private static $currentUser = 2;
 
     public function definition()
     {
