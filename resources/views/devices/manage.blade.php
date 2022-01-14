@@ -63,12 +63,15 @@
                         {{$member->email}}
                         {{$member->name}}
                         {{-- show if the member is approved and if not let the manager decide --}}
-                        @if ($member->approved == true)
+                        @if (auth()->id() != $member->id)
+                            @if ($member->approved == true)
                             <input class="btn btn-danger" type="submit" value="Abandon">
-                        @else
-                            <input class="btn btn-success" type="submit" value="Approve">
-                            <input class="btn btn-danger" type="submit" value="Decline">
+                            @else
+                                <input class="btn btn-success" type="submit" value="Approve">
+                                <input class="btn btn-danger" type="submit" value="Decline">
+                            @endif
                         @endif
+                        
                     </li>
                 @endforeach
             </ul>
