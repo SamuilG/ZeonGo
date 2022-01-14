@@ -128,7 +128,11 @@
 
 <script src="js/map.js"></script>
 
-
+{{ $data['deviceCoords'] }}
+<script>
+    let a = JSON.parse({!! $data['deviceCoords'] !!});
+    console.log(a);
+</script>
 @if (session('status'))
     <script>
     alert( '{{Session::get('status')}}' )

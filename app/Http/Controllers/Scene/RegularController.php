@@ -27,13 +27,15 @@ class RegularController extends Controller
         
         $history = auth()->user()->history;
 
+        $deviceCoords = json_encode(auth()->user()->devicesCoords());
+
         $manager = Manager::where('user_id', '=', auth()->id())
                         ->select('managers.device_id')
                         ->get();
 
         $key = "https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=".$this->createKey();
         
-        $data = array('key' => $key, 'devices' => $devices, 'history' => $history, 'manager' => $manager);
+        $data = array('key' => $key, 'devices' => $devices, 'history' => $history, 'manager' => $manager, 'deviceCoords' => $deviceCoords);
 
         return view('scenes.regular')->with('data', $data);
         
