@@ -64,7 +64,8 @@ class User extends Authenticatable
     public function devicesCoords(){
         return $this->hasMany(Pass::class)
                     ->join('devices', 'passes.device_id', '=' , 'devices.id')
-                    ->select('devices.device_name', 'devices.coordinates');
+                    ->select('devices.device_name', 'devices.coordinates')
+                    ->toJson();
     }
     public function history(){
         return $this->hasMany(History::class)
