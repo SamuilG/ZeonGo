@@ -12,7 +12,7 @@
 
 <div class="row flex-grow-1">
     
-    <div class="col-md-7 d-flex h-100 flex-column">
+    <div class="col-md-6 d-flex h-100 flex-column">
         <div class="row info p-2">
             <div class="col h-100">
                 
@@ -40,38 +40,8 @@
         </div>
         <div class="row flex-grow-1 p-2 bg-blue">
             <div class="col">
-
-                <h3>Members</h3>
-                
-                {{-- members --}}
-                <ul class="list-group m-1">
-                    @foreach ($data['members'] as $member)
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="w-75">
-                                <p class="float-start m-0">{{$member->name}}</p>                            
-                                <p class="float-end m-0">{{$member->email}}</p>
-                            </div>
-                            {{-- show if the member is approved and if not let the manager decide --}}
-                            @if (auth()->id() != $member->id)
-                                @if ($member->approved == true)
-                                    <input class="btn btn-danger" type="submit" value="Evict">
-                                @else
-                                    <input class="btn btn-success" type="submit" value="Approve">
-                                    <input class="btn btn-danger" type="submit" value="Decline">
-                                @endif
-                            @endif
-                        </li>
-                    @endforeach
-                </ul>
-
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-md-5 position-relative">
-        <div class="w-90 position-absolute top-50 start-50 translate-middle">
-            {{-- history --}}
-            <h3 class="text-center">History</h3>
+                {{-- history --}}
+            <h3>History</h3>
             <ul class="list-group m-1">
                 @if (count($data['history']))
 
@@ -87,7 +57,7 @@
                         @php
                             $i++
                         @endphp
-                        @if ($i > 10)
+                        @if ($i > 5)
                             @break
                         @endif
                         @endforeach
@@ -98,6 +68,39 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">No history yet</li>
                 @endif
             </ul>
+
+                
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="">
+            
+            <h3 class="text-center">Members</h3>
+                
+                {{-- members --}}
+                <ul class="list-group m-1">
+                    @foreach ($data['members'] as $member)
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="w-75">
+                                <p class="float-start m-0">{{$member->name}}</p>                            
+                                <p class="float-end m-0">{{$member->email}}</p>
+                            </div>
+                            {{-- show if the member is approved and if not let the manager decide --}}
+                            @if (auth()->id() != $member->id)
+                                @if ($member->approved == true)
+                                    <input class="btn btn-danger btn-sm" type="submit" value="Evict">
+                                @else
+                                    <input class="btn btn-success btn-sm" type="submit" value="Approve">
+                                    <input class="btn btn-danger btn-sm" type="submit" value="Decline">
+                                @endif
+                            @endif
+                        </li>
+                    @endforeach
+                </ul>
+
         </div>
     </div>
 </div>
