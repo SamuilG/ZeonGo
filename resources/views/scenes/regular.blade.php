@@ -128,11 +128,12 @@
 
 <script src="js/map.js"></script>
 
-{{ $data['deviceCoords'] }}
 <script>
-    let a = JSON.parse({!! $data['deviceCoords'] !!});
-    console.log(a);
+    let devices_js = JSON.parse({!! $data['deviceCoords'] !!});
+    console.log(devices_js);
 </script>
+
+
 @if (session('status'))
     <script>
     alert( '{{Session::get('status')}}' )

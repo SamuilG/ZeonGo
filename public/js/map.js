@@ -53,6 +53,18 @@ function defaltPosition(){  // map
     runDefaltPosition(x, y, z);
 }
 
+
+// console.log(typeof devices_js);
+
+let greenIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+});
+
 function runPosition(x, y, z, accuracy) {   // map
 
     // console.log(x + " || " + y);
@@ -72,9 +84,22 @@ function runPosition(x, y, z, accuracy) {   // map
         radius: accuracy
     }).addTo(map);
 
-    map.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('Device')
-    .openPopup();
+    for (let i = 0; i < devices_js.length; i++) {
+
+        let device_name = devices_js[i].device_name.toString();
+        let devices_x = devices_js[i].coordinates.split(", ")[0];
+        let devices_y = devices_js[i].coordinates.split(", ")[1];
+        console.log(devices_x);
+
+        L.marker([devices_x, devices_y], {icon: greenIcon}).addTo(map).bindPopup(device_name);
+    }
+    
+
+    // L.marker([51.5, -0.09]).addTo(map);
+
+    // map.marker([51.5, -0.09]).addTo(map)
+    // .bindPopup('Device')
+    // .openPopup();
 
 }
 
@@ -87,9 +112,9 @@ function runDefaltPosition(x, y, z) {   // map
     let  map = L.map('map').setView([x,  y],  z);  // z=zoom
     map.addLayer(osmLayer);
 
-    map.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('Device')
-    .openPopup();
+    // map.marker([51.5, -0.09]).addTo(map)
+    // .bindPopup('Device')
+    // .openPopup();
 
 
 }
