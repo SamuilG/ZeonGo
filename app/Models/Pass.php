@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pass extends Model
 {
+    use HasFactory;
         /**
      * The table associated with the model.
      *
