@@ -31,33 +31,32 @@
                                     <div class="card-body overflow-auto">
                                         <h4 class="card-title text-white pb-2">{{$device->device_name}}</h4>
                                         <p class="card-text text-white">
+                                            {{-- Check if there are users waiting to be approved --}}
+                                            @if ($data['awaitingUsers']->contains('device_id' ,$device->id))
+                                                <span class="text-danger">There are users awaiting approval</span> <br>
+                                            @endif
+                                            {{-- if the user is not approved tell him to waiting --}}
                                             @if (!$device->approved)
-                                            <span class="text-danger">Access pending</span> <br>
-                                        @endif
-                                        {{ $device->device_description }}
+                                                <span class="text-danger">Access pending</span> <br>
+                                            @endif
+                                            {{ $device->device_description }}
                                         </p>
                                         
                                         
                                     </div>
                                     <div class="card-footer">
+                                        {{-- if the user is manager display the manage button --}}
                                         @if (count($data['manager']))
-                                            @foreach ($data['manager'] as $manager_device)
-                                                @if ($manager_device->device_id == $device->id)
-                                                    {{-- <form action="/manage" method="get">
-                                                        @csrf
-                                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                                        <input class="btn btn-primary" style="float: right" type="submit" value="Manage">
-                                                    </form> --}}
-                                                    <a class="btn btn-primary" style="float: right" href='/manage/{{$device->uuid}}'>Manage</a>
-                                                @else
-                                                
-                                                    <form action="/abandon" method="post">
-                                                        @csrf
-                                                        <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                                        <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
-                                                    </form>
-                                                @endif
-                                            @endforeach
+                                            @if ($data['manager']->contains('device_id' , $device->id))
+                                                <a class="btn btn-primary" style="float: right" href='/manage/{{$device->uuid}}'>Manage</a>
+                                            @else
+                                            
+                                                <form action="/abandon" method="post">
+                                                    @csrf
+                                                    <input type="hidden" name="device_id" value="{{ $device->id }}">
+                                                    <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                                </form>
+                                            @endif
                                         @else
                                             <form action="/abandon" method="post">
                                                 @csrf

@@ -82,7 +82,6 @@
                 
                 {{-- members --}}
                 <ul class="list-group m-1">
-                    {{$data['managers']}}
                     @foreach ($data['members'] as $member)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="w-75">

@@ -36,10 +36,13 @@ class RegularController extends Controller
             ->get();
 
         $awaitingUsers = new Collection();
-        if (count($manager)) {
+        if(count($manager)){
             $awaitingUsers = Manager::where('managers.user_id', auth()->id())
-                ->join('passes', 'managers.device_id', '=', 'passes.device_id')
-                ->get();
+            ->where('approved', false)
+            ->join('passes', 'managers.device_id', '=', 'passes.device_id')
+            ->select('managers.device_id')
+            ->distinct()
+            ->get();
         }
 
         $key = "https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=" . $this->createKey();

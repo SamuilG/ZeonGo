@@ -68,5 +68,15 @@ class DatabaseSeeder extends Seeder
         History::factory()->times(100)->create();
         \App\Models\User::factory(20)->create();
         \App\Models\Pass::factory(10)->create();
+
+        // Pass::create([
+        //     'device_id' => 1,
+        //     'user_id' => 5,
+        //     'approved' => false,
+        // ]);
+        // Manager::create([
+        //     'device_id' => 1,
+        //     'user_id' => 1
+        // ]);
     }
 }

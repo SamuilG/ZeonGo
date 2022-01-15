@@ -32,10 +32,10 @@ class RegisterController extends Controller
 
 
         $data = array('email' => $request->email, 'name' =>  $request->name, 'verifyKey' => $emailVKey);
-        Mail::send('emails.emailVerify', ["data" => $data], function($m) use($data){
-            $m->to($data['email'], $data['name'])->subject('Email verification');
-            $m->from("admin@beta.zeongo.online", "ZeonGo");
-        });
+        // Mail::send('emails.emailVerify', ["data" => $data], function($m) use($data){
+        //     $m->to($data['email'], $data['name'])->subject('Email verification');
+        //     $m->from("admin@beta.zeongo.online", "ZeonGo");
+        // });
 
         auth()->attempt($request->only('email', 'password'));
         
