@@ -41,7 +41,6 @@
                                     </div>
                                     <div class="card-footer">
                                         @if (count($data['manager']))
-                                                
                                             @foreach ($data['manager'] as $manager_device)
                                                 @if ($manager_device->device_id == $device->id)
                                                     {{-- <form action="/manage" method="get">

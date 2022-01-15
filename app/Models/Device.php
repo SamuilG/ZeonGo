@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Device extends Model
 {
     protected $table = 'devices';
-    
+
     protected $fillable = [
         'device_name',
         'uuid',
@@ -25,24 +25,26 @@ class Device extends Model
     public function history()
     {
         return $this->hasMany(History::class)
-                    ->join('users', 'history.user_id', '=', 'users.id')
-                    ->select('users.email', 'history.created_at');
+            ->join('users', 'history.user_id', '=', 'users.id')
+            ->select('users.email', 'history.created_at');
     }
     public function users()
     {
         return $this->hasMany(Pass::class)
-                    ->join('users', 'passes.user_id', '=', 'users.id')
-                    ->select('users.uuid','users.email', 'users.name', 'passes.created_at', 'passes.approved')
-                    ->orderBy('passes.approved', 'ASC');
+            ->join('users', 'passes.user_id', '=', 'users.id')
+            ->select('users.id', 'users.uuid', 'users.email', 'users.name', 'passes.created_at', 'passes.approved')
+            ->orderBy('passes.approved', 'ASC');
     }
     public function managers()
     {
-        return $this->hasMany(Manager::class);
+        return $this->hasMany(Manager::class)
+            ->select('managers.user_id');
     }
+
     public static function createKey()
     {
         $key = Str::random(6);
-        while(count(Device::where('device_key', $key)->get())){
+        while (count(Device::where('device_key', $key)->get())) {
             $key = Str::random(6);
         }
         return $key;
@@ -51,7 +53,7 @@ class Device extends Model
     public static function createUUID()
     {
         $uuid = Str::uuid();
-        while(count(Device::where('uuid', $uuid)->get())){
+        while (count(Device::where('uuid', $uuid)->get())) {
             $uuid = Str::uuid();
         }
         return $uuid;

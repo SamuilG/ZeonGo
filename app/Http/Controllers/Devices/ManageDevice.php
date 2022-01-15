@@ -15,25 +15,26 @@ class ManageDevice extends Controller
     {
         $this->middleware(['auth']);
     }
-    
-    public function index(Device $device){
-        if(!auth()->user()->isManager($device->id))
-        {
+
+    public function index(Device $device)
+    {
+        if (!auth()->user()->isManager($device->id)) {
             return redirect('/home');
         }
 
         $history = $device->history;
 
         $members = $device->users;
-        
-        $data = array('device' => $device, 'history' => $history, 'members' => $members);
+
+        $managers = $device->managers;
+        $data = array('device' => $device, 'history' => $history, 'members' => $members, 'managers' => $managers);
 
         return view('devices.manage')->with('data', $data);
     }
 
-    public function saveChanges(Request $request, Device $device){
-        if(!auth()->user()->isManager($device->id))
-        {
+    public function saveChanges(Request $request, Device $device)
+    {
+        if (!auth()->user()->isManager($device->id)) {
             return redirect('/home');
         }
 
@@ -48,13 +49,12 @@ class ManageDevice extends Controller
         $device->coordinates = $request->coordinates;
 
         $device->save();
-        return redirect('/manage/'.$device->uuid);
+        return redirect('/manage/' . $device->uuid);
     }
 
     public function approve(Device $device, User $user)
     {
-        if(!auth()->user()->isManager($device->id))
-        {
+        if (!auth()->user()->isManager($device->id)) {
             return redirect('/home');
         }
 
@@ -68,23 +68,20 @@ class ManageDevice extends Controller
 
         $currentPass->save();
 
-        return redirect('/manage/'.$device->uuid);
+        return redirect('/manage/' . $device->uuid);
     }
 
     public function decline(Device $device, User $user)
     {
-        if(!auth()->user()->isManager($device->id))
-        {
+        if (!auth()->user()->isManager($device->id)) {
             return redirect('/home');
         }
-        if($user->isManager($device->id))
-        {
-            return redirect('/manage/'.$device->uuid);
+        if ($user->isManager($device->id)) {
+            return redirect('/manage/' . $device->uuid);
         }
         Pass::where('user_id', $user->id)
             ->where('device_id', $device->id)
             ->delete();
-        return redirect('/manage/'.$device->uuid);
-
+        return redirect('/manage/' . $device->uuid);
     }
 }

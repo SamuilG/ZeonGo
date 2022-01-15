@@ -82,6 +82,7 @@
                 
                 {{-- members --}}
                 <ul class="list-group m-1">
+                    {{$data['managers']}}
                     @foreach ($data['members'] as $member)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="w-75">
@@ -89,7 +90,8 @@
                                 <p class="m-0 w-50">{{$member->email}}</p>
                             </div>
                             {{-- show if the member is approved and if not let the manager decide --}}
-                            @if (count(\App\Models\Manager::where('user_id',$member->id)->where('device_id',$data['device']->id)->get()))
+                            @if (!$data['managers']->contains('user_id' ,(int) $member->id) )
+                                {{-- {{ $data['managers']->contains('user_id' ,auth()->id()) }} --}}
                                 @if ($member->approved == true)
                                     {{-- Evict user --}}
                                     <form action="/decline/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
