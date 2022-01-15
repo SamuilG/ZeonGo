@@ -45,19 +45,11 @@
                                         
                                     </div>
                                     <div class="card-footer">
-                                        {{-- if the user is manager display the manage button --}}
-                                        @if (count($data['manager']))
-                                            @if ($data['manager']->contains('device_id' , $device->id))
-                                                <a class="btn btn-primary" style="float: right" href='/manage/{{$device->uuid}}'>Manage</a>
-                                            @else
-                                            
-                                                <form action="/abandon" method="post">
-                                                    @csrf
-                                                    <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                                    <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
-                                                </form>
-                                            @endif
+                                        {{-- if the device is managed by the authenticated user show the manage button --}}
+                                        @if ($data['manager']->contains('device_id' , $device->id))
+                                            <a class="btn btn-primary" style="float: right" href='/manage/{{$device->uuid}}'>Manage</a>
                                         @else
+                                        {{-- if not, show the abandon button --}}
                                             <form action="/abandon" method="post">
                                                 @csrf
                                                 <input type="hidden" name="device_id" value="{{ $device->id }}">

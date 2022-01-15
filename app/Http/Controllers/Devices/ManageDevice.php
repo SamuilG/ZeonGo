@@ -27,6 +27,7 @@ class ManageDevice extends Controller
         $members = $device->users;
 
         $managers = $device->managers;
+        
         $data = array('device' => $device, 'history' => $history, 'members' => $members, 'managers' => $managers);
 
         return view('devices.manage')->with('data', $data);

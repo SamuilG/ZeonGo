@@ -83,14 +83,13 @@
                 {{-- members --}}
                 <ul class="list-group m-1">
                     @foreach ($data['members'] as $member)
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <li class="list-group-item d-flex justify-content-between align-items-center @if ($data['managers']->contains('user_id' ,(int) $member->id) ) bg-light @endif">
                             <div class="w-75">
                                 <p class="m-0 w-50">{{$member->name}}</p>                            
                                 <p class="m-0 w-50">{{$member->email}}</p>
                             </div>
                             {{-- show if the member is approved and if not let the manager decide --}}
                             @if (!$data['managers']->contains('user_id' ,(int) $member->id) )
-                                {{-- {{ $data['managers']->contains('user_id' ,auth()->id()) }} --}}
                                 @if ($member->approved == true)
                                     {{-- Evict user --}}
                                     <form action="/decline/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
@@ -108,7 +107,7 @@
                                         @csrf
                                         <input class="btn btn-danger" type="submit" value="Decline">
                                     </form>
-                                @endif
+                                @endif  
                             @endif
                         </li>
                     @endforeach

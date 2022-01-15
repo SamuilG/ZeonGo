@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         $a = User::find(1);
         $a->email_verified = 1;
         $a->save();
-        
+
         Device::create([
             'device_name' => 'EG Geo Milev',
             'uuid' => Device::createUUID(),
@@ -69,6 +69,10 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(20)->create();
         \App\Models\Pass::factory(10)->create();
 
+        // Manager::create([
+        //     'device_id' => 2,
+        //     'user_id' => 5
+        // ]);
         // Pass::create([
         //     'device_id' => 1,
         //     'user_id' => 5,
