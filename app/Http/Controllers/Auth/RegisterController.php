@@ -28,7 +28,7 @@ class RegisterController extends Controller
     public function store(RegisterRequest $request){
         $emailVKey = Str::random(50);
         // User::create($request->validated() + ['email_verified' => $emailVKey]);
-        User::create($request->validated() + ['email_verified' => '1']);
+        User::create($request->validated() + ['email_verified' => '1'] + ['uuid' => User::createUUID()]);
 
 
         $data = array('email' => $request->email, 'name' =>  $request->name, 'verifyKey' => $emailVKey);

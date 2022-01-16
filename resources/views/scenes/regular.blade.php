@@ -16,7 +16,9 @@
 @section('content')
 
 <div class="row flex-grow-1">
-    
+    <div id="qrCode" style="display: none;">
+        <img src="{{ $data['key'] }}" class="img-fluid" alt="The qr code">
+    </div>
     <div class="col-md-8 d-flex h-100 flex-column">
         <div class="row locations">
             <div class="col h-100">

@@ -56,40 +56,42 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($password);
     }
-    public function devices(){
+    public function devices()
+    {
         return $this->hasMany(Pass::class)
-                    ->join('devices', 'passes.device_id', '=' , 'devices.id');
+            ->join('devices', 'passes.device_id', '=', 'devices.id');
     }
 
-    public function devicesCoords(){
+    public function devicesCoords()
+    {
         return $this->hasMany(Pass::class)
-                    ->join('devices', 'passes.device_id', '=' , 'devices.id')
-                    ->select('devices.device_name', 'devices.coordinates')
-                    ->get()
-                    ->toJson();
+            ->join('devices', 'passes.device_id', '=', 'devices.id')
+            ->select('devices.device_name', 'devices.coordinates')
+            ->get()
+            ->toJson();
     }
-    public function history(){
+    public function history()
+    {
         return $this->hasMany(History::class)
-                    ->join('devices', 'history.device_id', '=', 'devices.id')
-                    ->orderBy('history.created_at', 'DESC');
+            ->join('devices', 'history.device_id', '=', 'devices.id')
+            ->orderBy('history.created_at', 'DESC');
     }
 
     public static function createUUID()
     {
         $uuid = Str::uuid();
-        // while(count(User::where('uuid', $uuid)->get())){
-        //     $uuid = Str::uuid();
-        // }
+        while(count(User::where('uuid', $uuid)->get())){
+            $uuid = Str::uuid();
+        }
         return $uuid;
     }
 
     public function isManager($device_id)
     {
         $row = Manager::where('user_id', $this->id)
-                      ->where('device_id', $device_id)
-                      ->get();  
-        if(count($row))
-        {
+            ->where('device_id', $device_id)
+            ->get();
+        if (count($row)) {
             return true;
         }
         return false;
