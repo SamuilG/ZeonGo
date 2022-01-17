@@ -52,11 +52,29 @@
                                             <a class="btn btn-primary" style="float: right" href='/manage/{{$device->uuid}}'>Manage</a>
                                         @else
                                         {{-- if not, show the abandon button --}}
-                                            <form action="/abandon" method="post">
-                                                @csrf
-                                                <input type="hidden" name="device_id" value="{{ $device->id }}">
-                                                <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
-                                            </form>
+                                            @if (!$device->approved && $device->invited_by)
+                                                
+                                                <form action="/user/decline/{{ $device->uuid }}" method="post">
+                                                    @csrf
+                                                    <input class="btn btn-danger" style="float: right" type="submit" value="Decline">
+                                                </form>
+                                                <form action="/user/accept/{{ $device->uuid }}" method="post">
+                                                    @csrf
+                                                    <input class="btn btn-success" style="float: right" type="submit" value="Accept">
+                                                </form>
+                                            @else
+                                                <form action="/user/decline/{{ $device->uuid }}" method="post">
+                                                    @csrf
+                                                    <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                                </form>
+                                            @endif
+                                            {{-- F
+                                            I
+                                            X
+
+                                            |
+                                            * --}}
+                                            
                                         @endif
                                     </div>
                                 </div>

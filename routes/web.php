@@ -53,6 +53,9 @@ Route::get('/', function () {
 // normal user things
 Route::post('/abandon', [UserOptions::class, 'leaveDevice'])->name("leaveDevice");
 Route::post('/addDevice', [UserOptions::class, 'addDevice'])->name("addDevice");
+
+Route::post('/user/accept/{device}', [UserOptions::class, 'accept']);
+Route::post('/user/decline/{device}', [UserOptions::class, 'decline']);
 // management things
 Route::get('/manage/{device}', [ManageDevice::class, 'index'])->name("manage");
 Route::post('/manage/{device}', [ManageDevice::class, 'saveChanges']);
@@ -60,6 +63,6 @@ Route::post('/manage/{device}', [ManageDevice::class, 'saveChanges']);
 Route::post('/approve/{device}/{user}', [ManageDevice::class, 'approve']);
 Route::post('/decline/{device}/{user}', [ManageDevice::class, 'decline']);
 
-Route::post('/addUser/{device}/', [ManageCevice::class, 'addUser']);
+Route::post('/addUser/{device}/', [ManageDevice::class, 'addUser']);
 
 

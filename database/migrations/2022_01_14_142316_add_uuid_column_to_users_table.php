@@ -16,7 +16,6 @@ class AddUuidColumnToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->uuid('uuid')
-                  ->default(User::createUUID())
                   ->after('id');
         });
     }

@@ -50,16 +50,19 @@ class DatabaseSeeder extends Seeder
             'device_id' => 1,
             'user_id' => 1,
             'approved' => true,
+            'approved_by' => 1
         ]);
         Pass::create([
             'device_id' => 2,
             'user_id' => 1,
             'approved' => true,
+            'approved_by' => 1
         ]);
         Pass::create([
             'device_id' => 3,
             'user_id' => 1,
             'approved' => true,
+            'approved_by' => 1
         ]);
         Manager::create([
             'device_id' => 2,

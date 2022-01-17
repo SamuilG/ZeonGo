@@ -18,7 +18,8 @@ class PassFactory extends Factory
         return [
             'user_id' => self::$currentUser++,
             'device_id' => 2,
-            'approved' => 0
+            'approved' => 0,
+            'approved_by' => 1,
         ];
     }
 }

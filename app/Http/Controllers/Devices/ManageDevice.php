@@ -66,6 +66,7 @@ class ManageDevice extends Controller
             ->where('device_id', $device_id)
             ->get()->first();
         $currentPass->approved = true;
+        $currentPass->approved_by = auth()->id();
 
         $currentPass->save();
 
@@ -94,10 +95,17 @@ class ManageDevice extends Controller
         $request->validate([
             'email' => 'required|email',
         ]);
-        $user_id = User::where('email', $request->email)->first()->id;
+        $user = User::where('email', $request->email)->first();
+        if(!$user){
+            return back()->with('status', 'User with this email doesn\' exist');
+        }
         Pass::create([
-            'user_id' => $user_id,
-            'device'
+            'user_id' => $user->id,
+            'device_id' => $device->id,
+            'approved' => false,
+            'invited_by' => auth()->id(),
         ]);
+
+        return redirect('/manage/' . $device->uuid);
     }
 }

@@ -82,11 +82,20 @@
                 
                 {{-- members --}}
                 <ul class="list-group m-1">
-                    <li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
                         <form action="/addUser/{{ $data['device']->uuid }}" method="POST">
                             @csrf
-                            <input name="email" type="email">
-                            <input class="btn btn-success" type="submit" value="Add">
+                            <div class="w-75">
+                                <input name="email" type="email" class="form-control @error('email') border border-danger @enderror">
+                                @error('email')
+                                    <div class="text-danger">{{$message}}</div>
+                                @enderror
+                                @if (session('status'))
+                                    <div class="text-danger">User with this email doesn't exist</div>
+                                @endif
+                            </div>
+                            
+                            <input class="btn btn-success" style="float: right;" type="submit" value="Add">
                         </form>
                     </li>
                     @foreach ($data['members'] as $member)
@@ -94,6 +103,17 @@
                             <div class="w-75">
                                 <p class="m-0 w-50">{{$member->name}}</p>                            
                                 <p class="m-0 w-50">{{$member->email}}</p>
+                                <p class="m-0 w-50" style="float: right;">
+                                    @if (!$member->invited_by == NULL)
+                                        Invited by {{ $member->invitedBy() }}
+                                    @else
+                                        Invited himself
+                                    @endif
+                                </p>
+                                @if ($member->approved)
+                                    <p class="m-0 w-50">Approved by {{ $member->approvedBy() }}</p>
+                                @endif
+
                             </div>
                             {{-- show if the member is approved and if not let the manager decide --}}
                             @if (!$data['managers']->contains('user_id' ,(int) $member->id) )
@@ -104,16 +124,21 @@
                                         <input class="btn btn-danger" type="submit" value="Evict">
                                     </form>
                                 @else
-                                    {{-- Approve user --}}
-                                    <form action="/approve/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
-                                        @csrf
-                                        <input class="btn btn-success" type="submit" value="Approve">
-                                    </form>
-                                    {{-- Decline user  --}}
-                                    <form action="/decline/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
-                                        @csrf
-                                        <input class="btn btn-danger" type="submit" value="Decline">
-                                    </form>
+                                    @if ($member->invited_by)
+                                        <p class="btn btn-success">Wait for the user to decide</p>
+                                    @else
+                                        {{-- Approve user --}}
+                                        <form action="/approve/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
+                                            @csrf
+                                            <input class="btn btn-success" type="submit" value="Approve">
+                                        </form>
+                                        {{-- Decline user  --}}
+                                        <form action="/decline/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
+                                            @csrf
+                                            <input class="btn btn-danger" type="submit" value="Decline">
+                                        </form>
+                                    @endif
+                                    
                                 @endif  
                             @endif
                         </li>

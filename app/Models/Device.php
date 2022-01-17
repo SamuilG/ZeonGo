@@ -32,7 +32,7 @@ class Device extends Model
     {
         return $this->hasMany(Pass::class)
             ->join('users', 'passes.user_id', '=', 'users.id')
-            ->select('users.id', 'users.uuid', 'users.email', 'users.name', 'passes.created_at', 'passes.approved')
+            ->select('users.id', 'users.uuid', 'users.email', 'users.name', 'passes.created_at', 'passes.approved', 'passes.invited_by', 'passes.approved_by')
             ->orderBy('passes.approved', 'ASC');
     }
     public function managers()

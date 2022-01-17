@@ -38,8 +38,25 @@ class UserOptions extends Controller
         Pass::create([
             'device_id' => $device->id,
             'user_id' => auth()->id(),
-            'approved' => false
+            'approved' => false,
+            'invited_by' => 0,
         ]);
         return redirect()->back()->with('status', 'Succesfuly, joined! Please wait for a manager to approve your request to join');
+    }
+
+    public function accept(Device $device)
+    {
+        $user_id = auth()->id();
+        $device_id = $device->id;
+
+        $currentPass = Pass::where('user_id', $user_id)
+            ->where('device_id', $device_id)
+            ->get()->first();
+        $currentPass->approved = true;
+        $currentPass->approved_by = auth()->id();
+
+        $currentPass->save();
+
+        return redirect('/home');
     }
 }
