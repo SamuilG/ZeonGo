@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\DeviceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\PassController;
 use App\Http\Controllers\Devices\UserOptions;
@@ -51,7 +53,6 @@ Route::get('/', function () {
 
 // Device management things
 // normal user things
-Route::post('/abandon', [UserOptions::class, 'leaveDevice'])->name("leaveDevice");
 Route::post('/addDevice', [UserOptions::class, 'addDevice'])->name("addDevice");
 
 Route::post('/user/accept/{device}', [UserOptions::class, 'accept']);
@@ -66,3 +67,8 @@ Route::post('/decline/{device}/{user}', [ManageDevice::class, 'decline']);
 Route::post('/addUser/{device}/', [ManageDevice::class, 'addUser']);
 
 
+// SUPER ADMIN THINGS
+
+Route::get('/admin', [AdminController::class, 'index']);
+
+Route::resource('admin/device', DeviceController::class);

@@ -15,15 +15,6 @@ class UserOptions extends Controller
         $this->middleware(['auth']);
     }
 
-    public function leaveDevice(Request $request)
-    {
-        Pass::where('device_id', $request->device_id)
-            ->where('user_id', auth()->id())
-            ->delete();
-
-            return redirect()->route('home');
-    }
-
     public function addDevice(JoinDeviceRequest $request){
         $device = Device::where('device_key', $request->validated())->first();
         $check = Pass::where('user_id', auth()->id())
@@ -57,6 +48,15 @@ class UserOptions extends Controller
 
         $currentPass->save();
 
-        return redirect('/home');
+        return redirect()->route('home');
+    }
+
+    public function decline(Device $device)
+    {
+        Pass::where('device_id', $device->id)
+            ->where('user_id', auth()->id())
+            ->delete();
+
+            return redirect()->route('home');
     }
 }
