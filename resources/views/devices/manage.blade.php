@@ -82,6 +82,13 @@
                 
                 {{-- members --}}
                 <ul class="list-group m-1">
+                    <li>
+                        <form action="/addUser/{{ $data['device']->uuid }}" method="POST">
+                            @csrf
+                            <input name="email" type="email">
+                            <input class="btn btn-success" type="submit" value="Add">
+                        </form>
+                    </li>
                     @foreach ($data['members'] as $member)
                         <li class="list-group-item d-flex justify-content-between align-items-center @if ($data['managers']->contains('user_id' ,(int) $member->id) ) bg-light @endif">
                             <div class="w-75">

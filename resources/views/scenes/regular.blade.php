@@ -25,10 +25,10 @@
                 
                 {{-- <div class="col-8 h-100"> --}}
                     <div class="container-fluid h-100 d-flex overflow-auto">
-                        <div class="row flex-grow-1 flex-nowrap overflow-auto">
+                        <div class="row flex-grow-1 flex-nowrap overflow-auto zoom-zoom">
     
                             @foreach ($data['devices'] as $device)
-                            <div class="col-card p-3 ps-2 pe-2">
+                            <div class="col-card p-3 ps-2 pe-2 card-zoom">
                                 <div class="card h-100 card-block bg-dark">
                                     <div class="card-body overflow-auto">
                                         <h4 class="card-title text-white pb-2">{{$device->device_name}}</h4>
@@ -121,14 +121,14 @@
 <script src="js/map.js"></script>
 
 <script>
-    let devices_js = JSON.parse({!! $data['deviceCoords'] !!});
+    let devices_js = JSON.parse({$data['deviceCoords']});
     console.log(devices_js);
 </script>
 
 
 @if (session('status'))
     <script>
-    alert( '{{Session::get('status')}}' )
+    alert( '{{ Session::get('status') }}' )
     </script>
 @endif
 @error('device_key')

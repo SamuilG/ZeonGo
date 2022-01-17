@@ -95,12 +95,6 @@ function runPosition(x, y, z, accuracy) {   // map
     }
     
 
-    // L.marker([51.5, -0.09]).addTo(map);
-
-    // map.marker([51.5, -0.09]).addTo(map)
-    // .bindPopup('Device')
-    // .openPopup();
-
 }
 
 function runDefaltPosition(x, y, z) {   // map
@@ -112,9 +106,14 @@ function runDefaltPosition(x, y, z) {   // map
     let  map = L.map('map').setView([x,  y],  z);  // z=zoom
     map.addLayer(osmLayer);
 
-    // map.marker([51.5, -0.09]).addTo(map)
-    // .bindPopup('Device')
-    // .openPopup();
+    
+    for (let i = 0; i < devices_js.length; i++) {
 
+        let device_name = devices_js[i].device_name.toString();
+        let devices_x = devices_js[i].coordinates.split(", ")[0];
+        let devices_y = devices_js[i].coordinates.split(", ")[1];
+        console.log(devices_x);
 
+        L.marker([devices_x, devices_y], {icon: greenIcon}).addTo(map).bindPopup(device_name);
+    }
 }
