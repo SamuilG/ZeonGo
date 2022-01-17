@@ -103,7 +103,7 @@
         <div class="w-95 position-absolute top-50 start-50 translate-middle">
 
             <h3 class="text-center">History</h3>
-            <ul class="list-group m-1">
+            <ul class="list-group m-1 hover-hover">
             @if (count($data['history']))
 
                 @php
@@ -111,7 +111,7 @@
                 @endphp
                 
                     @foreach ($data['history'] as $log)
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
                         {{$log->device_name}} {{-- get the device name --}}
                         <span class="badge bg-primary rounded-pill">{{$log->created_at->diffForHumans()}}</span> {{-- get the date --}}
                     </li>
@@ -122,7 +122,7 @@
                         @break
                     @endif
                     @endforeach
-                    <li class="list-group-item d-flex justify-content-between align-items-center"><a href="/history">View full history</a></li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover"><a href="/history">View full history</a></li>
                     
                     
             @else

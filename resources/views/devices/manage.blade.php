@@ -50,7 +50,7 @@
                     @endphp
                     
                         @foreach ($data['history'] as $log)
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
                             {{$log->email}} {{-- get the device name --}}
                             <span class="badge bg-primary rounded-pill">{{$log->created_at->diffForHumans()}}</span> {{-- get the date --}}
                         </li>
@@ -61,7 +61,7 @@
                             @break
                         @endif
                         @endforeach
-                        <li class="list-group-item d-flex justify-content-between align-items-center"><a href="/history">View full history</a></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center this-hover"><a href="/history">View full history</a></li>
                         
                         
                 @else
