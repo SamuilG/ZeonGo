@@ -33,6 +33,10 @@ html, body {
     resize: none;
 }
 
+.w-37 {
+    width: 37.5%;
+}
+
 .w-90 {
     width: 90%;
 }
@@ -51,7 +55,7 @@ html, body {
 }
 
 .zoom-zoom .card-zoom:hover {
-    transform: scale(1.05);
+    transform: scale(1.025);
 }
 
 /* .hover-hover {

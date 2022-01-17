@@ -139,7 +139,7 @@
 <script src="js/map.js"></script>
 
 <script>
-    let devices_js = JSON.parse({$data['deviceCoords']});
+    let devices_js = JSON.parse({!!$data['deviceCoords']!!});
     console.log(devices_js);
 </script>
 

@@ -83,38 +83,43 @@
                 {{-- members --}}
                 <ul class="list-group m-1">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <form action="/addUser/{{ $data['device']->uuid }}" method="POST">
+                        <form class="w-100" action="/addUser/{{ $data['device']->uuid }}" method="POST">
                             @csrf
-                            <div class="w-75">
-                                <input name="email" type="email" class="form-control @error('email') border border-danger @enderror">
-                                @error('email')
-                                    <div class="text-danger">{{$message}}</div>
-                                @enderror
+                            {{-- <div class="w-75"> --}}
+                                <input class="btn btn-success float-end" type="submit" value="Add">
+                                <input name="email" type="email" placeholder="@error('email'){{$message}}@enderror" class="w-50 form-control @error('email') border border-danger @enderror">
+                                
                                 @if (session('status'))
                                     <div class="text-danger">User with this email doesn't exist</div>
                                 @endif
-                            </div>
+                            {{-- </div> --}}
                             
-                            <input class="btn btn-success" style="float: right;" type="submit" value="Add">
                         </form>
                     </li>
                     @foreach ($data['members'] as $member)
                         <li class="list-group-item d-flex justify-content-between align-items-center @if ($data['managers']->contains('user_id' ,(int) $member->id) ) bg-light @endif">
-                            <div class="w-75">
-                                <p class="m-0 w-50">{{$member->name}}</p>                            
-                                <p class="m-0 w-50">{{$member->email}}</p>
-                                <p class="m-0 w-50" style="float: right;">
-                                    @if (!$member->invited_by == NULL)
-                                        Invited by {{ $member->invitedBy() }}
-                                    @else
-                                        Invited himself
-                                    @endif
-                                </p>
-                                @if ($member->approved)
-                                    <p class="m-0 w-50">Approved by {{ $member->approvedBy() }}</p>
-                                @endif
+                            {{-- <div class="w-75"> --}}
+                                <div class="w-37">
+                                    <p class="m-0">{{$member->name}}</p>                            
+                                    <p class="m-0">{{$member->email}}</p>
+                                </div>
 
-                            </div>
+                                <div class="w-37 float-end">
+                                    <p class="m-0">
+                                        @if (!$member->invited_by == NULL)
+                                            Invited by {{ $member->invitedBy() }}
+                                        @else
+                                            Invited himself
+                                        @endif
+                                    </p>
+                                    @if ($member->approved)
+                                        <p class="m-0">Approved by {{ $member->approvedBy() }}</p>
+                                    @endif
+                                </div>
+                                
+                                
+
+                            {{-- </div> --}}
                             {{-- show if the member is approved and if not let the manager decide --}}
                             @if (!$data['managers']->contains('user_id' ,(int) $member->id) )
                                 @if ($member->approved == true)
