@@ -85,4 +85,19 @@ class ManageDevice extends Controller
             ->delete();
         return redirect('/manage/' . $device->uuid);
     }
+
+    public function addUser(Device $device, Request $request)
+    {
+        if (!auth()->user()->isManager($device->id)) {
+            return redirect('/home');
+        }
+        $request->validate([
+            'email' => 'required|email',
+        ]);
+        $user_id = User::where('email', $request->email)->first()->id;
+        Pass::create([
+            'user_id' => $user_id,
+            'device'
+        ]);
+    }
 }

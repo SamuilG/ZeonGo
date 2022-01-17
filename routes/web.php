@@ -56,7 +56,10 @@ Route::post('/addDevice', [UserOptions::class, 'addDevice'])->name("addDevice");
 // management things
 Route::get('/manage/{device}', [ManageDevice::class, 'index'])->name("manage");
 Route::post('/manage/{device}', [ManageDevice::class, 'saveChanges']);
+
 Route::post('/approve/{device}/{user}', [ManageDevice::class, 'approve']);
 Route::post('/decline/{device}/{user}', [ManageDevice::class, 'decline']);
+
+Route::post('/addUser/{device}/', [ManageCevice::class, 'addUser']);
 
 
