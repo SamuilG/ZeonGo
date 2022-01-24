@@ -96,4 +96,13 @@ class User extends Authenticatable
         }
         return false;
     }
+
+    public function isAdmin()
+    {
+        $admin = Admin::where('user_id', $this->id)->get();
+        if(count($admin)){
+            return true;
+        }
+        return false;
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -9,12 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
-{
-    public function __construct()
-    {
-        $this->middleware(['guest']);
-    }
-    
+{   
     public function verifyEmail(Request $request)
     {
         //dd($request->key);
@@ -23,5 +19,12 @@ class EmailController extends Controller
         DB::update('UPDATE `users` SET `email_verified`= 1 WHERE `email_verified` = ?', [$key]);
 
         redirect()->route('login');
+    }
+
+    public function resetPassword(Request $request){
+        $request->validate([
+            'password' => 'required|confirmed'
+        ]);
+        User::find(auth()->id());
     }
 }
