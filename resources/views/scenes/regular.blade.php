@@ -16,7 +16,7 @@
 @section('content')
 
 <div class="row flex-grow-1">
-    <div id="qrCode" style="display: none;">
+    <div class="qrCode p-2" style="display: none;">
         <img src="{{ $data['key'] }}" class="img-fluid" alt="The qr code">
     </div>
     <div class="col-md-8 d-flex h-100 flex-column">
@@ -94,7 +94,7 @@
 
             </div>
         </div>
-        <div class="row flex-grow-1 bg-blue">
+        <div class="row flex-grow-1 bg-blue mapFlex">
             <div class="col">
                 {{-- <div class=""> --}}
                     <div id="map"></div>                
@@ -105,7 +105,7 @@
     
     <div class="col-md-4 position-relative">
 
-        <div class="w-95 position-absolute top-50 start-50 translate-middle">
+        <div class="w-95 position-absolute top-50 start-50 translate-middle flexHis">
 
             <h3 class="text-center">History</h3>
             <ul class="list-group m-1 hover-hover">

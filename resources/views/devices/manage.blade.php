@@ -12,9 +12,9 @@
 
 <div class="row flex-grow-1">
     
-    <div class="col-md-6 d-flex h-100 flex-column">
+    <div class="col-md-6 d-flex h-100 flex-column h-resp">
         <div class="row info p-2">
-            <div class="col h-100">
+            <div class="col h-100 h-resp">
                 
                 {{-- <h3>Device: {{ $data['device']->device_key }}</h3> --}}
                 <form action="/manage/{{ $data['device']->uuid }}" method="POST">

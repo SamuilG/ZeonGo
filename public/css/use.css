@@ -88,10 +88,10 @@ ul {
 }
 
 @media only screen and (max-width: 767px) {
-    #qrCode {
+    .qrCode {
         display: block !important;
     }
-    .h-100 {
+    .h-resp {
         height: auto !important;;
     }
 
@@ -105,5 +105,26 @@ ul {
 
     .membersLi form {
         float: right;
+    }
+
+    .locations {
+        height: auto;
+    }
+
+    .col-card {
+        width: 85%;
+        height: 350px;
+    }
+
+    .mapFlex {
+        height: 300px;
+    }
+
+    .flexHis {
+        top: -100px !important;
+    }
+
+    .flex-grow-1 {
+        flex-grow: 0 !important;
     }
 }
