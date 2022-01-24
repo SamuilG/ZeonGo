@@ -31,20 +31,19 @@
                 
               
                 @auth
-                <li>
-                  <form action="{{ route('addDevice') }}" method="POST" class="p-3 inline">
-                      
-                      @csrf
-                      <input type="text" name="device_key">
-                      <button type="submit" class="me-2 btn btn-outline-light">Join</button>
-                  </form>
-                </li> 
-                    <li>
-                      <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
-                          @csrf
-                          <button type="submit" class="me-2 btn btn-outline-light">Logout</button>
-                      </form>
-                    </li>
+                
+                  <li>
+                    <form action="" method="POST" class="p-3 inline">
+                        @csrf
+                        <button type="submit" class="me-2 btn btn-outline-light">Account</button>
+                    </form>
+                  </li>
+                  <li>
+                    <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
+                        @csrf
+                        <button type="submit" class="me-2 btn btn-outline-light">Logout</button>
+                    </form>
+                  </li>
                 @endauth
 
                 @guest

@@ -82,7 +82,7 @@
                 
                 {{-- members --}}
                 <ul class="list-group m-1">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
                         <form class="w-100" action="/addUser/{{ $data['device']->uuid }}" method="POST">
                             @csrf
                             {{-- <div class="w-75"> --}}
@@ -97,7 +97,7 @@
                         </form>
                     </li>
                     @foreach ($data['members'] as $member)
-                        <li class="list-group-item d-flex justify-content-between align-items-center @if ($data['managers']->contains('user_id' ,(int) $member->id) ) bg-light @endif">
+                        <li class="list-group-item d-flex justify-content-between align-items-center @if ($data['managers']->contains('user_id' ,(int) $member->id) ) bg-light @endif this-hover membersLi">
                             {{-- <div class="w-75"> --}}
                                 <div class="w-37">
                                     <p class="m-0">{{$member->name}}</p>                            

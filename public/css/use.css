@@ -21,6 +21,10 @@ html, body {
     height: 50%;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .form-group {
     padding-bottom: 10px;
 }
@@ -71,8 +75,35 @@ html, body {
     background: rgb(230, 230, 230);
 }
 
+.join {
+    position: absolute;
+    /* width: 100px;
+    height: 100px; */
+    z-index: 1;
+}
+
+.membersLi form {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 @media only screen and (max-width: 767px) {
     #qrCode {
         display: block !important;
+    }
+    .h-100 {
+        height: auto !important;;
+    }
+
+    .membersLi {
+        display: list-item !important;
+    }
+
+    .w-37 {
+        width: 100%;
+    }
+
+    .membersLi form {
+        float: right;
     }
 }
