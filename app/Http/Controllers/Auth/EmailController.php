@@ -25,6 +25,27 @@ class EmailController extends Controller
         $request->validate([
             'password' => 'required|confirmed'
         ]);
-        User::find(auth()->id());
+        $user = User::find(auth()->id());
+        $user->password = bcrypt($request->password);
+        $user->save();
+    }
+
+    public function forgottenPassword(Request $request){
+        $this->validate($request, [
+            'email' => 'required|email',
+        ]);
+
+        $email = $request->email;
+        $passwordToken = Str::random(50);
+        // add a check in db for email
+        // DB::insert('insert into password_resets (email, token) values (?, ?)', [$email, $passwordToken]);
+
+        $data = array('email' => $email, 'token' => $passwordToken);
+        Mail::send('emails.forgottenPassword', ["data" => $data], function($m) use($data){ // change blade
+            $m->to($data['email'])->subject('Forgotten password');
+            $m->from("admin@beta.zeongo.online", "ZeonGo");
+        });
+
+        return redirect()->route('login')->with('status', 'Check your email');
     }
 }
