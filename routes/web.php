@@ -53,6 +53,8 @@ Route::get('/', function () {
 
 // Device management things
 // normal user things
+Route::get('/account', [RegularController::class, 'userSettings'])->name("userSettings");
+
 Route::post('/addDevice', [UserOptions::class, 'addDevice'])->name("addDevice");
 
 Route::post('/user/accept/{device}', [UserOptions::class, 'accept']);
