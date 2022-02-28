@@ -28,6 +28,11 @@
                 <input type="text" class="form-control" id="device_name" name="device_name" value="">
             </div>
 
+            <div class="form-group changeDeviceGroup"> 
+                <label for="device_name" class="form-label">Manager email</label>
+                <input type="email" class="form-control" id="device_name" name="device_name" value="">
+            </div>
+
 
             {{-- optional for admin --}}
             <div class="form-group changeDeviceGroup">
