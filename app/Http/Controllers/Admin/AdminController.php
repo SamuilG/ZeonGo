@@ -12,9 +12,15 @@ class AdminController extends Controller
     {
         $this->middleware(['isAdmin']);
     }
-    
+
     public function index()
     {
-        return view('admin.admin');
+        $users = User::all();
+
+        $device = Device::all();
+
+        $data = array('users' => $users, 'device' => $device);
+
+        return view('admin.admin')->with('data', $data)
     }
 }

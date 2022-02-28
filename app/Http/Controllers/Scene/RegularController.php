@@ -58,4 +58,11 @@ class RegularController extends Controller
         UserKey::where('user_id', auth()->id())->update(array('user_key' => $key));
         return $key;
     }
+
+    public function history()
+    {
+        $history = History::where('user_id', auth()->id());
+
+        return view('scene.history');
+    }
 }
