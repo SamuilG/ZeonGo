@@ -73,4 +73,6 @@ Route::post('/addUser/{device}/', [ManageDevice::class, 'addUser']);
 
 Route::get('/admin', [AdminController::class, 'index']);
 
+Route::get('/createDevice', [AdminController::class, 'createDeviceIndex']);
+
 Route::resource('admin/device', DeviceController::class);

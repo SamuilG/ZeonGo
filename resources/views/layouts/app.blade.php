@@ -31,13 +31,24 @@
                 
               
                 @auth
+
+                {{-- това само админ да го вижда --}}
                 
-                  <li>
-                    <form action="" method="POST" class="p-3 inline">
-                        @csrf
-                        <button type="submit" class="me-2 btn btn-outline-light">Account</button>
-                    </form>
-                  </li>
+                <li>
+                  <form action="" method="POST" class="p-3 inline">
+                      @csrf
+                      <button type="submit" class="me-2 btn btn-outline-light">Create Device</button>
+                  </form>
+                </li>
+
+                {{-- до тук --}}
+
+                <li>
+                  <form action="" method="POST" class="p-3 inline">
+                      @csrf
+                      <button type="submit" class="me-2 btn btn-outline-light">Account</button>
+                  </form>
+                </li>
                   <li>
                     <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
                         @csrf
