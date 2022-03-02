@@ -12,19 +12,19 @@
 
 <div class="row flex-grow-1">
     
-    <div id="containAccordion">
+    <div>
+
+        <h2 class="text-center pt-3">USER NAME HERE</h2>
+            {{-- като зареди страницата да му зареди сегашните данни в полетата --}}
 
         <h5 id="message"></h5>
         <br>
-        <div class="accordion" id="accordion">
+        {{-- <div class="accordion" id="accordion"> --}}
             
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <p class="accordion-header ps-4 pt-2">
                     Chanage email
-                </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                </p>
                 <div class="accordion-body">
                     
                             
@@ -37,15 +37,11 @@
                     </div>
     
                 </div>
-                </div>
             </div>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <p class="accordion-header ps-4 pt-2">
                     Change password
-                </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                </p>
                 <div class="accordion-body">
                     
                     <div class="form-floating mb-3">
@@ -64,17 +60,12 @@
                         <button type='button' class='btn btn-primary' onclick='change_password()'>Save</button>
                     </div>
     
-                
-                </div>
                 </div>
             </div>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <p class="accordion-header ps-4 pt-2">
                     Change name
-                </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                </p>
                 <div class="accordion-body">
                 
                 
@@ -87,10 +78,9 @@
                     </div>
     
                 </div>
-                </div>
             </div>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
+                <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                     Delete account
                 </button>
@@ -100,14 +90,76 @@
                 
             
                     <div id="buttons">
-                        <button type='button' class='btn btn-primary' onclick='delete_user()'>Delete</button>
+                        <button type='button' class='btn btn-primary' onclick='delete_user()'>Delete now</button>
                     </div>
     
     
                 </div>
                 </div>
             </div>
-        </div>
+        {{-- </div> --}}
+        <br><br>
+
+        <h3>Passes</h3>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Device key</th>
+                <th scope="col">Device name</th>
+                <th scope="col">Coordinates</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">dfgdsf</th>
+                <td>MQSTO</td>
+                <td>33.23232. 32.67767</td>
+              </tr>
+              <tr>
+                <th scope="row">fdgddfg</th>
+                <td>PMG VAZOV</td>
+                <td>22.42324, 56.2452</td>
+              </tr>
+              <tr>
+                <th scope="row">dfgdfg</th>
+                <td>EG GEO MILEV</td>
+                <td>53.5453, 24.52332</td>
+              </tr>
+            </tbody>
+          </table>
+          <br><br>
+  
+          <h3>History</h3>
+          <table class="table">
+              <thead>
+                <tr>
+                    <th scope="col">Device key</th>
+                    <th scope="col">Device name</th>
+                    <th scope="col">Coordinates</th>
+                    <th scope="col">Timestamp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">dfgdsf</th>
+                    <td>MQSTO</td>
+                    <td>33.23232. 32.67767</td>
+                    <td>23.02.2022 11:45</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">fdgddfg</th>
+                    <td>PMG VAZOV</td>
+                    <td>22.42324, 56.2452</td>
+                    <td>23.02.2022 11:45</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">dfgdfg</th>
+                    <td>EG GEO MILEV</td>
+                    <td>53.5453, 24.52332</td>
+                    <td>23.02.2022 11:45</td>
+                  </tr>
+              </tbody>
+            </table>
       
         </div>
 

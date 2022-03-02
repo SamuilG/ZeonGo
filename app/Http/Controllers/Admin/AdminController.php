@@ -35,6 +35,10 @@ class AdminController extends Controller
     {
         return view('admin.createDevice');
     }
+    public function accountAdminSide()
+    {
+        return view('admin.accountAdminSide');
+    }
     public function saveDevice()
     {
         //

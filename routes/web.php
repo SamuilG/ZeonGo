@@ -72,6 +72,7 @@ Route::post('/addUser/{device}/', [ManageDevice::class, 'addUser']);
 // SUPER ADMIN THINGS
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::get('/accountAdminSide', [AdminController::class, 'accountAdminSide'])->name('admin.accountAdminSide');
 
 Route::get('/createDevice', [AdminController::class, 'createDeviceIndex'])->name('admin.device.create');
 Route::post('/createDevice', [AdminController::class, 'saveDevice']);
