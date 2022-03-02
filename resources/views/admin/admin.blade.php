@@ -27,11 +27,11 @@ admin/manager
                 <ul class="list-group m-1">
                     <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
                         {{-- <form class="w-100" action="/addUser/{{ $data['device']->uuid }}" method="POST"> --}}
-                        <form class="w-100" method="POST">
+                        <form class="w-100" method="GET">
                             @csrf
                             {{-- <div class="w-75"> --}}
                                 <input class="btn btn-primary float-end" type="submit" value="Search">
-                                <input name="email" type="email" placeholder="@error('email'){{$message}}@enderror" class="w-50 form-control @error('email') border border-danger @enderror">
+                                <input name="user_search" type="email" placeholder="Search for email" class="w-50 form-control @error('user_search') border border-danger @enderror">
                                 
                                 @if (session('status'))
                                     <div class="text-danger">User with this email doesn't exist</div>
@@ -39,46 +39,42 @@ admin/manager
                             {{-- </div> --}}
                             
                         </form>
+                        <a class="btn btn-danger float-end mx-1" href="{{route('admin.index')}}">Clear</a>
                     </li>
 
                     {{-- това ще е search result --}}
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        <div class="w-37">
-                            <p class="m-0">Samuil Georgiev</p>                            
-                            <p class="m-0">samuil@zeongo.online</p>
-                        </div>
+                    @php
+                        $i = 0;
+                    @endphp
+                    @if (count($users))
+                        @foreach ($users as $user)
+                            @php
+                                $i++;
+                                if($i > 5)
+                                {
+                                    break;
+                                }
+                            @endphp
+                            <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
+                                <div class="w-37">
+                                    <p class="m-0">{{$user->name}}</p>                            
+                                    <p class="m-0">{{$user->email}}</p>
+                                </div>
 
-                        <form method="POST">
-                            @csrf
-                            <input class="btn btn-dark" type="submit" value="More">
-                        </form>
+                                <form method="POST">
+                                    @csrf
+                                    <input class="btn btn-dark" type="submit" value="More">
+                                </form>
 
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        <div class="w-37">
-                            <p class="m-0">Samuil Georgiev</p>                            
-                            <p class="m-0">samuil@zeongo.online</p>
-                        </div>
-
-                        <form method="POST">
-                            @csrf
-                            <input class="btn btn-dark" type="submit" value="More">
-                        </form>
-
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        <div class="w-37">
-                            <p class="m-0">Samuil Georgiev</p>                            
-                            <p class="m-0">samuil@zeongo.online</p>
-                        </div>
-
-                        <form method="POST">
-                            @csrf
-                            <input class="btn btn-dark" type="submit" value="More">
-                        </form>
-
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover"><a href="">View all results</a><a class="text-end" href="">View all users</a></li>
+                            </li>
+                        @endforeach
+                    @else
+                        <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
+                            There are no results
+                        </li>
+                    @endif
+                    
+                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover"><a href="">View all users  </a></li>
                 </ul>
 
                 
@@ -91,19 +87,16 @@ admin/manager
                 <h3>Stats</h3>
                 <ul class="list-group m-1">
                     <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        Number of users: <p class="m-0 text-end">216 218</p>
+                        Number of users: <p class="m-0 text-end">{{count($users)}}</p>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        Number of access points: <p class="m-0 text-end">52 000</p>
+                        Number of devices: <p class="m-0 text-end">{{count($devices)}}</p>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        Successful entries <p class="m-0 text-end">500 043</p>
+                        Successful entries <p class="m-0 text-end">{{count($history)}}</p>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        Denied entries <p class="m-0 text-end">379 992</p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        User satisfaction: <p class="m-0 text-end">99%</p>
+                        Number of passes<p class="m-0 text-end">{{count($passes)}}</p>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center this-hover"><a href="">View full access history</a></li>
                 </ul>
@@ -122,141 +115,46 @@ admin/manager
                 {{-- Devices --}}
                 <ul class="list-group m-1">
                     <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        {{-- <form class="w-100" action="/addUser/{{ $data['device']->uuid }}" method="POST"> --}}
-                        <form class="w-100" method="POST">
+                        <form class="w-100" method="GET">
                             @csrf
                             {{-- <div class="w-75"> --}}
                                 <input class="btn btn-primary float-end" type="submit" value="Search">
-                                <input name="email" type="email" placeholder="@error('email'){{$message}}@enderror" class="w-50 form-control @error('email') border border-danger @enderror">
-                                
-                                @if (session('status'))
-                                    <div class="text-danger">User with this email doesn't exist</div>
-                                @endif
+                                <input name="device_search" type="text" placeholder="Enter device name" class="w-50 form-control">
                             {{-- </div> --}}
                             
                         </form>
+                        <a class="btn btn-danger float-end mx-1" href="{{route('admin.index')}}">Clear</a>
                     </li>
+                    @php
+                        $i = 0
+                    @endphp
+                    @foreach ($devices as $device)
+                        @php
+                            $i++;
+                            if($i > 5)
+                            {
+                                break;
+                            }
+                        @endphp
+                        <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
+                            <div class="w-37">
+                                <p class="m-0">{{$device->device_name}}</p>
+                                {{-- {{dd($device->managers->first()->user->name)}} --}}
+                                <p class="m-0">Manager: {{ $device->managers()->first()->user->name ?? 'Not set' }}</p>
+                            </div>
 
+                            <div class="w-37 float-end">
+                                <p class="m-0 text-end">Device Id: {{$device->id}}</p>
+                            </div>
 
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        <div class="w-37">
-                            <p class="m-0">deviceNameTuk</p>                            
-                            <p class="m-0">managerNameTuk</p>
-                        </div>
+                            <form method="POST">
+                                @csrf
+                                <input class="btn btn-dark" type="submit" value="More">
+                            </form>
 
-                        <div class="w-37 float-end">
-                            <p class="m-0 text-end">Device Id</p>
-                            <p class="m-0 text-end">DeviceIdTuk</p>
-                        </div>
-
-                        <form method="POST">
-                            @csrf
-                            <input class="btn btn-dark" type="submit" value="More">
-                        </form>
-
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        <div class="w-37">
-                            <p class="m-0">deviceNameTuk</p>                            
-                            <p class="m-0">managerNameTuk</p>
-                        </div>
-
-                        <div class="w-37 float-end">
-                            <p class="m-0 text-end">Device Id</p>
-                            <p class="m-0 text-end">DeviceIdTuk</p>
-                        </div>
-
-                        <form method="POST">
-                            @csrf
-                            <input class="btn btn-dark" type="submit" value="More">
-                        </form>
-
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        <div class="w-37">
-                            <p class="m-0">deviceNameTuk</p>                            
-                            <p class="m-0">managerNameTuk</p>
-                        </div>
-
-                        <div class="w-37 float-end">
-                            <p class="m-0 text-end">Device Id</p>
-                            <p class="m-0 text-end">DeviceIdTuk</p>
-                        </div>
-
-                        <form method="POST">
-                            @csrf
-                            <input class="btn btn-dark" type="submit" value="More">
-                        </form>
-
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        <div class="w-37">
-                            <p class="m-0">deviceNameTuk</p>                            
-                            <p class="m-0">managerNameTuk</p>
-                        </div>
-
-                        <div class="w-37 float-end">
-                            <p class="m-0 text-end">Device Id</p>
-                            <p class="m-0 text-end">DeviceIdTuk</p>
-                        </div>
-
-                        <form method="POST">
-                            @csrf
-                            <input class="btn btn-dark" type="submit" value="More">
-                        </form>
-
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        <div class="w-37">
-                            <p class="m-0">deviceNameTuk</p>                            
-                            <p class="m-0">managerNameTuk</p>
-                        </div>
-
-                        <div class="w-37 float-end">
-                            <p class="m-0 text-end">Device Id</p>
-                            <p class="m-0 text-end">DeviceIdTuk</p>
-                        </div>
-
-                        <form method="POST">
-                            @csrf
-                            <input class="btn btn-dark" type="submit" value="More">
-                        </form>
-
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        <div class="w-37">
-                            <p class="m-0">deviceNameTuk</p>                            
-                            <p class="m-0">managerNameTuk</p>
-                        </div>
-
-                        <div class="w-37 float-end">
-                            <p class="m-0 text-end">Device Id</p>
-                            <p class="m-0 text-end">DeviceIdTuk</p>
-                        </div>
-
-                        <form method="POST">
-                            @csrf
-                            <input class="btn btn-dark" type="submit" value="More">
-                        </form>
-
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        <div class="w-37">
-                            <p class="m-0">deviceNameTuk</p>                            
-                            <p class="m-0">managerNameTuk</p>
-                        </div>
-
-                        <div class="w-37 float-end">
-                            <p class="m-0 text-end">Device Id</p>
-                            <p class="m-0 text-end">DeviceIdTuk</p>
-                        </div>
-
-                        <form method="POST">
-                            @csrf
-                            <input class="btn btn-dark" type="submit" value="More">
-                        </form>
-
-                    </li>
+                        </li>
+                    @endforeach
+                   
                     <li class="list-group-item d-flex justify-content-between align-items-center this-hover"><a href="">View all devices</a></li>
                 </ul>
 
