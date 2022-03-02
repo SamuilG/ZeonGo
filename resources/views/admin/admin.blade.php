@@ -50,7 +50,7 @@ admin/manager
                         @foreach ($users as $user)
                             @php
                                 $i++;
-                                if($i > 5)
+                                if($i > 3)
                                 {
                                     break;
                                 }
