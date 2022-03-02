@@ -18,10 +18,6 @@
 
         <form action="" method="POST">
             @csrf
-            <div class="form-group changeDeviceGroup"> 
-                <label for="device_name" class="form-label">Device key</label>
-                <input type="text" class="form-control" id="device_name" name="device_name" value="">
-            </div>
             
             <div class="form-group changeDeviceGroup"> 
                 <label for="device_name" class="form-label">Device name</label>

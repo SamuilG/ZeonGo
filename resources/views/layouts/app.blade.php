@@ -34,12 +34,14 @@
 
                 {{-- това само админ да го вижда --}}
                 
-                <li>
-                  <form action="" method="POST" class="p-3 inline">
-                      @csrf
-                      <button type="submit" class="me-2 btn btn-outline-light">Create Device</button>
-                  </form>
-                </li>
+                @if (auth()->user()->isAdmin())
+                  <li>
+                    <form action="{{route('admin.device.create')}}" method="GET" class="p-3 inline">
+                        @csrf
+                        <button type="submit" class="me-2 btn btn-outline-light">Create Device</button>
+                    </form>
+                  </li>
+                @endif
 
                 {{-- до тук --}}
 
