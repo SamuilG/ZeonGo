@@ -31,13 +31,26 @@
                 
               
                 @auth
+
+                {{-- това само админ да го вижда --}}
                 
+                @if (auth()->user()->isAdmin())
                   <li>
-                    <form action="" method="POST" class="p-3 inline">
+                    <form action="{{route('admin.device.create')}}" method="GET" class="p-3 inline">
                         @csrf
-                        <button type="submit" class="me-2 btn btn-outline-light">Account</button>
+                        <button type="submit" class="me-2 btn btn-outline-light">Create Device</button>
                     </form>
                   </li>
+                @endif
+
+                {{-- до тук --}}
+
+                <li>
+                  <form action="" method="POST" class="p-3 inline">
+                      @csrf
+                      <button type="submit" class="me-2 btn btn-outline-light">Account</button>
+                  </form>
+                </li>
                   <li>
                     <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
                         @csrf

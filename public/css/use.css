@@ -87,6 +87,33 @@ ul {
     padding-right: 5px;
 }
 
+
+#containAccordion {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#accordion {
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    background: linear-gradient( 34deg, rgba(13,84,138,1) 0%, rgb(31, 119, 121) 100%);
+
+}
+#message {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* button.accordion-button.collapsed {
+    color: white;
+} */
+
+
+
 @media only screen and (max-width: 767px) {
     .qrCode {
         display: block !important;

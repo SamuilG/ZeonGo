@@ -53,6 +53,8 @@ Route::get('/', function () {
 
 // Device management things
 // normal user things
+Route::get('/account', [RegularController::class, 'userSettings'])->name("userSettings");
+
 Route::post('/addDevice', [UserOptions::class, 'addDevice'])->name("addDevice");
 
 Route::post('/user/accept/{device}', [UserOptions::class, 'accept']);
@@ -69,10 +71,9 @@ Route::post('/addUser/{device}/', [ManageDevice::class, 'addUser']);
 
 // SUPER ADMIN THINGS
 
-// Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::get('/accountAdminSide', [AdminController::class, 'accountAdminSide'])->name('admin.accountAdminSide');
 
-Route::resource('admin/device', DeviceController::class);
-Route::get('admin/device/create', [DeviceController::class, 'edit']);
-Route::get('admin/device/store', [DeviceController::class, 'update']);
-Route::get('admin/device/edit/{device}', [DeviceController::class, 'edit']);
-Route::get('admin/device/update/{device}', [DeviceController::class, 'edit']);
+Route::get('/createDevice', [AdminController::class, 'createDeviceIndex'])->name('admin.device.create');
+Route::post('/createDevice', [AdminController::class, 'saveDevice']);
+
