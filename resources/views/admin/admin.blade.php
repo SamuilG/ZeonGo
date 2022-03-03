@@ -6,17 +6,6 @@
 
 @section('content')
 
-{{-- 
-
-admin/device
-admin/user
-admin/pass
-admin/manager
-
-    
---}}
-
-
 <div class="row flex-grow-1">
     
     <div class="col-md-6 d-flex h-100 flex-column h-resp">
@@ -26,18 +15,14 @@ admin/manager
                 <h3>Search Users</h3>
                 <ul class="list-group m-1">
                     <li class="list-group-item d-flex justify-content-between align-items-center this-hover">
-                        {{-- <form class="w-100" action="/addUser/{{ $data['device']->uuid }}" method="POST"> --}}
                         <form class="w-100" method="GET">
                             @csrf
-                            {{-- <div class="w-75"> --}}
-                                <input class="btn btn-primary float-end" type="submit" value="Search">
-                                <input name="user_search" type="email" placeholder="Search for email" class="w-50 form-control @error('user_search') border border-danger @enderror">
-                                
-                                @if (session('status'))
-                                    <div class="text-danger">User with this email doesn't exist</div>
-                                @endif
-                            {{-- </div> --}}
+                            <input class="btn btn-primary float-end" type="submit" value="Search">
+                            <input name="user_search" type="email" placeholder="Search for email" class="w-50 form-control @error('user_search') border border-danger @enderror">
                             
+                            @if (session('status'))
+                                <div class="text-danger">User with this email doesn't exist</div>
+                            @endif
                         </form>
                         <a class="btn btn-danger float-end mx-1" href="{{route('admin.index')}}">Clear</a>
                     </li>
@@ -61,8 +46,7 @@ admin/manager
                                     <p class="m-0">{{$user->email}}</p>
                                 </div>
 
-                                <form method="POST">
-                                    @csrf
+                                <form action="/accountAdminSide/{{$user->uuid}}" method="GET">
                                     <input class="btn btn-dark" type="submit" value="More">
                                 </form>
 

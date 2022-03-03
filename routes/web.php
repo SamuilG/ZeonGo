@@ -72,8 +72,11 @@ Route::post('/addUser/{device}/', [ManageDevice::class, 'addUser']);
 // SUPER ADMIN THINGS
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
-Route::get('/accountAdminSide', [AdminController::class, 'accountAdminSide'])->name('admin.accountAdminSide');
+Route::get('/accountAdminSide/{user}', [AdminController::class, 'accountAdminSide'])->name('admin.accountAdminSide');
+Route::get('/admin/revoke/{device}/{user}', [AdminController::class, 'removePass']);
 
-Route::get('/createDevice', [AdminController::class, 'createDeviceIndex'])->name('admin.device.create');
-Route::post('/createDevice', [AdminController::class, 'saveDevice']);
+Route::post('/admin/updateUser/{user}', [AdminController::class, 'updateUser']);
+Route::get('/admin/deleteUser/{user}', [AdminController::class, 'deleteUser']);
+Route::get('/admin/createDevice', [AdminController::class, 'createDeviceIndex'])->name('admin.device.create');
+Route::post('/admin/createDevice', [AdminController::class, 'saveDevice']);
 
