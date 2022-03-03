@@ -16,6 +16,7 @@ class AdminController extends Controller
     {
         $this->middleware(['isAdmin']);
     }
+
     public function index(Request $request)
     {
         $users = User::all();

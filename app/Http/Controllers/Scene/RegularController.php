@@ -59,7 +59,6 @@ class RegularController extends Controller
         return $key;
     }
 
-
     public function userSettings()
     {
         if (auth()->user()->email_verified != 1) {
@@ -94,4 +93,10 @@ class RegularController extends Controller
         return view('scenes.account')->with('data', $data);
     }
 
+    public function history()
+    {
+        $history = History::where('user_id', auth()->id());
+
+        return view('scene.history');
+    }
 }
