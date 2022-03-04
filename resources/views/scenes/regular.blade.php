@@ -24,8 +24,6 @@
             <div class="col h-100">
                 
 
-                <button type="submit" class="me-2 btn btn-primary btn-lg join">+</button>
-
                 {{-- <div class="col-8 h-100"> --}}
                     <div class="container-fluid h-100 d-flex overflow-auto">
                         <div class="row flex-grow-1 flex-nowrap overflow-auto zoom-zoom">
