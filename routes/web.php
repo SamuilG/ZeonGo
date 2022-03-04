@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\DeviceController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\PassController;
 use App\Http\Controllers\Devices\UserOptions;
@@ -72,11 +72,6 @@ Route::post('/addUser/{device}/', [ManageDevice::class, 'addUser']);
 // SUPER ADMIN THINGS
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
-Route::get('/accountAdminSide/{user}', [AdminController::class, 'accountAdminSide'])->name('admin.accountAdminSide');
-Route::get('/admin/revoke/{device}/{user}', [AdminController::class, 'removePass']);
 
-Route::post('/admin/updateUser/{user}', [AdminController::class, 'updateUser']);
-Route::get('/admin/deleteUser/{user}', [AdminController::class, 'deleteUser']);
-Route::get('/admin/createDevice', [AdminController::class, 'createDeviceIndex'])->name('admin.device.create');
-Route::post('/admin/createDevice', [AdminController::class, 'saveDevice']);
+Route::resource('/admin/users', UserController::class);
 

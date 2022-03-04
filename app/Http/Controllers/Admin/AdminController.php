@@ -31,7 +31,7 @@ class AdminController extends Controller
         if($request->device_search){
             $devices = $devices->where('device_name', $request->device_search);
         }
-        return view('admin.admin', compact('users', 'devices', 'history', 'passes'));
+        return view('admin.index', compact('users', 'devices', 'history', 'passes'));
     }
     public function createDeviceIndex()
     {
