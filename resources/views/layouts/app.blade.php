@@ -40,11 +40,6 @@
                         <button type="submit" class="me-2 btn btn-outline-light">Admin Panel</button>
                     </form>
                   </li>
-                  <li>
-                    <form action="{{route('admin.device.create')}}" method="GET" class="p-3 inline">
-                        <button type="submit" class="me-2 btn btn-outline-light">Create Device</button>
-                    </form>
-                  </li>
                 @endif
 
                 {{-- до тук --}}

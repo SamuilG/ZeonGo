@@ -5,10 +5,16 @@
 @endsection
 
 @section('content')
-    <div class="bg-light">
-        <h1 class="mx-4 float-start my-3"><i class="fa fa-user"></i> Users</h1>
-        <a class="btn btn-success float-end my-4 mx-4" href="/admin/users/create">Create User</a>
+<div class="col-10 bg-light" style="height: 100vh;">
+    <div class="bg-light row">
+        <h1 class="mx-4 my-3 col-4"><i class="fa fa-user"></i> Users</h1>
+        <a class="btn btn-success  col-1 my-4 ms-auto me-4" href="/admin/users/create">Create User</a>
     </div>
+    @if (session()->has('success'))
+        <div class="alert alert-success col-4" role="alert">
+            {{session()->get('success')}}
+        </div>
+    @endif
     <table class="table table-striped">
         <th>
             <td>Name</td>
@@ -26,7 +32,13 @@
                 <td>@if ($user->email_verified == 1) Yes @else No @endif</td>
                 <td>{{$user->created_at}}</td>
                 <td><a class="btn btn-success" href="/admin/users/edit/{{$user->uuid}}">Edit</a></td>
-                <td><a class="btn btn-danger" href="/admin/users/destroy/{{$user->uuid}}">Delete</a></td>
+                <td>
+                    <form action="/admin/users/destroy/{{$user->uuid}}" method="POST">
+                        @method('delete')
+                        @csrf
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+                </td>
             </tr>
         @endforeach
         
@@ -36,4 +48,6 @@
             {{$users->links()}}
         </div>
     </div>
+</div>
+    
 @endsection

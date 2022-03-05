@@ -73,5 +73,17 @@ Route::post('/addUser/{device}/', [ManageDevice::class, 'addUser']);
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 
-Route::resource('/admin/users', UserController::class);
+// Route::resource('/admin/users', UserController::class);
+Route::group(['prefix' => 'admin', 'admin.'], function(){
+  Route::group(['prefix' => 'users', 'users.'], function() {
+    Route::get('/', [UserController::class, 'index'])->name('index');
+    Route::get('/create', [UserController::class, 'create'])->name('create');
+    Route::post('/store', [UserController::class, 'store']);
+    Route::get('/edit/{user}', [UserController::class, 'edit']);
+    Route::put('/update/{user}', [UserController::class, 'update']);
+    Route::delete('/destroy/{user}', [UserController::class, 'destroy']);
+  });
+});
+
+
 

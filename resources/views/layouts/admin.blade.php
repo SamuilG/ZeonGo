@@ -19,14 +19,13 @@
                 <div class="sidebar-heading border-bottom bg-light"><img class="img-fluid" src="http://127.0.0.1:8000/images/ZeonGoLogo.png" alt=""></div>
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin/users"><i class="fa fa-user"></i> Users</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="fa fa-video"></i> Devices</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin/users"><i class="fa fa-video"></i> Devices</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="fas fa-user-gear"></i> Managers</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Passes</a>
                 </div>
             </div>
-            <div class="col-10">
-                @yield('content')
-            </div>
+            @yield('content')
+            
         </div>
     </body>
 </html>

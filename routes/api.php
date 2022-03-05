@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 //Device
-Route::post('/process', [ScanController::class, 'process']);
+// Route::post('/process', [ScanController::class, 'process']);
