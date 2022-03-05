@@ -1,7 +1,11 @@
 @extends('layouts.admin')
 
 @section('title')
-    Creating User    
+    @if ($user->email) 
+    Editing 
+    @else
+    Creating
+    @endif User   
 @endsection
 
 @section('content')

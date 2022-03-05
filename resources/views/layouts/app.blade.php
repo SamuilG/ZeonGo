@@ -45,7 +45,7 @@
                 {{-- до тук --}}
 
                 <li>
-                  <form action="" method="POST" class="p-3 inline">
+                  <form action="/account" method="GET" class="p-3 inline">
                       @csrf
                       <button type="submit" class="me-2 btn btn-outline-light">Account</button>
                   </form>

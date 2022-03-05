@@ -12,40 +12,63 @@ class DeviceController extends Controller
     {
         $this->middleware(['isAdmin']);
     }
+
+    public function index()
+    {
+        $devices = Device::paginate(15);
+
+        return view('admin.devices.index', compact('devices'));
+    }
     
     public function create()
     {
-        //
+        $device = new Device();
+
+        return view('admin.devices.form', compact('device'));
     }
 
-    public function store(DeviceRequest $request)
+    public function store(Request $request)
     {
-        Device::create($request->validated());
+        $request = $request->validate([
+            'device_name' => 'required',
+            'coordinates' => 'required',
+            'device_description' => 'required'
+        ]);
 
-        return redirect()->route('admin.index');
+        Device::create($request + ['uuid' => Device::createUUID(), 'device_key' => Device::createKey()]);
+
+        session()->flash('success', 'Device succesfully created');
+
+        return redirect('/admin/devices');
     }
 
-    public function show(Device $id)
+    public function edit(Device $device)
     {
-        //
+        return view('admin.devices.form', compact('device'));
     }
 
-    public function edit(Device $id)
+    public function update(Request $request, Device $device)
     {
-        //
-    }
+        $request = $request->validate([
+            'device_name' => 'required',
+            'coordinates' => 'required',
+            'device_description' => 'required'
+        ]);
 
-    public function update(DeviceRequest $request, Device $device)
-    {
-        Device::update($request->validated());
-        
-        return redirect()->route('admin.index');
+        $device->update($request);
+        $device->save();
+
+        session()->flash('success', 'Device succesfully updated');
+
+        return redirect('/admin/devices');
     }
 
     public function destroy(Device $device)
     {
-        Device::delete($device->id);
+        Device::destroy($device->id);
 
-        return redirect()->route('admin.index');
+        session()->flash('success', 'Device succesfully deleted');
+
+        return redirect('/admin/devices');
     }
 }

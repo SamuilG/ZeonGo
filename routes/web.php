@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\DeviceController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\PassController;
@@ -82,6 +83,15 @@ Route::group(['prefix' => 'admin', 'admin.'], function(){
     Route::get('/edit/{user}', [UserController::class, 'edit']);
     Route::put('/update/{user}', [UserController::class, 'update']);
     Route::delete('/destroy/{user}', [UserController::class, 'destroy']);
+  });
+
+  Route::group(['prefix' => 'devices', 'devices.'], function() {
+    Route::get('/', [DeviceController::class, 'index'])->name('index');
+    Route::get('/create', [DeviceController::class, 'create'])->name('create');
+    Route::post('/store', [DeviceController::class, 'store']);
+    Route::get('/edit/{device}', [DeviceController::class, 'edit']);
+    Route::put('/update/{device}', [DeviceController::class, 'update']);
+    Route::delete('/destroy/{device}', [DeviceController::class, 'destroy']);
   });
 });
 

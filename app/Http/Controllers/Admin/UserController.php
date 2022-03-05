@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::paginate(16);
+        $users = User::paginate(15);
 
         return view('admin.users.index', compact('users'));
     }
@@ -29,6 +29,8 @@ class UserController extends Controller
             'name' => 'required',
             'password' => 'required'
         ]);
+
+        $request['password'] = bcrypt($request['password']);
 
         User::create($request + ['email_verified' => '1'] + ['uuid' => User::createUUID()]);
 

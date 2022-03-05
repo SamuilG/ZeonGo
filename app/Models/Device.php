@@ -41,6 +41,11 @@ class Device extends Model
             ->select('managers.user_id');
     }
 
+    public function managersFullData()
+    {
+        return $this->hasMany(Manager::class);
+    }
+
     public static function createKey()
     {
         $key = Str::random(6);
