@@ -25,8 +25,6 @@
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin/users"><i class="fa fa-user"></i> Users</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin/devices"><i class="fa fa-video"></i> Devices</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="fas fa-user-gear"></i> Managers</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Passes</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('home')}}">Back to main site</a>
                 </div>
             </div>
