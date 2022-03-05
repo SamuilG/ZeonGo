@@ -27,6 +27,7 @@
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin/devices"><i class="fa fa-video"></i> Devices</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="fas fa-user-gear"></i> Managers</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Passes</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('home')}}">Back to main site</a>
                 </div>
             </div>
             @yield('content')

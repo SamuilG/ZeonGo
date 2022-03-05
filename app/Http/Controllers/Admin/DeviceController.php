@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Device;
 use App\Http\Controllers\Controller;
+use App\Models\History;
+use App\Models\Manager;
+use App\Models\Pass;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DeviceController extends Controller
@@ -70,5 +74,102 @@ class DeviceController extends Controller
         session()->flash('success', 'Device succesfully deleted');
 
         return redirect('/admin/devices');
+    }
+
+    public function createPass(Device $device)
+    {
+        $users = User::all();
+        return view('admin.passes.form', compact('device', 'users'));
+    }
+
+    public function storePass(Device $device, Request $request)
+    {
+        $request = $request->validate([
+            'email' => 'required|email|exists:users,email'
+        ]);
+
+        $user = User::where('email', $request['email'])->get()->first();
+        $pass = Pass::where('device_id', $device->id)->where('user_id', $user->id)->get()->first();
+
+        if($pass) {
+            session()->flash('info', 'User already has access to this device');
+            return redirect()->back();
+        }
+
+        Pass::create([
+            'device_id' => $device->id,
+            'user_id' => $user->id,
+            'approved' => true
+        ]);
+
+        session()->flash('success', 'Pass granted to '.$user->name);
+        return redirect('/admin/devices/edit/'.$device->uuid);
+    }
+
+    public function destroyPass(Device $device, User $user)
+    {
+        $pass = Pass::where('device_id', $device->id)
+            ->where('user_id', $user->id)
+            ->firstOrFail();
+
+        Pass::destroy($pass->id);
+
+        session()->flash('success', 'User successfuly removed from this device');
+
+        return redirect('/admin/devices/edit/'.$device->uuid);
+
+    }
+
+    public function createManager(Device $device)
+    {
+        $users = User::all();
+        return view('admin.managers.form', compact('device', 'users'));
+    }
+
+    public function storeManager(Device $device, Request $request)
+    {
+        $request = $request->validate([
+            'email' => 'required|email|exists:users,email'
+        ]);
+
+        $user = User::where('email', $request['email'])->get()->first();
+        $manager = Manager::where('device_id', $device->id)->where('user_id', $user->id)->get()->first();
+
+        if($manager) {
+            session()->flash('info', 'User is already a manager of this device');
+            return redirect()->back();
+        }
+
+        Manager::create([
+            'device_id' => $device->id,
+            'user_id' => $user->id,
+            'approved' => true
+        ]);
+
+        session()->flash('success', 'Pass granted to '.$user->name);
+        return redirect('/admin/devices/edit/'.$device->uuid);
+    }
+
+    public function destroyManager(Device $device, $user_id)
+    {
+        $manager = Manager::where('device_id', $device->id)
+            ->where('user_id', $user_id)
+            ->firstOrFail();
+
+        Manager::destroy($manager->id);
+
+        session()->flash('success', 'Manager successfuly removed from device');
+
+        return redirect('/admin/devices/edit/'.$device->uuid);
+
+    }
+
+    public function destroyHistory(Device $device, History $history)
+    {
+        History::destroy($history->id);
+
+        session()->flash('success', 'History log successfuly deleted.');
+
+        return redirect('/admin/devices/edit/'.$device->uuid);
     }
 }

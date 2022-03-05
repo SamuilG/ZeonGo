@@ -11,7 +11,7 @@
         <a class="btn btn-success  col-2 my-4 ms-auto me-4" href="/admin/devices/create">Create Device</a>
     </div>
     @if (session()->has('success'))
-        <div class="alert alert-success col-4" role="alert">
+        <div class="alert alert-success mx-auto col-4" role="alert">
             {{session()->get('success')}}
         </div>
     @endif
@@ -20,6 +20,7 @@
             <td>Name</td>
             <td>Location</td>
             <td>Users with pass</td>
+            <td>Managers</td>
             <td>Edit</td>
             <td>Delete</td>
         </th>
@@ -29,6 +30,7 @@
                 <td>{{$device->device_name}}</td>
                 <td>{{$device->coordinates}}</td>
                 <td>{{$device->users->count()}}</td>
+                <td>{{$device->managers->count()}}</td>
                 <td><a class="btn btn-success" href="/admin/devices/edit/{{$device->uuid}}">Edit</a></td>
                 <td>
                     <form action="/admin/devices/destroy/{{$device->uuid}}" method="POST">

@@ -11,7 +11,7 @@
         <a class="btn btn-success  col-1 my-4 ms-auto me-4" href="/admin/users/create">Create User</a>
     </div>
     @if (session()->has('success'))
-        <div class="alert alert-success col-4" role="alert">
+        <div class="alert alert-success mx-auto col-4" role="alert">
             {{session()->get('success')}}
         </div>
     @endif

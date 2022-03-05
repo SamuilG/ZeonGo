@@ -27,6 +27,10 @@ class Pass extends Model
         'invited_by',
         'approved_by',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
     public function invitedBy()
     {
         return User::find($this->invited_by)->name;   

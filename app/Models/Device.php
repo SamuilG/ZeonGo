@@ -26,7 +26,7 @@ class Device extends Model
     {
         return $this->hasMany(History::class)
             ->join('users', 'history.user_id', '=', 'users.id')
-            ->select('users.email', 'history.created_at');
+            ->select('history.id','users.name', 'users.email', 'history.created_at');
     }
     public function users()
     {

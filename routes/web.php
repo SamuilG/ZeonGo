@@ -92,6 +92,17 @@ Route::group(['prefix' => 'admin', 'admin.'], function(){
     Route::get('/edit/{device}', [DeviceController::class, 'edit']);
     Route::put('/update/{device}', [DeviceController::class, 'update']);
     Route::delete('/destroy/{device}', [DeviceController::class, 'destroy']);
+
+    Route::get('/{device}/passes/create', [DeviceController::class, 'createPass']);
+    Route::post('/{device}/passes/store', [DeviceController::class, 'storePass']);
+    Route::delete('/{device}/passes/destroy/{user}', [DeviceController::class, 'destroyPass']);
+
+    Route::get('/{device}/managers/create', [DeviceController::class, 'createManager']);
+    Route::post('/{device}/managers/store', [DeviceController::class, 'storeManager']);
+    Route::delete('/{device}/managers/destroy/{user}', [DeviceController::class, 'destroyManager']);
+
+    Route::delete('/{device}/history/destroy/{history}', [DeviceController::class, 'destroyHistory']);
+
   });
 });
 
