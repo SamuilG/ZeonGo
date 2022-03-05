@@ -23,6 +23,7 @@
             <div class="border-end bg-white col-2" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom bg-light"><img class="img-fluid" src="http://127.0.0.1:8000/images/ZeonGoLogo.png" alt=""></div>
                 <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('admin.index')}}"><i class="fa fa-chart-line"></i> Dashboard</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin/users"><i class="fa fa-user"></i> Users</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin/devices"><i class="fa fa-video"></i> Devices</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('home')}}">Back to main site</a>

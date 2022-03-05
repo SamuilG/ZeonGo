@@ -24,13 +24,7 @@ class AdminController extends Controller
         $devices = Device::all();
         $history = History::all();
         $passes = Pass::all();
-
-        if($request->user_search){
-            $users = $users->where('email', $request->user_search);
-        }
-        if($request->device_search){
-            $devices = $devices->where('device_name', $request->device_search);
-        }
+        
         return view('admin.index', compact('users', 'devices', 'history', 'passes'));
     }
     public function createDeviceIndex()
