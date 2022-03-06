@@ -112,6 +112,13 @@ ul {
     color: white;
 } */
 
+.overF {
+    height: 82%;
+    width: 48%;
+    overflow: auto;
+    position: absolute;
+}    
+
 
 
 @media only screen and (max-width: 767px) {
@@ -153,5 +160,11 @@ ul {
 
     .flex-grow-1 {
         flex-grow: 0 !important;
+    }
+
+    .overF {
+        height: auto;
+        width: auto;
+        position: relative;
     }
 }
