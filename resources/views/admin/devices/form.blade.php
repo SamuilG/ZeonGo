@@ -113,13 +113,17 @@
                         <div class="accordion-body">
                             
                             <table class="col-12 table table-striped">
-                                <th>
-                                    <td>Name</td>
-                                    <td>Email</td>
-                                    <td>Since</td>
-                                    <td>Entries</td>
-                                    <td>Remove</td>
-                                </th>
+                                <tr>
+                                    <th>User id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Since</th>
+                                    <th>Entries</th>
+                                    <th>Remove</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align: center"><a class="btn btn-primary col-4" href="/admin/devices/{{$device->uuid}}/passes/create/">Add a new user</a></td>
+                                </tr>
                                 @foreach ($device->users as $user)
                                     <tr>
                                         <td>{{$user->id}}</td>
@@ -135,10 +139,7 @@
                                             </form>
                                         </td>
                                     </tr>
-                                @endforeach  
-                                <tr>
-                                    <td colspan="6" style="text-align: center"><a class="btn btn-primary col-4" href="/admin/devices/{{$device->uuid}}/passes/create/">Add a new user</a></td>
-                                </tr>  
+                                @endforeach
                             </table>     
                             
                         </div>
@@ -154,12 +155,16 @@
                         <div class="accordion-body">
                             
                             <table class="col-12 table table-striped">
-                                <th>
-                                    <td>Name</td>
-                                    <td>Email</td>
-                                    <td>Since</td>
-                                    <td>Remove</td>
-                                </th>
+                                <tr>
+                                    <th>User id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Since</th>
+                                    <th>Remove</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align: center"><a class="btn btn-primary col-4" href="/admin/devices/{{$device->uuid}}/managers/create/">Add a new manager</a></td>
+                                </tr> 
                                 @foreach ($device->managersFullData as $manager)
                                     <tr>
                                         <td>{{$manager->user->id}}</td>
@@ -175,9 +180,6 @@
                                         </td>
                                     </tr>
                                 @endforeach
-                                <tr>
-                                    <td colspan="6" style="text-align: center"><a class="btn btn-primary col-4" href="/admin/devices/{{$device->uuid}}/managers/create/">Add a new manager</a></td>
-                                </tr> 
                             </table>     
                             
                         </div>
@@ -193,12 +195,13 @@
                         <div class="accordion-body">
                             
                             <table class="col-12 table table-striped">
-                                <th>
-                                    <td>Name</td>
-                                    <td>Email</td>
-                                    <td>Date</td>
-                                    <td>Remove</td>
-                                </th>
+                                <tr>
+                                    <th>Log id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Date</th>
+                                    <th>Remove</th>
+                                </tr>
                                 @foreach ($device->history as $log)
                                     <tr>
                                         <td>{{$log->id}}</td>

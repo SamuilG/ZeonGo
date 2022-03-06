@@ -31,12 +31,16 @@ class Pass extends Model
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
-    public function invitedBy()
-    {
-        return User::find($this->invited_by)->name;   
-    }
-    public function approvedBy()
-    {
-        return User::find($this->approved_by)->name;   
-    }
+    // public function invitedBy()
+    // {
+    //     if ($this->invited_by) {
+    //         return User::find($this->invited_by)->name;
+    //     }
+    // }
+    // public function approvedBy()
+    // {
+    //     if ($this->approved_by) {
+    //         return User::find($this->approved_by)->name;
+    //     }
+    // }
 }

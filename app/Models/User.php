@@ -74,7 +74,13 @@ class User extends Authenticatable
     {
         return $this->hasMany(History::class)
             ->join('devices', 'history.device_id', '=', 'devices.id')
-            ->orderBy('history.created_at', 'DESC');
+            ->orderBy('history.created_at', 'DESC')
+            ->select('devices.*', 'history.*', 'history.id as history_id');
+    }
+
+    public function managers()
+    {
+        return $this->hasMany(Manager::class);
     }
 
     public static function createUUID()

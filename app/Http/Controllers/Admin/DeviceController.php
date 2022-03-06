@@ -17,9 +17,19 @@ class DeviceController extends Controller
         $this->middleware(['isAdmin']);
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $devices = Device::paginate(15);
+        $devices = Device::orderBy('id', 'ASC');
+
+        if($request->search_device_key){
+            $devices = $devices->where('device_key', $request->search_device_key);
+        }
+
+        if($request->search_name){
+            $devices = $devices->where('device_name', 'LIKE',  '%'.$request->search_name.'%');
+        }
+
+        $devices = $devices->paginate(15);
 
         return view('admin.devices.index', compact('devices'));
     }
@@ -78,8 +88,7 @@ class DeviceController extends Controller
 
     public function createPass(Device $device)
     {
-        $users = User::all();
-        return view('admin.passes.form', compact('device', 'users'));
+        return view('admin.passes.form', compact('device'));
     }
 
     public function storePass(Device $device, Request $request)
@@ -143,10 +152,19 @@ class DeviceController extends Controller
         Manager::create([
             'device_id' => $device->id,
             'user_id' => $user->id,
-            'approved' => true
         ]);
 
-        session()->flash('success', 'Pass granted to '.$user->name);
+        $pass = Pass::where('device_id', $device->id)->where('user_id', $user->id)->get()->first();
+
+        if(!$pass) {
+            Pass::create([
+                'device_id' => $device->id,
+                'user_id' => $user->id,
+                'approved' => true
+            ]);
+        }
+
+        session()->flash('success', $user->name.' is now a manager');
         return redirect('/admin/devices/edit/'.$device->uuid);
     }
 

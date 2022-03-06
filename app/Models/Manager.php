@@ -27,4 +27,8 @@ class Manager extends Model
     {
         return $this->hasOne(User::class, 'id', 'user_id');
     }
+    public function device()
+    {
+        return $this->hasOne(Device::class, 'id', 'device_id');
+    }
 }

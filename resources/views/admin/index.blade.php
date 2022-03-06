@@ -34,7 +34,6 @@
         <div class="col-6 p-4">
             <div class="card">
                 Chart go here someday
-
             </div>
         </div>
     </div>

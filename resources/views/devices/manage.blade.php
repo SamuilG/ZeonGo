@@ -104,7 +104,7 @@
                                     <p class="m-0">{{$member->email}}</p>
                                 </div>
 
-                                <div class="w-37 float-end">
+                                {{-- <div class="w-37 float-end">
                                     <p class="m-0">
                                         @if (!$member->invited_by == NULL)
                                             Invited by {{ $member->invitedBy() }}
@@ -115,7 +115,7 @@
                                     @if ($member->approved)
                                         <p class="m-0">Approved by {{ $member->approvedBy() }}</p>
                                     @endif
-                                </div>
+                                </div> --}}
                                 
                                 
 

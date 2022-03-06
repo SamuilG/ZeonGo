@@ -74,20 +74,29 @@ Route::post('/addUser/{device}/', [ManageDevice::class, 'addUser']);
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 
-// Route::resource('/admin/users', UserController::class);
 Route::group(['prefix' => 'admin', 'admin.'], function(){
   Route::group(['prefix' => 'users', 'users.'], function() {
-    Route::get('/', [UserController::class, 'index'])->name('index');
-    Route::get('/create', [UserController::class, 'create'])->name('create');
+    Route::get('/', [UserController::class, 'index']);
+    Route::get('/create', [UserController::class, 'create']);
     Route::post('/store', [UserController::class, 'store']);
     Route::get('/edit/{user}', [UserController::class, 'edit']);
     Route::put('/update/{user}', [UserController::class, 'update']);
     Route::delete('/destroy/{user}', [UserController::class, 'destroy']);
+
+    Route::get('/{user}/passes/create', [UserController::class, 'createPass']);
+    Route::post('/{user}/passes/store', [UserController::class, 'storePass']);
+    Route::delete('/{user}/passes/destroy/{device}', [UserController::class, 'destroyPass']);
+
+    Route::get('/{user}/managers/create', [UserController::class, 'createManager']);
+    Route::post('/{user}/managers/store', [UserController::class, 'storeManager']);
+    Route::delete('/{user}/managers/destroy/{device}', [UserController::class, 'destroyManager']);
+
+    Route::delete('/{user}/history/destroy/{history}', [UserController::class, 'destroyHistory']);
   });
 
   Route::group(['prefix' => 'devices', 'devices.'], function() {
-    Route::get('/', [DeviceController::class, 'index'])->name('index');
-    Route::get('/create', [DeviceController::class, 'create'])->name('create');
+    Route::get('/', [DeviceController::class, 'index']);
+    Route::get('/create', [DeviceController::class, 'create']);
     Route::post('/store', [DeviceController::class, 'store']);
     Route::get('/edit/{device}', [DeviceController::class, 'edit']);
     Route::put('/update/{device}', [DeviceController::class, 'update']);
