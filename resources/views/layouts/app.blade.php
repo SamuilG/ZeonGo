@@ -21,12 +21,18 @@
 
       <div class="row">
         <div class="col">
-          <nav class="navbar navbar-expand navbar-light bg-dark vh-50" style="height: 69px;">
-            <a class="ms-3 h-100 navbar-brand" href="/">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+          {{-- <nav class="navbar navbar-expand navbar-light bg-dark vh-50" > --}}
+            <a class="ms-3 h-69px navbar-brand" href="/">
               <img class="mh-100 img-fluid" src="/images/ZeonGoLogo.png" alt="ZeonGo">
             </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
           
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav" style="margin-left: auto">
                 
               
@@ -35,7 +41,7 @@
                 {{-- това само админ да го вижда --}}
                 
                 @if (auth()->user()->isAdmin())
-                  <li>
+                  <li class="nav-item">
                     <form action="{{route('admin.index')}}" method="GET" class="p-3 inline">
                         <button type="submit" class="me-2 btn btn-outline-light">Admin Panel</button>
                     </form>
@@ -44,19 +50,19 @@
 
                 {{-- до тук --}}
 
-                <li>
+                <li class="nav-item">
                   <form action="/" method="GET" class="p-3 inline">
                       @csrf
                       <button type="submit" class="me-2 btn btn-outline-light">Add Pass</button>
                   </form>
                 </li>
-                <li>
+                <li class="nav-item">
                   <form action="/account" method="GET" class="p-3 inline">
                       @csrf
                       <button type="submit" class="me-2 btn btn-outline-light">Account</button>
                   </form>
                 </li>
-                  <li>
+                  <li class="nav-item">
                     <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
                         @csrf
                         <button type="submit" class="me-2 btn btn-outline-light">Logout</button>
@@ -65,10 +71,10 @@
                 @endauth
 
                 @guest
-                    <li>
+                    <li class="nav-item">
                       <a href="{{ route('login') }}" class="me-2 btn btn-outline-light" role="button" aria-disabled="true">Login</a>
                     </li>  
-                    <li>
+                    <li class="nav-item">
                       <a href="{{ route('register') }}" class="me-3 btn btn-outline-light" role="button" aria-disabled="true">Register</a>
                     </li>
                 @endguest  
@@ -76,6 +82,7 @@
               </ul>    
             </div>
           </nav>
+          
         </div>
       </div>
       
