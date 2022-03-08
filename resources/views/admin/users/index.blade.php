@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden;">
+{{-- <div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden;"> --}}
     <div class="bg-light row">
         <h1 class="mx-4 my-3 col-4"><i class="fa fa-user"></i> Users</h1>
         <a class="btn btn-success  col-1 my-4 ms-auto me-4" href="/admin/users/create">Create User</a>
@@ -69,6 +69,6 @@
             {{-- {{$users->links()}} --}}
         </div>
     </div>
-</div>
+{{-- </div> --}}
     
 @endsection

@@ -1,0 +1,29 @@
+.adminDataContainer {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.menuText {
+    margin: 0;
+    width: 90%;
+    float: right;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .adminDataContainer {
+        height: 100vh;
+        overflow-x: auto;
+    }
+
+    .menuText {
+        display: none
+    }
+
+    .linksPanel {
+        text-align: center;
+    }
+
+
+}

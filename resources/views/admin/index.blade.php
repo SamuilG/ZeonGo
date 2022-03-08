@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden">
+{{-- <div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden"> --}}
     <div class="bg-light row">
         <h1 class="mx-4 my-3 col-4"><i class="fa fa-chart-line"></i>Dashboard</h1>
     </div>
@@ -37,6 +37,6 @@
             </div>
         </div>
     </div>
-</div>
+{{-- </div> --}}
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.js"></script>
 @endsection
