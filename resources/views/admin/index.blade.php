@@ -5,12 +5,12 @@
 @endsection
 
 @section('content')
-<div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden">
+{{-- <div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden"> --}}
     <div class="bg-light row">
-        <h1 class="mx-4 my-3 col-4"><i class="fa fa-chart-line"></i>Dashboard</h1>
+        <h1 class="mx-4 my-3"><i class="fa fa-chart-line"></i><span>Dashboard</span></h1>
     </div>
     <div class="row">
-        <div class="col-6 p-4">
+        <div class="p-4">
             <div class="card">
                 <div class="card-body">
                     <h5>Statistics</h5>
@@ -31,25 +31,13 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="col-6 p-4">
+        <div class="p-4">
+
             <div class="card">
                 <canvas id="myChart" class="w-100" height="400"></canvas>
             </div>
         </div> --}}
     </div>
-</div>
-{{-- @php
-    $keys = $history->keys();
-    $values = $history->values();
-    $dates = [];
-    foreach ($values as $value) {
-        array_push($dates, strtotime($value->created_at->toDateString()));
-    }
-    $dates = array_count_values($dates);
-    $historyKeys = array_keys($dates);
-    $historyValues = array_values($dates);
-    // dd($historyValues);
-@endphp --}}
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.js"></script>
 {{-- <script>
     const ctx = document.getElementById('myChart').getContext('2d');

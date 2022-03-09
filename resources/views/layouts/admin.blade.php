@@ -7,6 +7,10 @@
         <meta name="author" content="" />
         <title>@yield('title')</title>
 
+        
+        <link rel="icon" type="image/png" href="/images/ZeonGoIcon.png"/>
+        <link rel="stylesheet" href="/css/admin.css">
+
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 
@@ -28,13 +32,16 @@
                     {{-- <img class="img-fluid" src="http://127.0.0.1:8000/images/ZeonGoLogo.png" alt=""> --}}
                 </div>
                 <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('admin.index')}}"><i class="fa fa-chart-line"></i> Dashboard</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin/users"><i class="fa fa-user"></i> Users</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin/devices"><i class="fa fa-video"></i> Devices</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('home')}}">Back to main site</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="{{route('admin.index')}}"><i class="fa fa-chart-line"></i><span class="menuText"> Dashboard</span></a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="/admin/users"><i class="fa fa-user"></i><span class="menuText"> Users</span></a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="/admin/devices"><i class="fa fa-video"></i><span class="menuText"> Devices</span></a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="{{route('home')}}"><i class="fa fa-arrow-circle-left"></i><span class="menuText"> Back to main site</span></a>
                 </div>
             </div>
-            @yield('content')
+            
+            <div class="col-10 bg-light adminDataContainer">
+                @yield('content')
+            </div>
             
         </div>
     </body>

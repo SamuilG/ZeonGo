@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="col-10 bg-light" style="height: 100vh; overflow: hidden">
+{{-- <div class="col-10 bg-light" style="height: 100vh; overflow: hidden"> --}}
     <div class="bg-light row">
         <h1 class="mx-4 my-3 col-4">Adding Manager</h1>
     </div>
@@ -61,6 +61,6 @@
         </form>
     </div>
     
-</div>
+{{-- </div> --}}
     
 @endsection

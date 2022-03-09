@@ -4,6 +4,18 @@ html, body {
     /* background-color: rgba(150, 150, 150, 0.1); */
 }
 
+.navbar {
+    height: 69px;
+}
+
+.h-69px {
+    height: 69px;
+}
+
+.nav-item {
+    text-align: center;
+}
+
 .col {
     padding: 0;
 }
@@ -35,6 +47,14 @@ ul {
 
 #device_description {
     resize: none;
+}
+
+.h-69px {
+    height: 69px;
+}
+
+.w-75 {
+    width: 75%;
 }
 
 .w-37 {
@@ -117,11 +137,19 @@ ul {
     width: 48%;
     overflow: auto;
     position: absolute;
-}    
+}
+
+
+
 
 
 
 @media only screen and (max-width: 767px) {
+
+    .navbar {
+        height: auto;
+    }
+
     .qrCode {
         display: block !important;
     }

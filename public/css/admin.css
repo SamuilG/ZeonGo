@@ -1,0 +1,32 @@
+.adminDataContainer {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* .menuText {
+    margin: 0;
+    width: 90%;
+    float: right;
+} */
+
+/* h1 .menuText {
+    width: 85%;
+} */
+
+
+@media only screen and (max-width: 767px) {
+
+    .adminDataContainer {
+        height: 100vh;
+        overflow-x: auto;
+    }
+
+    .linksPanel .menuText {
+        display: none;
+    }
+
+    .titlesAdmin {
+        text-align: center;
+    }
+
+}
