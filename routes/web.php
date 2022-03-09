@@ -4,7 +4,6 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\DeviceController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\PassController;
 use App\Http\Controllers\Devices\UserOptions;
 use App\Http\Controllers\Auth\EmailController;
 use App\Http\Controllers\Auth\LoginController;
@@ -36,8 +35,9 @@ Route::get('/verifyEmail', [EmailController::class, 'verifyEmail']);
 // Auth Things
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
-Route::post('/forgottenPassword', [PassController::class, 'forgottenPassword'])->name('forgottenPassword');
-Route::get('/forgottenPassword', [PassController::class, 'index']);
+Route::post('/forgottenPassword', [EmailController::class, 'forgottenPassword'])->name('forgottenPassword');
+Route::get('/forgottenPasswordRedirect', [EmailController::class, 'forgottenPasswordRedirect']);
+Route::post('/resetPassword', [EmailController::class, 'resetPassword']);
 
 // Route::post('/resetPassword', [PassController::class, 'forgottenPassword'])->name('resetPassword'); // за после 
 Route::get('/login', [LoginController::class, 'index'])->name('login');

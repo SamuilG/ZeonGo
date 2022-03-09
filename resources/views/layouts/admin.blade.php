@@ -21,7 +21,12 @@
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white col-2" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light"><img class="img-fluid" src="http://127.0.0.1:8000/images/ZeonGoLogo.png" alt=""></div>
+                <div class="sidebar-heading border-bottom bg-dark">
+                    <a class="navbar-brand" href="/">
+                        <img class="mh-100 img-fluid" src="/images/ZeonGoLogo.png" alt="ZeonGo">
+                    </a>
+                    {{-- <img class="img-fluid" src="http://127.0.0.1:8000/images/ZeonGoLogo.png" alt=""> --}}
+                </div>
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{route('admin.index')}}"><i class="fa fa-chart-line"></i> Dashboard</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin/users"><i class="fa fa-user"></i> Users</a>
