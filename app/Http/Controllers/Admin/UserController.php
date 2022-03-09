@@ -31,8 +31,6 @@ class UserController extends Controller
         }
 
         if($request->email_verified){
-            // dd($request->email_verified);
-            // $users = $users->where('email_ver', 'LIKE',  '%'.$request->search_name.'%');
             if($request->email_verified == 'yes'){
                 $users = $users->where('email_verified', '1');
             } else {
@@ -44,7 +42,6 @@ class UserController extends Controller
             $users = $users->whereDate('created_at', $request->search_registered_on);
         }
         $users = $users->paginate(15);
-        // dd($users);
 
         return view('admin.users.index', compact('users'));
     }
@@ -63,12 +60,12 @@ class UserController extends Controller
             'password' => 'required'
         ]);
 
-        $request['password'] = bcrypt($request['password']);
+        // $request['password'] = bcrypt($request['password']);
 
-        User::create($request + ['email_verified' => '1'] + ['uuid' => User::createUUID()]);
+        $user = User::create($request + ['email_verified' => '1'] + ['uuid' => User::createUUID()]);
 
         UserKey::create([
-            'user_id' => auth()->id(),
+            'user_id' => $user->id,
             'user_key' => '0'
         ]);
 
@@ -85,7 +82,7 @@ class UserController extends Controller
     public function update(User $user, Request $request)
     {
         $request = $request->validate([
-            'email' => 'required|email',
+            // 'email' => 'required|email',
             'name' => 'required',
         ]);
 

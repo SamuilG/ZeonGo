@@ -53,11 +53,16 @@
                 <td>{{$user->devices->count()}}</td>
                 <td><a class="btn btn-success w-100" href="/admin/users/edit/{{$user->uuid}}">Edit</a></td>
                 <td>
-                    <form action="/admin/users/destroy/{{$user->uuid}}" method="POST">
-                        @method('delete')
-                        @csrf
-                        <input type="submit" value="Delete" class="btn btn-danger w-100">
-                    </form>
+                    @if ($user->isAdmin())
+                        
+                    @else
+                        <form action="/admin/users/destroy/{{$user->uuid}}" method="POST">
+                            @method('delete')
+                            @csrf
+                            <input type="submit" value="Delete" class="btn btn-danger w-100">
+                        </form>
+                    @endif
+                    
                 </td>
             </tr>
         @endforeach

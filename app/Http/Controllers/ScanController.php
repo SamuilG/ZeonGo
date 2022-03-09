@@ -5,21 +5,26 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\History;
 use App\Models\UserKey;
-use Illuminate\Http\Request;
+use Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\Device;
+use Illuminate\Http\Request as HttpRequest;
 
-class DeviceController extends Controller
+class ScanController extends Controller
 {
-    public function process(Request $request)
+    public function process(HttpRequest $request)
     {
         $userKey = $request->userKey;
-        $deviceId = $request->deviceId;
+        $device_key = $request->device_key;
+
+        $device = Device::where('device_key', $device_key)->get()->first();
+        
         $check = DB::table('user_keys')
             ->where('user_key', $userKey)
             ->join('passes', 'user_keys.user_id', '=' , 'passes.user_id')
             ->where('approved', true)
-            ->where('device_id', $deviceId)
+            ->where('device_id', $device->id)
             ->select('user_keys.updated_at', 'user_keys.user_id', 'user_keys.user_id')
             ->get();
 
@@ -36,7 +41,7 @@ class DeviceController extends Controller
         if($timeDifference < 60 && count($check) == 1){
             History::create([
                 'user_id' => $check->first()->user_id,
-                'device_id' => $deviceId
+                'device_id' => $device->id
             ]);
             UserKey::where('user_id', $check->first()->user_id)->update(array('user_key' => '0'));
             return(1);
