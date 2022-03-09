@@ -12,11 +12,14 @@
 {{-- <div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden;"> --}}
     <div class="bg-light row">
         <h1 class="mx-4 my-3 col-4"><i class="fa fa-video"></i>
-            @if ($device->device_name) 
-                Editing 
-            @else
-                Creating
-            @endif Device</h1>
+            <p class="menuText">
+                @if ($device->device_name) 
+                    Editing 
+                @else
+                    Creating
+                @endif Device
+            </p>
+        </h1>
     </div>
     <br><br><br>
     @if (session()->has('success'))

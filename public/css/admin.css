@@ -9,6 +9,10 @@
     float: right;
 }
 
+h1 .menuText {
+    width: 85%;
+}
+
 
 @media only screen and (max-width: 767px) {
 
@@ -17,13 +21,16 @@
         overflow-x: auto;
     }
 
-    .menuText {
-        display: none
+    .linksPanel .menuText {
+        display: none;
     }
 
-    .linksPanel {
-        text-align: center;
+    h1 .menuText{
+        width: 60%;
     }
 
+    h1{
+        padding-top: 20px;
+    }
 
 }

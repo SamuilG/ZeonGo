@@ -7,10 +7,10 @@
 @section('content')
 {{-- <div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden"> --}}
     <div class="bg-light row">
-        <h1 class="mx-4 my-3 col-4"><i class="fa fa-chart-line"></i>Dashboard</h1>
+        <h1 class="mx-4 my-3 col-4"><i class="fa fa-chart-line"></i><p class="menuText">Dashboard</p></h1>
     </div>
     <div class="row">
-        <div class="col-6 p-4">
+        <div class="p-4">
             <div class="card">
                 <div class="card-body">
                     <h5>Statistics</h5>
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 p-4">
+        <div class="p-4">
             <div class="card">
                 Chart go here someday
             </div>

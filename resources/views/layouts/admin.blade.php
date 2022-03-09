@@ -8,6 +8,7 @@
         <title>@yield('title')</title>
 
         
+        <link rel="icon" type="image/png" href="/images/ZeonGoIcon.png"/>
         <link rel="stylesheet" href="/css/admin.css">
 
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>

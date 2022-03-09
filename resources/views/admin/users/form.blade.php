@@ -12,11 +12,14 @@
 {{-- <div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden;"> --}}
     <div class="bg-light row">
         <h1 class="mx-4 my-3 col-4"><i class="fa fa-user"></i>
-            @if ($user->email) 
-                Editing 
-            @else
-                Creating
-            @endif User</h1>
+            <p class="menuText">
+                @if ($user->email) 
+                    Editing 
+                @else
+                    Creating
+                @endif User
+            </p>
+        </h1>
     </div>
     <br><br><br>
     @if (session()->has('success'))
