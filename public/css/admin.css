@@ -3,15 +3,15 @@
     overflow-x: hidden;
 }
 
-.menuText {
+/* .menuText {
     margin: 0;
     width: 90%;
     float: right;
-}
+} */
 
-h1 .menuText {
+/* h1 .menuText {
     width: 85%;
-}
+} */
 
 
 @media only screen and (max-width: 767px) {
@@ -25,12 +25,8 @@ h1 .menuText {
         display: none;
     }
 
-    h1 .menuText{
-        width: 60%;
-    }
-
-    h1{
-        padding-top: 20px;
+    .titlesAdmin {
+        text-align: center;
     }
 
 }

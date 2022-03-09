@@ -7,7 +7,7 @@
 @section('content')
 {{-- <div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden"> --}}
     <div class="bg-light row">
-        <h1 class="mx-4 my-3 col-4"><i class="fa fa-chart-line"></i><p class="menuText">Dashboard</p></h1>
+        <h1 class="mx-4 my-3"><i class="fa fa-chart-line"></i><span>Dashboard</span></h1>
     </div>
     <div class="row">
         <div class="p-4">

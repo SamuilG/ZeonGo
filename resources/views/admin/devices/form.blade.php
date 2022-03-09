@@ -11,14 +11,14 @@
 @section('content')
 {{-- <div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden;"> --}}
     <div class="bg-light row">
-        <h1 class="mx-4 my-3 col-4"><i class="fa fa-video"></i>
-            <p class="menuText">
+        <h1 class="mx-4 my-3 col-4 titlesAdmin"><i class="fa fa-video"></i>
+            <span>
                 @if ($device->device_name) 
                     Editing 
                 @else
                     Creating
                 @endif Device
-            </p>
+            </span>
         </h1>
     </div>
     <br><br><br>

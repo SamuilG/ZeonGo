@@ -11,14 +11,14 @@
 @section('content')
 {{-- <div class="col-10 bg-light" style="height: 100vh; overflow-x: hidden;"> --}}
     <div class="bg-light row">
-        <h1 class="mx-4 my-3 col-4"><i class="fa fa-user"></i>
-            <p class="menuText">
+        <h1 class="mx-4 my-3 col-4 titlesAdmin"><i class="fa fa-user"></i>
+            <span>
                 @if ($user->email) 
                     Editing 
                 @else
                     Creating
                 @endif User
-            </p>
+            </span>
         </h1>
     </div>
     <br><br><br>

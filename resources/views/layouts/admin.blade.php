@@ -32,10 +32,10 @@
                     {{-- <img class="img-fluid" src="http://127.0.0.1:8000/images/ZeonGoLogo.png" alt=""> --}}
                 </div>
                 <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="{{route('admin.index')}}"><i class="fa fa-chart-line"></i><p class="menuText">Dashboard</p></a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="/admin/users"><i class="fa fa-user"></i><p class="menuText">Users</p></a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="/admin/devices"><i class="fa fa-video"></i><p class="menuText">Devices</p></a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="{{route('home')}}"><i class="fa fa-arrow-circle-left"></i><p class="menuText">Back to main site</p></a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="{{route('admin.index')}}"><i class="fa fa-chart-line"></i><span class="menuText"> Dashboard</span></a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="/admin/users"><i class="fa fa-user"></i><span class="menuText"> Users</span></a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="/admin/devices"><i class="fa fa-video"></i><span class="menuText"> Devices</span></a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 linksPanel" href="{{route('home')}}"><i class="fa fa-arrow-circle-left"></i><span class="menuText"> Back to main site</span></a>
                 </div>
             </div>
             
