@@ -22,7 +22,6 @@ class UserOptions extends Controller
         if($check){
             return redirect()->back()->with('status', 'You have already joined');
         }
-        // dd($device->id);
         if(!$device){
             return redirect()->back()->with('status', 'The code is invalid');
         }

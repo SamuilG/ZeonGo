@@ -37,8 +37,6 @@
                 
               
                 @auth
-
-                {{-- това само админ да го вижда --}}
                 
                 @if (auth()->user()->isAdmin())
                   <li class="nav-item">
@@ -48,17 +46,13 @@
                   </li>
                 @endif
 
-                {{-- до тук --}}
-
                 <li class="nav-item">
-                  <form action="/" method="GET" class="p-3 inline">
-                      @csrf
-                      <button type="submit" class="me-2 btn btn-outline-light">Add Pass</button>
-                  </form>
+                  <div class="p-3 inline">
+                    <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#addDevice">Add Pass</button>
+                  </div>
                 </li>
                 <li class="nav-item">
                   <form action="/account" method="GET" class="p-3 inline">
-                      @csrf
                       <button type="submit" class="me-2 btn btn-outline-light">Account</button>
                   </form>
                 </li>
@@ -85,7 +79,43 @@
           
         </div>
       </div>
-      
+
+      <div class="modal fade" id="addDevice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Enter a device key below</h5>
+              <button type="button" class="btn close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form action="/addDevice" method="post">
+              <div class="modal-body">
+                <div class="container-fluid">
+                    @csrf
+                    <input type="text" name="device_key" placeholder="Device Key" class="form-control @error('device_key') border border-danger @enderror">
+                    @error('device_key')
+                    <p class="text-danger">
+                      {{ $message }}
+                    </p>
+                    @enderror
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="Save Changes">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      @error('device_key')
+        <script>
+          let addDeviceModal = new bootstrap.Modal(document.getElementById('addDevice'));
+          addDeviceModal.show();
+        </script>    
+      @enderror
 
       @yield('content')
 
