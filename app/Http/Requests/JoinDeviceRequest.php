@@ -24,7 +24,7 @@ class JoinDeviceRequest extends FormRequest
     public function rules()
     {
         return [
-            'device_key' => 'required|size:6'
+            'device_key' => 'required|size:6|exists:devices,device_key'
         ];
     }
 }

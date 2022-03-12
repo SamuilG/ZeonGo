@@ -153,8 +153,6 @@
     alert( '{{ Session::get('status') }}' )
     </script>
 @endif
-@error('device_key')
-    <script>alert("The code is invalid")</script>
-@enderror
+
 
 @endsection
