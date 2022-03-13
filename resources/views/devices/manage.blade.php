@@ -148,58 +148,6 @@
                             @endif
                         </li>
                     @endforeach
-                    @foreach ($data['members'] as $member)
-                        <li class="list-group-item d-flex justify-content-between align-items-center @if ($data['managers']->contains('user_id' ,(int) $member->id) ) bg-light @endif this-hover membersLi">
-                            {{-- <div class="w-75"> --}}
-                                <div class="w-37">
-                                    <p class="m-0">{{$member->name}}</p>                            
-                                    <p class="m-0">{{$member->email}}</p>
-                                </div>
-
-                                {{-- <div class="w-37 float-end">
-                                    <p class="m-0">
-                                        @if (!$member->invited_by == NULL)
-                                            Invited by {{ $member->invitedBy() }}
-                                        @else
-                                            Invited himself
-                                        @endif
-                                    </p>
-                                    @if ($member->approved)
-                                        <p class="m-0">Approved by {{ $member->approvedBy() }}</p>
-                                    @endif
-                                </div> --}}
-                                
-                                
-
-                            {{-- </div> --}}
-                            {{-- show if the member is approved and if not let the manager decide --}}
-                            @if (!$data['managers']->contains('user_id' ,(int) $member->id) )
-                                @if ($member->approved == true)
-                                    {{-- Evict user --}}
-                                    <form action="/decline/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
-                                        @csrf
-                                        <input class="btn btn-danger" type="submit" value="Evict">
-                                    </form>
-                                @else
-                                    @if ($member->invited_by)
-                                        <p class="btn btn-success">Wait for the user to decide</p>
-                                    @else
-                                        {{-- Approve user --}}
-                                        <form action="/approve/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
-                                            @csrf
-                                            <input class="btn btn-success" type="submit" value="Approve">
-                                        </form>
-                                        {{-- Decline user  --}}
-                                        <form action="/decline/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
-                                            @csrf
-                                            <input class="btn btn-danger" type="submit" value="Decline">
-                                        </form>
-                                    @endif
-                                    
-                                @endif  
-                            @endif
-                        </li>
-                    @endforeach
                 </ul>
 
         </div>

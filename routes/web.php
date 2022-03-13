@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Devices\ManageDevice;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\Scene\AccountController;
 use App\Http\Controllers\Scene\RegularController;
 
@@ -58,6 +59,7 @@ Route::get('/', function () {
 // Device management things
 // normal user things
 Route::get('/account', [RegularController::class, 'userSettings'])->name("userSettings");
+Route::get('/history/user', [HistoryController::class, 'user']);
 
 Route::post('/addDevice', [UserOptions::class, 'addDevice'])->name("addDevice");
 
