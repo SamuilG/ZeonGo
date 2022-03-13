@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Devices\ManageDevice;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Scene\AccountController;
 use App\Http\Controllers\Scene\RegularController;
 
 /*
@@ -34,17 +35,19 @@ Route::get('/verifyEmail', [EmailController::class, 'verifyEmail']);
 
 // Auth Things
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
-
-Route::post('/forgottenPassword', [EmailController::class, 'forgottenPassword'])->name('forgottenPassword');
-Route::get('/forgottenPasswordRedirect', [EmailController::class, 'forgottenPasswordRedirect']);
-Route::post('/resetPassword', [EmailController::class, 'resetPassword']);
-
 // Route::post('/resetPassword', [PassController::class, 'forgottenPassword'])->name('resetPassword'); // за после 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
+
+// User account settings
+
+Route::post('/changeEmail', [AccountController::class, 'changeEmail']);
+Route::post('/changePassword', [AccountController::class, 'changePassword']);
+Route::post('/changeName', [AccountController::class, 'changeName']);
+Route::post('/deleteAccount', [AccountController::class, 'deleteAccount']);
 
 Route::get('/', function () {
     return view('index');
@@ -60,6 +63,7 @@ Route::post('/addDevice', [UserOptions::class, 'addDevice'])->name("addDevice");
 
 Route::post('/user/accept/{device}', [UserOptions::class, 'accept']);
 Route::post('/user/decline/{device}', [UserOptions::class, 'decline']);
+
 // management things
 Route::get('/manage/{device}', [ManageDevice::class, 'index'])->name("manage");
 Route::post('/manage/{device}', [ManageDevice::class, 'saveChanges']);
