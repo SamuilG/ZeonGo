@@ -141,14 +141,20 @@ ul {
 
 
 
+@media only screen and (max-width: 991px) {
+    .navbar {
+        height: auto;
+    }
+    #containAccordion {
+        position: relative;
+    }
+}
 
 
 
 @media only screen and (max-width: 767px) {
 
-    .navbar {
-        height: auto;
-    }
+    
 
     .qrCode {
         display: block !important;
