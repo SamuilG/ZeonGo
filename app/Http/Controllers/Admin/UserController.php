@@ -14,6 +14,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth', 'isAdmin']);
+    }
+    
     public function index(Request $request)
     {
         $users = User::orderBy('id', 'ASC');

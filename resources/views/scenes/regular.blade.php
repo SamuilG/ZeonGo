@@ -126,7 +126,7 @@
                         @break
                     @endif
                     @endforeach
-                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover"><a href="/history">View full history</a></li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center this-hover"><a href="/history/user">View full history</a></li>
                     
                     
             @else
