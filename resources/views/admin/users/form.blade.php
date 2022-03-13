@@ -33,7 +33,7 @@
                 @method('put')
             @endif
             @csrf
-            <div class="row">
+            <div class="row d-flex flex-lg-row">
                 <div class="col-6 px-4">
                     <div class="form-group">
                         <label class="col-form-label">
@@ -94,10 +94,10 @@
                 </div>
             @endif
             
-            <div class="row">
-                <div class="col-4 ms-auto mt-4">
-                    <input class="btn btn-success float-end mx-4" type="submit" value="Save">
-                    <a href="/admin/users" class="btn btn-danger float-end mx-4">Back</a>
+            <div class="row float-end">
+                <div class="col-4 mt-4 d-flex flex-row">
+                    <a href="/admin/users" class="btn btn-danger mx-4">Back</a>
+                    <input class="btn btn-success mx-4" type="submit" value="Save">
                 </div>
             </div>
         </form>
@@ -117,7 +117,7 @@
                             Passes
                         </button>
                         </h2>
-                        <div id="passes" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                        <div id="passes" class="accordion-collapse collapse overflow-auto" aria-labelledby="headingOne" data-bs-parent="#accordion">
                         <div class="accordion-body">
                             
                             <table class="col-12 table table-striped">
@@ -157,7 +157,7 @@
                             Manages
                         </button>
                         </h2>
-                        <div id="manages" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                        <div id="manages" class="accordion-collapse collapse overflow-auto" aria-labelledby="headingOne" data-bs-parent="#accordion">
                         <div class="accordion-body">
                             
                             <table class="col-12 table table-striped">
@@ -195,7 +195,7 @@
                             History
                         </button>
                         </h2>
-                        <div id="history" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                        <div id="history" class="accordion-collapse collapse overflow-auto" aria-labelledby="headingOne" data-bs-parent="#accordion">
                         <div class="accordion-body">
                             
                             <table class="col-12 table table-striped">

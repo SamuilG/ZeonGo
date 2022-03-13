@@ -89,10 +89,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-4 ms-auto mt-4">
-                    <input class="btn btn-success float-end mx-4" type="submit" value="Save">
-                    <a href="/admin/devices" class="btn btn-danger float-end mx-4">Back</a>
+            <div class="row float-end">
+                <div class="col-4 mt-4 d-flex flex-row">
+                    <a href="/admin/devices" class="btn btn-danger mx-4">Back</a>
+                    <input class="btn btn-success mx-4" type="submit" value="Save">
                 </div>
             </div>
         </form>
@@ -112,7 +112,7 @@
                             Users
                         </button>
                         </h2>
-                        <div id="users" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                        <div id="users" class="accordion-collapse collapse overflow-auto" aria-labelledby="headingOne" data-bs-parent="#accordion">
                         <div class="accordion-body">
                             
                             <table class="col-12 table table-striped">
@@ -154,7 +154,7 @@
                             Managers
                         </button>
                         </h2>
-                        <div id="managers" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                        <div id="managers" class="accordion-collapse collapse overflow-auto" aria-labelledby="headingOne" data-bs-parent="#accordion">
                         <div class="accordion-body">
                             
                             <table class="col-12 table table-striped">
@@ -194,7 +194,7 @@
                             Access history
                         </button>
                         </h2>
-                        <div id="history" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                        <div id="history" class="accordion-collapse collapse overflow-auto" aria-labelledby="headingOne" data-bs-parent="#accordion">
                         <div class="accordion-body">
                             
                             <table class="col-12 table table-striped">

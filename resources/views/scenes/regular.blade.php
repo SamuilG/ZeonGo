@@ -62,7 +62,7 @@
                                                 </form>
                                                 <form action="/user/accept/{{ $device->uuid }}" method="post">
                                                     @csrf
-                                                    <input class="btn btn-success" style="float: right" type="submit" value="Accept">
+                                                    <input class="btn btn-success me-1" style="float: right" type="submit" value="Accept">
                                                 </form>
                                             @else
                                                 <form action="/user/decline/{{ $device->uuid }}" method="post">

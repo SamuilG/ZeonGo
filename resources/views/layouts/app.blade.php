@@ -66,10 +66,10 @@
 
                 @guest
                     <li class="nav-item">
-                      <a href="{{ route('login') }}" class="me-2 btn btn-outline-light" role="button" aria-disabled="true">Login</a>
+                      <a href="{{ route('login') }}" class="me-2 btn btn-outline-light m-3" role="button" aria-disabled="true">Login</a>
                     </li>  
                     <li class="nav-item">
-                      <a href="{{ route('register') }}" class="me-3 btn btn-outline-light" role="button" aria-disabled="true">Register</a>
+                      <a href="{{ route('register') }}" class="me-2 btn btn-outline-light m-3" role="button" aria-disabled="true">Register</a>
                     </li>
                 @endguest  
 
