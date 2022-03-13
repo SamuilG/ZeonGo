@@ -52,10 +52,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-4 ms-auto mt-4">
-                    <input class="btn btn-success float-end mx-4" type="submit" value="Save">
-                    <a href="/admin/devices/edit/{{$device->uuid}}" class="btn btn-danger float-end mx-4">Back</a>
+            <div class="row float-end">
+                <div class="col-4 mt-4 d-flex flex-row">
+                    <a href="/admin/devices/edit/{{$device->uuid}}" class="btn btn-danger mx-4">Back</a>
+                    <input class="btn btn-success mx-4" type="submit" value="Save">
                 </div>
             </div>
         </form>
