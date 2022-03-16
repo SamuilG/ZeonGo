@@ -27,7 +27,7 @@
         </tr>
         <tr>
             <form action="/admin/devices" method="GET">
-                <td><input type="text" name="search_device_key" value='{{request()->get('search_id')}}' placeholder="Search by id" class="form-control"></td>
+                <td><input type="text" name="search_device_key" value='{{request()->get('search_id')}}' placeholder="Search by device key" class="form-control"></td>
                 <td><input type="text" name="search_name" value='{{request()->get('search_name')}}' placeholder="Search by name" class="form-control "></td>
                 <td></td>
                 <td></td>

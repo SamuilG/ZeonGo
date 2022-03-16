@@ -130,7 +130,7 @@
                                     </form>
                                 @else
                                     @if ($member->invited_by)
-                                        <p class="btn btn-success">Wait for the user to decide</p>
+                                        <p class="btn btn-success my-auto">Wait for the user to decide</p>
                                     @else
                                         {{-- Approve user --}}
                                         <form action="/approve/{{ $data['device']->uuid }}/{{ $member->uuid }}" method="post">
