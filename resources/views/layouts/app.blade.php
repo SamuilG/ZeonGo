@@ -24,7 +24,7 @@
 
           <nav class="navbar navbar-expand-lg navbar-light bg-dark">
           {{-- <nav class="navbar navbar-expand navbar-light bg-dark vh-50" > --}}
-            <a class="ms-3 h-69px navbar-brand" href="/">
+            <a class="ms-3 h-69px navbar-brand mw-75" href="/">
               <img class="mh-100 img-fluid" src="/images/ZeonGoLogo.png" alt="ZeonGo">
             </a>
 

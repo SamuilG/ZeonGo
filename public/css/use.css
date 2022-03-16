@@ -49,6 +49,13 @@ ul {
     resize: none;
 }
 
+.mw-50 {
+    max-width: 50%;
+}
+.mw-75 {
+    max-width: 75%;
+}
+
 .h-69px {
     height: 69px;
 }
