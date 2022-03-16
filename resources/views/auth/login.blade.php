@@ -34,9 +34,9 @@
                     <label class="form-check-label float-start" for="remember" role="button">
                         Remember me
                     </label>
-                    <label class="form-check-label float-end" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    {{-- <label class="form-check-label float-end mw-50" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         Forgotten password
-                    </label>
+                    </label> --}}
                 </div>
                 <button type="submit" class="btn btn-primary col-7 mt-3">Log in</button>
             </form>
