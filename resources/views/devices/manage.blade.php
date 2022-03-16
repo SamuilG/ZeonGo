@@ -38,7 +38,7 @@
 
             </div>
         </div>
-        <div class="row flex-grow-1 p-2 bg-blue">
+        <div class="row flex-grow-1 p-2 bg-blue mt-auto">
             <div class="col">
                 {{-- history --}}
             <h3>History</h3>
@@ -61,7 +61,7 @@
                             @break
                         @endif
                         @endforeach
-                        <li class="list-group-item d-flex justify-content-between align-items-center this-hover"><a href="/history">View full history</a></li>
+                        {{-- <li class="list-group-item d-flex justify-content-between align-items-center this-hover"><a href="/history">View full history</a></li> --}}
                         
                         
                 @else
