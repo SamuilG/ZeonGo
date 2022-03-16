@@ -27,15 +27,15 @@ class RegisterController extends Controller
 
     public function store(RegisterRequest $request){
         $emailVKey = Str::random(50);
-        // User::create($request->validated() + ['email_verified' => $emailVKey]);
-        User::create($request->validated() + ['email_verified' => '1'] + ['uuid' => User::createUUID()]);
+        User::create($request->validated() + ['email_verified' => $emailVKey] + ['uuid' => User::createUUID()]);
+        // User::create($request->validated() + ['email_verified' => '1'] + ['uuid' => User::createUUID()]);
 
 
         $data = array('email' => $request->email, 'name' =>  $request->name, 'verifyKey' => $emailVKey);
-        // Mail::send('emails.emailVerify', ["data" => $data], function($m) use($data){
-        //     $m->to($data['email'], $data['name'])->subject('Email verification');
-        //     $m->from("admin@beta.zeongo.online", "ZeonGo");
-        // });
+        Mail::send('emails.emailVerify', ["data" => $data], function($m) use($data){
+            $m->to($data['email'], $data['name'])->subject('Email verification');
+            $m->from("zeongo@zeongo.online", "ZeonGo");
+        });
 
         auth()->attempt($request->only('email', 'password'));
         

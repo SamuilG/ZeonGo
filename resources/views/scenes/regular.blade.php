@@ -28,60 +28,64 @@
                 {{-- <div class="col-8 h-100"> --}}
                     <div class="container-fluid h-100 d-flex overflow-auto">
                         <div class="row flex-grow-1 flex-nowrap overflow-auto zoom-zoom">
-    
-                            @foreach ($data['devices'] as $device)
-                            <div class="col-card p-3 ps-2 pe-2 card-zoom">
-                                <div class="card h-100 card-block bg-dark">
-                                    <div class="card-body overflow-auto">
-                                        <h4 class="card-title text-white pb-2">{{$device->device_name}}</h4>
-                                        <p class="card-text text-white">
-                                            {{-- Check if there are users waiting to be approved --}}
-                                            @if ($data['awaitingUsers']->contains('device_id' ,$device->id))
-                                                <span class="text-danger">There are users awaiting approval</span> <br>
-                                            @endif
-                                            {{-- if the user is not approved tell him to waiting --}}
-                                            @if (!$device->approved)
-                                                <span class="text-danger">Access pending</span> <br>
-                                            @endif
-                                            {{ $device->device_description }}
-                                        </p>
-                                        
-                                        
-                                    </div>
-                                    <div class="card-footer">
-                                        {{-- if the device is managed by the authenticated user show the manage button --}}
-                                        @if ($data['manager']->contains('device_id' , $device->id))
-                                            <a class="btn btn-primary" style="float: right" href='/manage/{{$device->uuid}}'>Manage</a>
-                                        @else
-                                        {{-- if not, show the abandon button --}}
-                                            @if (!$device->approved && $device->invited_by)
-                                                
-                                                <form action="/user/decline/{{ $device->uuid }}" method="post">
-                                                    @csrf
-                                                    <input class="btn btn-danger" style="float: right" type="submit" value="Decline">
-                                                </form>
-                                                <form action="/user/accept/{{ $device->uuid }}" method="post">
-                                                    @csrf
-                                                    <input class="btn btn-success me-1" style="float: right" type="submit" value="Accept">
-                                                </form>
-                                            @else
-                                                <form action="/user/decline/{{ $device->uuid }}" method="post">
-                                                    @csrf
-                                                    <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
-                                                </form>
-                                            @endif
-                                            {{-- F
-                                            I
-                                            X
-
-                                            |
-                                            * --}}
+                            @if (count($data['devices']))
+                                @foreach ($data['devices'] as $device)
+                                <div class="col-card p-3 ps-2 pe-2 card-zoom">
+                                    <div class="card h-100 card-block bg-dark">
+                                        <div class="card-body overflow-auto">
+                                            <h4 class="card-title text-white pb-2">{{$device->device_name}}</h4>
+                                            <p class="card-text text-white">
+                                                {{-- Check if there are users waiting to be approved --}}
+                                                @if ($data['awaitingUsers']->contains('device_id' ,$device->id))
+                                                    <span class="text-danger">There are users awaiting approval</span> <br>
+                                                @endif
+                                                {{-- if the user is not approved tell him to waiting --}}
+                                                @if (!$device->approved)
+                                                    <span class="text-danger">Access pending</span> <br>
+                                                @endif
+                                                {{ $device->device_description }}
+                                            </p>
                                             
-                                        @endif
+                                            
+                                        </div>
+                                        <div class="card-footer">
+                                            {{-- if the device is managed by the authenticated user show the manage button --}}
+                                            @if ($data['manager']->contains('device_id' , $device->id))
+                                                <a class="btn btn-primary" style="float: right" href='/manage/{{$device->uuid}}'>Manage</a>
+                                            @else
+                                            {{-- if not, show the abandon button --}}
+                                                @if (!$device->approved && $device->invited_by)
+                                                    
+                                                    <form action="/user/decline/{{ $device->uuid }}" method="post">
+                                                        @csrf
+                                                        <input class="btn btn-danger" style="float: right" type="submit" value="Decline">
+                                                    </form>
+                                                    <form action="/user/accept/{{ $device->uuid }}" method="post">
+                                                        @csrf
+                                                        <input class="btn btn-success me-1" style="float: right" type="submit" value="Accept">
+                                                    </form>
+                                                @else
+                                                    <form action="/user/decline/{{ $device->uuid }}" method="post">
+                                                        @csrf
+                                                        <input class="btn btn-danger" style="float: right" type="submit" value="Abandon">
+                                                    </form>
+                                                @endif
+                                                {{-- F
+                                                I
+                                                X
+
+                                                |
+                                                * --}}
+                                                
+                                            @endif
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            @endforeach
+                                @endforeach
+                            @else
+                                <h2 class="my-auto">No devices added</h2>
+                            @endif
+
                         </div>
                             <br>
                     </div>

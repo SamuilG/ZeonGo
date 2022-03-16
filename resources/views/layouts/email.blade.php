@@ -33,7 +33,7 @@
     </style>
 </head>
 <body>
-    <img id="logo" src="{{asset('/images/ZeonGoLogo.png')}}">
+    {{-- <img id="logo" src="{{asset('/images/ZeonGoLogo.png')}}"> --}}
     @yield('emailBody')
 </body>
 </html>

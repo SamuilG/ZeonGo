@@ -118,7 +118,7 @@
                     <form action="/changeName" method="post">
                         @csrf
                         <div class="form-floating mb-3">
-                            <input type="text" name="name" class="form-control @error('name') border border-danger @enderror" id="floatingInputUsername" placeholder="Username">
+                            <input type="text" value="{{ old('name', auth()->user()->name) }}" name="name" class="form-control @error('name') border border-danger @enderror" id="floatingInputUsername" placeholder="Username">
                             <label for="floatingInputUsername">Name</label>
                             @error('name')
                                 <script>

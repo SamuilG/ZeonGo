@@ -19,7 +19,7 @@ class EmailController extends Controller
         
         DB::update('UPDATE `users` SET `email_verified`= 1 WHERE `email_verified` = ?', [$key]);
 
-        redirect()->route('login');
+        return redirect()->route('login');
     }
 
     public function resetPassword(Request $request){
