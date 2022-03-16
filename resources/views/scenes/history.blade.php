@@ -18,7 +18,7 @@
                 </select>
             </td>
             <td><input type="date" name="search_date" value='{{request()->get('search_date')}}' placeholder="Search by date" class="form-control"></td>
-            <td>
+            <td style="width: 95px">
                 <input type="submit" value="Search" class="btn btn-primary">
                 <a href="/history/user" class="btn btn-danger ">Reset</a>
             </td>
