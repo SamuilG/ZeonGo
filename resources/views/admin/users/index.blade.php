@@ -56,7 +56,7 @@
                     @if ($user->isAdmin())
                         
                     @else
-                        <form action="/admin/users/destroy/{{$user->uuid}}" method="POST">
+                        <form action="/admin/users/destroy/{{$user->uuid}}" method="POST" onsubmit="return confirm('Do you really want to delete {{$user->name}}?');">
                             @method('delete')
                             @csrf
                             <input type="submit" value="Delete" class="btn btn-danger w-100">
@@ -74,6 +74,7 @@
             {{-- {{$users->links()}} --}}
         </div>
     </div>
+
 {{-- </div> --}}
     
 @endsection
