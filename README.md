@@ -18,7 +18,7 @@ GSM: 0895355091
 email: eg.m.kirilova@gmail.com
 Senior teacher
 
-Д-р инженер Светлана Василева Бояджиева
+Dr. engineer Svetlana Vasileva Boyadzhieva
 GSM: 0884164221
 email: svetlanaeli@abv.bg
 
