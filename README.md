@@ -92,7 +92,7 @@ The admin page
 Identification process
 ![image](https://user-images.githubusercontent.com/71490066/202901523-9b19a476-fd4f-493b-85da-7a789c8df146.png)
 
-4.7. Conclusion:
+## Conclusion:
 Our device is set up as a gateway. In order for a person to pass, they must scan the QR code from their profile. This code can be accessed through the mobile version of our web application. Provided the person appears in the database as someone with access, they will be allowed through the checkpoint.
 Future functionality is building an Android app to make it even easier for users.
 In the case of implementation, we would undertake the construction of a prototype using a Raspberry Pi.
